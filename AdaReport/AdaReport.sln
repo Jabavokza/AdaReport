@@ -22,4 +22,12 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F394FAC6-E83A-4771-8619-756770B3C363}
 	EndGlobalSection
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		CanCheckoutShared = true
+		SccProjectUniqueName1 = AdaReport\\AdaReport.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = AdaReport\\
+	EndGlobalSection
 EndGlobal
