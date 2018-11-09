@@ -1,0 +1,6 @@
+<Setting>
+  <Server>ADAAMORN\SQLEXPRESS</Server>
+  <UserDb>sa</UserDb>
+  <PwdDb>P@ssw0rd</PwdDb>
+  <DbName>POSSDB_Center</DbName>
+</Setting>

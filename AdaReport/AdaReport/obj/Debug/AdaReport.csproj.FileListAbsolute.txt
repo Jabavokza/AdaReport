@@ -1,0 +1,16 @@
+D:\Project\2018\AdaReport\AdaReport\AdaReport\bin\Debug\AdaReport.exe.config
+D:\Project\2018\AdaReport\AdaReport\AdaReport\bin\Debug\AdaReport.exe
+D:\Project\2018\AdaReport\AdaReport\AdaReport\bin\Debug\AdaReport.pdb
+D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\Debug\AdaReport.csprojAssemblyReference.cache
+D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\Debug\AdaReport.Properties.Resources.resources
+D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\Debug\AdaReport.wMain.resources
+D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\Debug\AdaReport.csproj.GenerateResource.cache
+D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\Debug\AdaReport.csproj.CoreCompileInputs.cache
+D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\Debug\AdaReport.exe
+D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\Debug\AdaReport.pdb
+D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\Debug\AdaReport.wPlant.resources
+D:\Project\2018\AdaReport\AdaReport\AdaReport\bin\Debug\MetroFramework.dll
+D:\Project\2018\AdaReport\AdaReport\AdaReport\bin\Debug\MetroFramework.Fonts.dll
+D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\Debug\AdaReport.wLogin.resources
+D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\Debug\AdaReport.csproj.CopyComplete
+D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\Debug\AdaReport.wReport.resources
