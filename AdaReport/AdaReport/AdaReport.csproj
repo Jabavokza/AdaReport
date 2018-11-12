@@ -34,7 +34,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -76,7 +76,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Models\mlDbConfig.cs" />
+    <Compile Include="Class\Models\mlPlant.cs" />
     <Compile Include="Class\ST-Class\cCNSP.cs" />
+    <Compile Include="Class\X-Class\cReadFileINI.cs" />
+    <Compile Include="Class\X-Class\cReadFileMdb.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="wLogin.cs">
       <SubType>Form</SubType>
@@ -156,8 +159,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Class\X-Class\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

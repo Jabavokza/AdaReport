@@ -2,5 +2,6 @@
   <Server>ADAAMORN\SQLEXPRESS</Server>
   <UserDb>sa</UserDb>
   <PwdDb>P@ssw0rd</PwdDb>
-  <DbName>POSSDB_Center</DbName>
+  <DbName>POSSDB_SAP</DbName>
+  <PlantCode>17KA</PlantCode>
 </Setting>

@@ -1,10 +1,12 @@
 ﻿using AdaReport.Class.Models;
 using AdaReport.Class.ST_Class;
+using AdaReport.Class.X_Class;
 using AdaReport.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,12 +21,12 @@ namespace AdaReport
         public wMain()
         {
             InitializeComponent();
-
         }
 
         private void wMain_Load(object sender, EventArgs e)
         {
-            W_GETxSetting();
+            wPlant oPlant = new wPlant();
+            oPlant.ShowDialog();
         }
 
         private void W_GETxSetting()
@@ -37,8 +39,8 @@ namespace AdaReport
                 otbUserName.Text = oSetting.Rows[0]["UserDb"].ToString();
                 otbUserPwd.Text = oSetting.Rows[0]["PwdDb"].ToString();
                 ocbDbName.Text = oSetting.Rows[0]["DbName"].ToString();
-                olaServerName.Text = oSetting.Rows[0]["Server"].ToString();
-                olaDbName.Text = oSetting.Rows[0]["DbName"].ToString();
+                //   olaServerName.Text = oSetting.Rows[0]["PlantCode"].ToString();
+
             }
             catch (Exception oEx)
             {
@@ -63,111 +65,77 @@ namespace AdaReport
 
         private void otoExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            otoExit.Enabled = false;
+            otaTebControl.SelectedTab = otaTebMain;
+            
         }
 
-        private void otoSetting_Click(object sender, EventArgs e)
-        {
-            otaTebControl.SelectedTab = otaTebSetting;
-        }
-
-        private void opbReload_Click(object sender, EventArgs e)
-        {
-            StringBuilder oSql = new StringBuilder();
-            mlDbConfig oDbConfig = new mlDbConfig();
-            try
-            {
-                if (otbServer.Text.Equals(""))
-                {
-                    otbServer.Focus();
-                    return;
-                }
-                if (otbUserName.Text.Equals(""))
-                {
-                    otbUserName.Focus();
-                    return;
-                }
-                if (otbUserPwd.Text.Equals(""))
-                {
-                    otbUserPwd.Focus();
-                    return;
-                }
-                oDbConfig.tML_Server = otbServer.Text;
-                oDbConfig.tML_UserName = otbUserName.Text;
-                oDbConfig.tML_UserPwd = otbUserPwd.Text;
-                var tConfig = cCNSP.SP_SETtConStr(oDbConfig);
-                oSql.AppendLine("SELECT NAME");
-                oSql.AppendLine("FROM sys.databases");
-                var tDbName = cCNSP.SP_GEToDbTbl(oSql.ToString(), tConfig);
-                ocbDbName.DataSource = tDbName;
-                ocbDbName.DisplayMember = "NAME";
-            }
-            catch (Exception oEx)
-            {
-                MessageBox.Show("wMain : opbReload_Click //" + oEx.Message);
-            }
-
-        }
-
-        private void ocmSave_Click(object sender, EventArgs e)
-        {
-            XmlDocument oXmlDoc = new XmlDocument();
-            XmlNode oRootNode;
-            XmlNode oServer;
-            XmlNode oDbName;
-            XmlNode oUserDb;
-            XmlNode oPwdDb;
-            try
-            {
-                var tSavePath = "AdaDbSetting.xml";
-                oRootNode = oXmlDoc.CreateElement("Setting"); //ส่วน root node
-                oXmlDoc.AppendChild(oRootNode);
-
-                oServer = oXmlDoc.CreateElement("Server"); // child node
-                oServer.InnerText = otbServer.Text; //ข้อมูลใน child node
-                oRootNode.AppendChild(oServer);
-
-                oUserDb = oXmlDoc.CreateElement("UserDb"); // child node
-                oUserDb.InnerText = otbUserName.Text; //ข้อมูลใน child node
-                oRootNode.AppendChild(oUserDb);
-
-                oPwdDb = oXmlDoc.CreateElement("PwdDb"); // child node
-                oPwdDb.InnerText = otbUserPwd.Text; //ข้อมูลใน child node
-                oRootNode.AppendChild(oPwdDb);
-
-                oDbName = oXmlDoc.CreateElement("DbName"); // child node
-                oDbName.InnerText = ocbDbName.Text; //ข้อมูลใน child node
-                oRootNode.AppendChild(oDbName);
-
-                oXmlDoc.Save(tSavePath);
-
-                olaServerName.Text = otbServer.Text;
-                olaDbName.Text = ocbDbName.Text;
-
-                //Settings.Default.Server= otbServer.Text;
-                //Settings.Default.UserDb = otbUserName.Text;
-                //Settings.Default.PwdDb = otbUserPwd.Text;
-                //Settings.Default.DbName = ocbDbName.Text;
-                //Settings.Default.Save();
-                //Settings.Default.Reload();
-            }
-            catch (Exception oEx)
-            {
-                MessageBox.Show("wMain : ocmSave_Click //" + oEx.Message);
-            }
-        }
-
-        private void ocmLoadPlant_Click(object sender, EventArgs e)
+        private void ocmOk_Click(object sender, EventArgs e)
         {
             try
             {
-                StringBuilder oSql = new StringBuilder();
-                oSql.AppendLine("SELECT [FTShdPlantCode] FORM ");
+                if (otbUsrName.Text.Equals(""))
+                {
+                    otbUsrName.Focus();
+                    return;
+                }
+                if (otbUsrPwd.Text.Equals(""))
+                {
+                    otbUsrPwd.Focus();
+                    return;
+                }
+                var oDbConfig = new mlDbConfig();
+                var oXmlDb = cCNSP.SP_GEToDbConfigXml();
+                oDbConfig.tML_Server = oXmlDb.Rows[0]["Server"].ToString();
+                oDbConfig.tML_DbName = oXmlDb.Rows[0]["DbName"].ToString();
+                oDbConfig.tML_UserName = oXmlDb.Rows[0]["UserDb"].ToString();
+                oDbConfig.tML_UserPwd = oXmlDb.Rows[0]["PwdDb"].ToString();
+                var oConDb= cCNSP.SP_SETtConStr(oDbConfig);
+                var oSql = new StringBuilder();
+                oSql.AppendLine("SELECT [FTEmpCode],[FTEmpPW] FROM [TCNMEmpMtn] WHERE [FTEmpCode]='"+otbUsrName.Text+ "' AND [FTEmpPW]='"+otbUsrPwd.Text+"'");
+                var tUserName = cCNSP.SP_GEToDbTbl(oSql.ToString(), oConDb);
+                if (tUserName.Rows.Count >0)
+                {
+                    otaTebControl.SelectedTab = otaTabReport;
+                    otoExit.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("UserName or Password InValidate");
+                }
             }
             catch (Exception oEx)
             {
-                MessageBox.Show("wMain : ocmLoadPlant_Click //" + oEx.Message);
+                MessageBox.Show("wMain : ocmOk_Click //" + oEx.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void ocmCancel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                otbUsrName.Clear();
+                otbUsrPwd.Clear();
+            }
+            catch (Exception oEx)
+            {
+                MessageBox.Show("wMain : ocmCancel_Click //" + oEx.Message);
+            }
+        }
+
+        private void ocmSelectPlant_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                wPlant oPlant = new wPlant();
+                oPlant.ShowDialog();
+            }
+            catch (Exception oEx)
+            {
+                MessageBox.Show("wMain : ocmSelectPlant_Click //" + oEx.Message);
+            }
+
         }
     }
 }
+

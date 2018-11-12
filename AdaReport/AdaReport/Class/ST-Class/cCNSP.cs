@@ -22,6 +22,7 @@ namespace AdaReport.Class.ST_Class
                 oDbCon.Open();
                 var  oDbAdt = new SqlDataAdapter(ptSql,oDbCon);
                 oDbAdt.Fill(oDbTbl);
+                oDbCon.Close();
                 return oDbTbl;
             }
             catch (SqlException oEx)
@@ -37,7 +38,7 @@ namespace AdaReport.Class.ST_Class
             try
             { 
                 oSql.AppendLine("Data Source = '"+poDbConfig.tML_Server+"'");
-              //  oSql.AppendLine(";Initial Catalog = '" + poDbConfig.tML_UserName + "'");
+                oSql.AppendLine(";Initial Catalog = '" + poDbConfig.tML_DbName + "'");
                 oSql.AppendLine(";User ID = '" + poDbConfig.tML_UserName + "'");
                 oSql.AppendLine(";Password = '" + poDbConfig.tML_UserPwd + "'");
                 return oSql.ToString();
