@@ -13,6 +13,7 @@ namespace AdaReport.Class.ST_Class
 {
     public static class cCNSP
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(cCNSP));
         public static DataTable SP_GEToDbTbl(string ptSql,string ptConStr)
         {
             try
@@ -27,9 +28,9 @@ namespace AdaReport.Class.ST_Class
             }
             catch (SqlException oEx)
             {
-                throw oEx;
+                log.Error(oEx.Message);
+                throw oEx; 
             }
-
         }
 
         public static string SP_SETtConStr(mlDbConfig poDbConfig)
@@ -45,6 +46,7 @@ namespace AdaReport.Class.ST_Class
             }
             catch (Exception oEx)
             {
+                log.Error(oEx.Message);
                 throw oEx;
             }
         }
@@ -56,7 +58,8 @@ namespace AdaReport.Class.ST_Class
             DataTable oDbTbl = new DataTable();
             try
             {
-                oXmlFile = XmlReader.Create(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\AdaDbSetting.xml", new XmlReaderSettings());
+                var tPath = "\\AdaDbSetting.xml";
+                oXmlFile = XmlReader.Create(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + tPath, new XmlReaderSettings());
                 oDs.ReadXml(oXmlFile);
                 oDbTbl = oDs.Tables[0];
                 oXmlFile.Close();
@@ -64,6 +67,7 @@ namespace AdaReport.Class.ST_Class
             }
             catch (Exception oEx)
             {
+                log.Error(oEx.Message);
                 return null;
             }
             finally

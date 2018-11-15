@@ -9,6 +9,7 @@ namespace AdaReport.Class.X_Class
 {
    public class cReadFileINI
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(cReadFileINI));
         [DllImport("kernel32")]
         private static extern long WritePrivateProfileString(string section,
           string key, string val, string filePath);

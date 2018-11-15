@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+      <section name="AdaReport.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+      <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler,Log4net"/>
+    </sectionGroup>
+  </configSections>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/>
+  </startup>
+  <userSettings>
+    <AdaReport.Properties.Settings>
+      <setting name="UserNameLogin" serializeAs="String">
+        <value>009</value>
+      </setting>
+      <setting name="UserPwdLogin" serializeAs="String">
+        <value>009</value>
+      </setting>
+      <setting name="Server" serializeAs="String">
+        <value>x</value>
+      </setting>
+      <setting name="UserDb" serializeAs="String">
+        <value>x</value>
+      </setting>
+      <setting name="PwdDb" serializeAs="String">
+        <value>x</value>
+      </setting>
+      <setting name="DbName" serializeAs="String">
+        <value>x</value>
+      </setting>
+    </AdaReport.Properties.Settings>
+  </userSettings>
+</configuration>
