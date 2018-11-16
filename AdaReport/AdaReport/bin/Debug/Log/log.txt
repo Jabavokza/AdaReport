@@ -1,3 +1,1 @@
-[15/11/2018 15:47:52,SSS] [INFO   ] wMain:111 (1) - Login Successful
-[15/11/2018 15:49:22,SSS] [INFO   ] wMain:111 (1) - Admin: Login Successful
-[15/11/2018 15:54:41,SSS] [INFO   ] wMain:111 (1) - 1111: Login Successful
+[16/11/2018 18:31:04,SSS] [INFO   ] wMain:130 (1) - 1: Login Successful

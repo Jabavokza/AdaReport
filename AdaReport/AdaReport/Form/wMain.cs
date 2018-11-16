@@ -36,9 +36,10 @@ namespace AdaReport.Form
             try
             {
                 oSetting = cCNSP.SP_GEToDbConfigXml();
+                ostServerDT.Text = oSetting.Rows[0]["Server"].ToString();
                 ostDbNameDT.Text = oSetting.Rows[0]["DbName"].ToString();
                 ostPlantDT.Text = oSetting.Rows[0]["PlantCode"].ToString();
-
+                otbOperationDate.Text = W_GETxOperationDate();
             }
             catch (Exception oEx)
             {
@@ -46,11 +47,6 @@ namespace AdaReport.Form
             }
         }
 
-        private void otoLogin_Click(object sender, EventArgs e)
-        {
-            //wLogin oLogin = new wLogin(this);
-            //oLogin.ShowDialog();
-        }
         private void otoPlantDB_Click(object sender, EventArgs e)
         {
             wPlant oPlant = new wPlant(this);
@@ -58,9 +54,36 @@ namespace AdaReport.Form
         }
         private void otoRptAll_Click(object sender, EventArgs e)
         {
-            otaTebControl.SelectedTab = otaTabReport;
-        }
+            try
+            {
+                //string tSql = "Select * From customer";
+                //string tConstr = "Data Source=ADAAMORN\\SQLEXPRESS;Initial Catalog=TestReport;User ID=sa;Password=P@ssw0rd";
+                //var oResult = cCNSP.SP_GEToDbTbl(tSql, tConstr);
+                //CrystalReport oCrystalReport = new CrystalReport();
+                //oCrystalReport.SetDataSource(oResult);
+                //crystalReportViewer.ReportSource = oCrystalReport;
+                //crystalReportViewer.Refresh();
+                //var oSql = new StringBuilder();
+                //oSql.AppendLine("SELECT [FTEmpFName] FROM [TCNMEmpMtn]");
+                //var oResult = cCNSP.SP_GEToDbTbl(oSql.ToString());
+                //UserLogin oUserLogin = new UserLogin();0
+                //oUserLogin.SetDataSource(oResult);
+                //wReportView oReportView = new wReportView();
+                //oReportView.olaHeader.Text = olbReportList.Text;
+                //oReportView.ocrReportView.ReportSource = oUserLogin;
+                //oReportView.ocrReportView.Refresh();
+                //oReportView.Show();
 
+                wReportView oReportView = new wReportView();
+                oReportView.olaHeader.Text = olbReportList.Text;
+                oReportView.Show();
+            }
+            catch (Exception oEx)
+            {
+                MessageBox.Show(oEx.Message); 
+            }
+           
+        }
         private void otoLogout_Click(object sender, EventArgs e)
         {
             try
@@ -71,6 +94,7 @@ namespace AdaReport.Form
                 otoPlantDB.Visible = true;
                 otbUsrName.Clear();
                 otbUsrPwd.Clear();
+                otoRptPreview.Visible = false;
             }
             catch (Exception oEx)
             {
@@ -91,17 +115,11 @@ namespace AdaReport.Form
                     otbUsrPwd.Focus();
                     return;
                 }
-                var oDbConfig = new mlDbConfig();
-                var oXmlDb = cCNSP.SP_GEToDbConfigXml();
-                oDbConfig.tML_Server = oXmlDb.Rows[0]["Server"].ToString();
-                oDbConfig.tML_DbName = oXmlDb.Rows[0]["DbName"].ToString();
-                oDbConfig.tML_UserName = oXmlDb.Rows[0]["UserDb"].ToString();
-                oDbConfig.tML_UserPwd = oXmlDb.Rows[0]["PwdDb"].ToString();
-                var oConDb = cCNSP.SP_SETtConStr(oDbConfig);
 
                 var oSql = new StringBuilder();
-                oSql.AppendLine("SELECT [FTEmpCode] FROM [TCNMEmpMtn] WHERE [FTEmpCode]='" + otbUsrName.Text + "' AND [FTEmpPW]='" + otbUsrPwd.Text + "'");
-                var oEmpFCode = cCNSP.SP_GEToDbTbl(oSql.ToString(), oConDb);
+                oSql.AppendLine("SELECT [FTEmpCode] FROM [TCNMEmpMtn]");
+                oSql.AppendLine("WHERE [FTEmpCode]='" + otbUsrName.Text + "' AND [FTEmpPW]='" + otbUsrPwd.Text + "'");
+                var oEmpFCode = cCNSP.SP_GEToDbTbl(oSql.ToString());
                 if (oEmpFCode.Rows.Count > 0)
                 {
                     otaTebControl.SelectedTab = otaTabReport;
@@ -143,7 +161,33 @@ namespace AdaReport.Form
         }
         private void otmDateTime_Tick(object sender, EventArgs e)
         {
-            olaDateTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            otbDateTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+        }
+
+        private void olbReportList_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            wReportView oReportView = new wReportView();
+            oReportView.olaHeader.Text = olbReportList.Text;
+            oReportView.Show();
+        }
+
+        private void otoExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private string W_GETxOperationDate()
+        {
+            try
+            {
+                var tSql = "SELECT [FDCdtDate] FROM [TSysChgDateTime]";
+                var tOperationDate= cCNSP.SP_GEToDbTbl(tSql);
+                return tOperationDate.Rows[0]["FDCdtDate"].ToString();
+            }
+            catch (Exception oEx)
+            {
+                throw oEx;
+            }
         }
     }
 }

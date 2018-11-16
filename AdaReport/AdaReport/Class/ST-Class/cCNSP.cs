@@ -14,12 +14,12 @@ namespace AdaReport.Class.ST_Class
     public static class cCNSP
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(cCNSP));
-        public static DataTable SP_GEToDbTbl(string ptSql,string ptConStr)
+        public static DataTable SP_GEToDbTbl(string ptSql)
         {
             try
             {
                 var oDbTbl = new DataTable();
-                var oDbCon = new SqlConnection(ptConStr);
+                var oDbCon = new SqlConnection(SP_SETtConStr());
                 oDbCon.Open();
                 var  oDbAdt = new SqlDataAdapter(ptSql,oDbCon);
                 oDbAdt.Fill(oDbTbl);
@@ -32,16 +32,16 @@ namespace AdaReport.Class.ST_Class
                 throw oEx; 
             }
         }
-
-        public static string SP_SETtConStr(mlDbConfig poDbConfig)
+        public static string SP_SETtConStr()
         {
             StringBuilder oSql = new StringBuilder();
             try
-            { 
-                oSql.AppendLine("Data Source = '"+poDbConfig.tML_Server+"'");
-                oSql.AppendLine(";Initial Catalog = '" + poDbConfig.tML_DbName + "'");
-                oSql.AppendLine(";User ID = '" + poDbConfig.tML_UserName + "'");
-                oSql.AppendLine(";Password = '" + poDbConfig.tML_UserPwd + "'");
+            {
+                var oXmlDb = SP_GEToDbConfigXml();
+                oSql.AppendLine("Data Source = '"+ oXmlDb.Rows[0]["Server"].ToString() + "'");
+                oSql.AppendLine(";Initial Catalog = '" + oXmlDb.Rows[0]["DbName"].ToString() + "'");
+                oSql.AppendLine(";User ID = '" + oXmlDb.Rows[0]["UserDb"].ToString() + "'");
+                oSql.AppendLine(";Password = '" + oXmlDb.Rows[0]["PwdDb"].ToString() + "'");
                 return oSql.ToString();
             }
             catch (Exception oEx)

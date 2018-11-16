@@ -34,3 +34,7 @@ D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\x86\Debug\AdaReport.csproj.Cop
 D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\x86\Debug\AdaReport.exe
 D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\x86\Debug\AdaReport.pdb
 D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\x86\Debug\AdaReport.csprojAssemblyReference.cache
+D:\Project\2018\AdaReport\AdaReport\AdaReport\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\Project\2018\AdaReport\AdaReport\AdaReport\bin\Debug\FlashControlV71.dll
+D:\Project\2018\AdaReport\AdaReport\AdaReport\bin\Debug\ShockwaveFlashObjects.dll
+D:\Project\2018\AdaReport\AdaReport\AdaReport\obj\x86\Debug\AdaReport.Form.wReportView.resources
