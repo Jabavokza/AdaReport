@@ -42,36 +42,31 @@ namespace AdaReport.Form
         private void W_GEToReport()
         {
             DataTable oDbCon = new DataTable();
+            ReportDocument oCryRpt = new ReportDocument();
             try
             {
-                oDbCon = cCNSP.SP_GEToDbConfigXml();
-                ReportDocument oCryRpt = new ReportDocument();
-                TableLogOnInfos oCrtableLogoninfos = new TableLogOnInfos();
-                TableLogOnInfo oCrtableLogoninfo = new TableLogOnInfo();
-                ConnectionInfo oCrConnectionInfo = new ConnectionInfo();
-                Tables oCrTables;
+                var oDt = cCNSP.SP_GEToDbTbl(tW_SqlQuery);
+                oDbCon = cCNSP.SP_GEToDbConfigXml(); 
+                var tServerName = oDbCon.Rows[0]["Server"].ToString();
+                var tDatabaseName = oDbCon.Rows[0]["DbName"].ToString();
+                var tUserID = oDbCon.Rows[0]["UserDb"].ToString();
+                var tPassword = oDbCon.Rows[0]["PwdDb"].ToString();
+
                 var tFileName = "CrystalReport.rpt";
                 var tPathApp = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.LastIndexOf('\\'));
                 var tPath = Path.Combine(tPathApp, @"Report\ServiceDoc\", tFileName);
                 // oCryRpt.Load(tPath);
-                oCryRpt.Load("D:\\Project\\2018\\AdaReport\\AdaReport\\AdaReport\\CrystalReport.rpt");
-                oCrConnectionInfo.ServerName = oDbCon.Rows[0]["Server"].ToString();
-                oCrConnectionInfo.DatabaseName = oDbCon.Rows[0]["DbName"].ToString();
-                oCrConnectionInfo.UserID = oDbCon.Rows[0]["UserDb"].ToString();
-                oCrConnectionInfo.Password = oDbCon.Rows[0]["PwdDb"].ToString();
-
-                oCrTables = oCryRpt.Database.Tables;
-                foreach (Table CrTable in oCrTables)
-                {
-                    oCrtableLogoninfo = CrTable.LogOnInfo;
-                    oCrtableLogoninfo.ConnectionInfo = oCrConnectionInfo;
-                    CrTable.ApplyLogOnInfo(oCrtableLogoninfo);
-                }
-                var oDt = cCNSP.SP_GEToDbTbl(tW_SqlQuery);
-                oCryRpt.SetDataSource(oDt);      
-                ocrCrystalReportViewer.ReportSource = null;
+               // oCryRpt.Load("D:\\Project\\2018\\AdaReport\\AdaReport\\AdaReport\\CrystalReport.rpt");
+                oCryRpt.Load("H:\\GitHub\\AdaReport\\AdaReport\\AdaReport\\CrystalReport.rpt");
+                
+                oCryRpt.DataSourceConnections.Clear();
+                oCryRpt.SetDatabaseLogon(tUserID, tPassword, tServerName, tDatabaseName);
+                oCryRpt.SetDataSource(oDt);
+                oCryRpt.VerifyDatabase();
+                ocrCrystalReportViewer.ReportSource = null; 
                 ocrCrystalReportViewer.ReportSource = oCryRpt;
-                ocrCrystalReportViewer.Refresh();
+
+                ocrCrystalReportViewer.RefreshReport();
             }
             catch (Exception oEx)
             {

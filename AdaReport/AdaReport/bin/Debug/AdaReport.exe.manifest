@@ -48,14 +48,19 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AdaReport.exe" size="247232">
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="MetroFramework.Design" version="1.2.0.3" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AdaReport.exe" size="230848">
       <assemblyIdentity name="AdaReport" version="1.0.0.5" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>kTBEjFG+Jv+dCineoJQI3VLt+2E=</dsig:DigestValue>
+        <dsig:DigestValue>LlSoNM96YlA3rr0mdr5SeMbecjA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -312,14 +317,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="stdole.dll" size="32392">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="stdole.dll" size="32416">
       <assemblyIdentity name="stdole" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0ZbVKIAXzmksiPi/8aAIRLz9NJ0=</dsig:DigestValue>
+        <dsig:DigestValue>ruRC42LnL3fYmJMmx7ED/vII3lU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

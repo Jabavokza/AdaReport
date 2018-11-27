@@ -20,7 +20,7 @@ namespace AdaReport.Form
         {
             try
             {
-                otmOpenPlant.Start();
+               // otmOpenPlant.Start();
                 olaVersion.Text = "v" + Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }
             catch (Exception oEx)
@@ -180,7 +180,8 @@ namespace AdaReport.Form
             StringBuilder oSql = new StringBuilder();
             try
             {
-                oSql.AppendLine("SELECT TCNMEmpMtn.FTEmpFName");
+                oSql.AppendLine("SELECT ");
+                oSql.AppendLine(" TCNMEmpMtn.FTEmpFName");
                 oSql.AppendLine(",TPSTSalVatDT.FTSkuAbbNameSndSrvDoc");
                 oSql.AppendLine(",TPSTSalVatDT.FTSdtBarCode");
                 oSql.AppendLine(",TPSTSalVatDT.FCSdtSalePrice");
@@ -199,10 +200,10 @@ namespace AdaReport.Form
                 oSql.AppendLine(" ON TCNMTerminalMtn.FTTmnNum = TPSTSalVatDT.FTTmnNum)");
                 oSql.AppendLine(" INNER JOIN TCNMEmpMtn");
                 oSql.AppendLine(" ON TCNMTerminalMtn.FTEmpCode = TCNMEmpMtn.FTEmpCode");
-                //oSql.AppendLine(" WHERE RIGHT(TPSTSalVatHD.FTTmnNum,5) ='" + otbTmnNum.Text + "'");
-                //oSql.AppendLine(" AND (TPSTSalVatHD.FTShdTransNo='" + otbTransNo.Text + "') ");
-                //oSql.AppendLine(" AND (TPSTSalVatHD.FDShdTransDate='" + otbTransDate.Text + "')");
-                //oSql.AppendLine(" AND (TPSTSalVatHD.FTXihDocNo='" + otbRFCode.Text + "')");
+                oSql.AppendLine(" WHERE RIGHT(TPSTSalVatHD.FTTmnNum,5) ='" + otbTmnNum.Text + "'");
+                oSql.AppendLine(" AND (TPSTSalVatHD.FTShdTransNo='" + otbTransNo.Text + "') ");
+                oSql.AppendLine(" AND (TPSTSalVatHD.FDShdTransDate='" + otbTransDate.Text + "')");
+                oSql.AppendLine(" AND (TPSTSalVatHD.FTXihDocNo='" + otbRFCode.Text + "')");
                 if (ocbPrintSticker.Checked == true)
                 {
                     tSql = "SELECT FTScfUsrValue FROM TSysConfig WHERE FTScfCode='SvdRFLOGO'";

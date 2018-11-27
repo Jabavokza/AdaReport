@@ -1,7 +1,7 @@
 <Setting>
-  <Server>172.16.30.151</Server>
+  <Server>JABAVOKZA\SQLEXPRESS</Server>
   <UserDb>sa</UserDb>
   <PwdDb>P@ssw0rd</PwdDb>
   <DbName>POSSDB_TesT</DbName>
-  <PlantCode>17KA</PlantCode>
+  <PlantCode>17KB</PlantCode>
 </Setting>
