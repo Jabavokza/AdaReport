@@ -48,19 +48,20 @@
             this.ocmLoadPlant = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ocbDbName = new System.Windows.Forms.ComboBox();
-            this.opbReload = new System.Windows.Forms.PictureBox();
-            this.olaDbNm = new System.Windows.Forms.Label();
-            this.otbServer = new System.Windows.Forms.TextBox();
-            this.olaServer = new System.Windows.Forms.Label();
-            this.olaPassword = new System.Windows.Forms.Label();
-            this.ocmSave = new System.Windows.Forms.Button();
-            this.otbUserPwd = new System.Windows.Forms.TextBox();
-            this.otbUserName = new System.Windows.Forms.TextBox();
-            this.olaUserName = new System.Windows.Forms.Label();
+            this.ocmSavePath = new System.Windows.Forms.Button();
+            this.ocmPathReport = new System.Windows.Forms.Button();
+            this.ocmPathAdaini = new System.Windows.Forms.Button();
+            this.otbPathAdaini = new System.Windows.Forms.TextBox();
+            this.olaPathAdaini = new System.Windows.Forms.Label();
+            this.otbPathReport = new System.Windows.Forms.TextBox();
+            this.olaPathReport = new System.Windows.Forms.Label();
             this.otaTabReport = new System.Windows.Forms.TabPage();
             this.olbReportList = new System.Windows.Forms.ListBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.ocbPrintSticker = new System.Windows.Forms.CheckBox();
+            this.ocmPreview = new System.Windows.Forms.Button();
+            this.olaTmnNum = new System.Windows.Forms.Label();
+            this.otbTmnNum = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.otaTebMain = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -104,14 +105,21 @@
             this.otbDateTime = new System.Windows.Forms.TextBox();
             this.olaOperationDate = new System.Windows.Forms.Label();
             this.otbOperationDate = new System.Windows.Forms.TextBox();
+            this.olaTransNo = new System.Windows.Forms.Label();
+            this.otbTransNo = new System.Windows.Forms.TextBox();
+            this.olaTransDate = new System.Windows.Forms.Label();
+            this.otbTransDate = new System.Windows.Forms.TextBox();
+            this.odtTransDate = new System.Windows.Forms.DateTimePicker();
+            this.olaRFCode = new System.Windows.Forms.Label();
+            this.otbRFCode = new System.Windows.Forms.TextBox();
             this.otoMainControl.SuspendLayout();
             this.otaTebSetting.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.opbReload)).BeginInit();
             this.otaTabReport.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.otaTebMain.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.opbLogin)).BeginInit();
@@ -204,6 +212,7 @@
             this.otoSetting.Text = "Setting";
             this.otoSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.otoSetting.Visible = false;
+            this.otoSetting.Click += new System.EventHandler(this.otoSetting_Click);
             // 
             // otoLogout
             // 
@@ -250,12 +259,13 @@
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.olaServerName);
             this.groupBox4.Controls.Add(this.olalbel);
-            this.groupBox4.Location = new System.Drawing.Point(456, 6);
+            this.groupBox4.Location = new System.Drawing.Point(659, 13);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(330, 61);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Status";
+            this.groupBox4.Visible = false;
             // 
             // olaDbName
             // 
@@ -297,12 +307,13 @@
             // 
             this.groupBox3.Controls.Add(this.ocmLoadPlant);
             this.groupBox3.Controls.Add(this.dataGridView2);
-            this.groupBox3.Location = new System.Drawing.Point(456, 71);
+            this.groupBox3.Location = new System.Drawing.Point(659, 80);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(330, 333);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "SelectPlant";
+            this.groupBox3.Visible = false;
             // 
             // ocmLoadPlant
             // 
@@ -326,117 +337,89 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.ocbDbName);
-            this.groupBox1.Controls.Add(this.opbReload);
-            this.groupBox1.Controls.Add(this.olaDbNm);
-            this.groupBox1.Controls.Add(this.otbServer);
-            this.groupBox1.Controls.Add(this.olaServer);
-            this.groupBox1.Controls.Add(this.olaPassword);
-            this.groupBox1.Controls.Add(this.ocmSave);
-            this.groupBox1.Controls.Add(this.otbUserPwd);
-            this.groupBox1.Controls.Add(this.otbUserName);
-            this.groupBox1.Controls.Add(this.olaUserName);
-            this.groupBox1.Location = new System.Drawing.Point(68, 38);
+            this.groupBox1.Controls.Add(this.ocmSavePath);
+            this.groupBox1.Controls.Add(this.ocmPathReport);
+            this.groupBox1.Controls.Add(this.ocmPathAdaini);
+            this.groupBox1.Controls.Add(this.otbPathAdaini);
+            this.groupBox1.Controls.Add(this.olaPathAdaini);
+            this.groupBox1.Controls.Add(this.otbPathReport);
+            this.groupBox1.Controls.Add(this.olaPathReport);
+            this.groupBox1.Location = new System.Drawing.Point(30, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(330, 365);
+            this.groupBox1.Size = new System.Drawing.Size(571, 151);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "SettingDatabase";
+            this.groupBox1.Text = "SettingPathFile";
             // 
-            // ocbDbName
+            // ocmSavePath
             // 
-            this.ocbDbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.ocbDbName.FormattingEnabled = true;
-            this.ocbDbName.Location = new System.Drawing.Point(103, 144);
-            this.ocbDbName.Name = "ocbDbName";
-            this.ocbDbName.Size = new System.Drawing.Size(173, 24);
-            this.ocbDbName.TabIndex = 10;
+            this.ocmSavePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.ocmSavePath.Image = ((System.Drawing.Image)(resources.GetObject("ocmSavePath.Image")));
+            this.ocmSavePath.Location = new System.Drawing.Point(244, 101);
+            this.ocmSavePath.Name = "ocmSavePath";
+            this.ocmSavePath.Size = new System.Drawing.Size(95, 40);
+            this.ocmSavePath.TabIndex = 13;
+            this.ocmSavePath.Text = "Save";
+            this.ocmSavePath.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ocmSavePath.UseVisualStyleBackColor = true;
             // 
-            // opbReload
+            // ocmPathReport
             // 
-            this.opbReload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.opbReload.Image = ((System.Drawing.Image)(resources.GetObject("opbReload.Image")));
-            this.opbReload.Location = new System.Drawing.Point(282, 140);
-            this.opbReload.Name = "opbReload";
-            this.opbReload.Size = new System.Drawing.Size(32, 32);
-            this.opbReload.TabIndex = 9;
-            this.opbReload.TabStop = false;
+            this.ocmPathReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.ocmPathReport.Image = ((System.Drawing.Image)(resources.GetObject("ocmPathReport.Image")));
+            this.ocmPathReport.Location = new System.Drawing.Point(512, 64);
+            this.ocmPathReport.Name = "ocmPathReport";
+            this.ocmPathReport.Size = new System.Drawing.Size(43, 35);
+            this.ocmPathReport.TabIndex = 12;
+            this.ocmPathReport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ocmPathReport.UseVisualStyleBackColor = true;
             // 
-            // olaDbNm
+            // ocmPathAdaini
             // 
-            this.olaDbNm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.olaDbNm.Location = new System.Drawing.Point(20, 145);
-            this.olaDbNm.Name = "olaDbNm";
-            this.olaDbNm.Size = new System.Drawing.Size(77, 23);
-            this.olaDbNm.TabIndex = 8;
-            this.olaDbNm.Text = "DataBase";
-            this.olaDbNm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ocmPathAdaini.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.ocmPathAdaini.Image = ((System.Drawing.Image)(resources.GetObject("ocmPathAdaini.Image")));
+            this.ocmPathAdaini.Location = new System.Drawing.Point(512, 26);
+            this.ocmPathAdaini.Name = "ocmPathAdaini";
+            this.ocmPathAdaini.Size = new System.Drawing.Size(43, 35);
+            this.ocmPathAdaini.TabIndex = 11;
+            this.ocmPathAdaini.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ocmPathAdaini.UseVisualStyleBackColor = true;
             // 
-            // otbServer
+            // otbPathAdaini
             // 
-            this.otbServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.otbServer.Location = new System.Drawing.Point(103, 33);
-            this.otbServer.Name = "otbServer";
-            this.otbServer.Size = new System.Drawing.Size(173, 22);
-            this.otbServer.TabIndex = 0;
+            this.otbPathAdaini.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.otbPathAdaini.Location = new System.Drawing.Point(103, 33);
+            this.otbPathAdaini.Name = "otbPathAdaini";
+            this.otbPathAdaini.Size = new System.Drawing.Size(403, 22);
+            this.otbPathAdaini.TabIndex = 0;
             // 
-            // olaServer
+            // olaPathAdaini
             // 
-            this.olaServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.olaServer.Location = new System.Drawing.Point(20, 33);
-            this.olaServer.Name = "olaServer";
-            this.olaServer.Size = new System.Drawing.Size(77, 23);
-            this.olaServer.TabIndex = 1;
-            this.olaServer.Text = "Server";
-            this.olaServer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.olaPathAdaini.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.olaPathAdaini.Location = new System.Drawing.Point(20, 33);
+            this.olaPathAdaini.Name = "olaPathAdaini";
+            this.olaPathAdaini.Size = new System.Drawing.Size(77, 23);
+            this.olaPathAdaini.TabIndex = 1;
+            this.olaPathAdaini.Text = "Path Adaini";
+            this.olaPathAdaini.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // olaPassword
+            // otbPathReport
             // 
-            this.olaPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.olaPassword.Location = new System.Drawing.Point(20, 107);
-            this.olaPassword.Name = "olaPassword";
-            this.olaPassword.Size = new System.Drawing.Size(77, 23);
-            this.olaPassword.TabIndex = 6;
-            this.olaPassword.Text = "Password";
-            this.olaPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.otbPathReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.otbPathReport.Location = new System.Drawing.Point(103, 70);
+            this.otbPathReport.Name = "otbPathReport";
+            this.otbPathReport.Size = new System.Drawing.Size(403, 22);
+            this.otbPathReport.TabIndex = 3;
             // 
-            // ocmSave
+            // olaPathReport
             // 
-            this.ocmSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.ocmSave.Image = ((System.Drawing.Image)(resources.GetObject("ocmSave.Image")));
-            this.ocmSave.Location = new System.Drawing.Point(189, 188);
-            this.ocmSave.Name = "ocmSave";
-            this.ocmSave.Size = new System.Drawing.Size(89, 43);
-            this.ocmSave.TabIndex = 2;
-            this.ocmSave.Text = "Save";
-            this.ocmSave.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.ocmSave.UseVisualStyleBackColor = true;
-            // 
-            // otbUserPwd
-            // 
-            this.otbUserPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.otbUserPwd.Location = new System.Drawing.Point(103, 107);
-            this.otbUserPwd.Name = "otbUserPwd";
-            this.otbUserPwd.Size = new System.Drawing.Size(173, 22);
-            this.otbUserPwd.TabIndex = 5;
-            // 
-            // otbUserName
-            // 
-            this.otbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.otbUserName.Location = new System.Drawing.Point(103, 70);
-            this.otbUserName.Name = "otbUserName";
-            this.otbUserName.Size = new System.Drawing.Size(173, 22);
-            this.otbUserName.TabIndex = 3;
-            // 
-            // olaUserName
-            // 
-            this.olaUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.olaUserName.Location = new System.Drawing.Point(20, 70);
-            this.olaUserName.Name = "olaUserName";
-            this.olaUserName.Size = new System.Drawing.Size(77, 23);
-            this.olaUserName.TabIndex = 4;
-            this.olaUserName.Text = "UserName";
-            this.olaUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.olaPathReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.olaPathReport.Location = new System.Drawing.Point(20, 70);
+            this.olaPathReport.Name = "olaPathReport";
+            this.olaPathReport.Size = new System.Drawing.Size(77, 23);
+            this.olaPathReport.TabIndex = 4;
+            this.olaPathReport.Text = "Path Report";
+            this.olaPathReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // otaTabReport
             // 
@@ -457,7 +440,7 @@
             this.olbReportList.FormattingEnabled = true;
             this.olbReportList.ItemHeight = 20;
             this.olbReportList.Items.AddRange(new object[] {
-            "Report - Employee",
+            "Report - PermissionDelivery",
             "Report - Divition Sale",
             "Report - Department/Class Sale",
             "Report - Merchandise Sale",
@@ -481,14 +464,62 @@
             this.olbReportList.ScrollAlwaysVisible = true;
             this.olbReportList.Size = new System.Drawing.Size(366, 364);
             this.olbReportList.TabIndex = 13;
-            this.olbReportList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.olbReportList_MouseDoubleClick);
+            this.olbReportList.SelectedIndexChanged += new System.EventHandler(this.olbReportList_SelectedIndexChanged);
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.olaRFCode);
+            this.panel6.Controls.Add(this.otbRFCode);
+            this.panel6.Controls.Add(this.odtTransDate);
+            this.panel6.Controls.Add(this.olaTransDate);
+            this.panel6.Controls.Add(this.otbTransDate);
+            this.panel6.Controls.Add(this.olaTransNo);
+            this.panel6.Controls.Add(this.otbTransNo);
+            this.panel6.Controls.Add(this.ocbPrintSticker);
+            this.panel6.Controls.Add(this.ocmPreview);
+            this.panel6.Controls.Add(this.olaTmnNum);
+            this.panel6.Controls.Add(this.otbTmnNum);
             this.panel6.Location = new System.Drawing.Point(471, 36);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(429, 381);
+            this.panel6.Size = new System.Drawing.Size(462, 381);
             this.panel6.TabIndex = 12;
+            // 
+            // ocbPrintSticker
+            // 
+            this.ocbPrintSticker.AutoSize = true;
+            this.ocbPrintSticker.Location = new System.Drawing.Point(127, 131);
+            this.ocbPrintSticker.Name = "ocbPrintSticker";
+            this.ocbPrintSticker.Size = new System.Drawing.Size(91, 17);
+            this.ocbPrintSticker.TabIndex = 4;
+            this.ocbPrintSticker.Text = "ปริ้นสติกเกอร์";
+            this.ocbPrintSticker.UseVisualStyleBackColor = true;
+            // 
+            // ocmPreview
+            // 
+            this.ocmPreview.Location = new System.Drawing.Point(127, 164);
+            this.ocmPreview.Name = "ocmPreview";
+            this.ocmPreview.Size = new System.Drawing.Size(87, 42);
+            this.ocmPreview.TabIndex = 2;
+            this.ocmPreview.Text = "Preview";
+            this.ocmPreview.UseVisualStyleBackColor = true;
+            this.ocmPreview.Click += new System.EventHandler(this.ocmPreview_Click);
+            // 
+            // olaTmnNum
+            // 
+            this.olaTmnNum.AutoSize = true;
+            this.olaTmnNum.Location = new System.Drawing.Point(50, 50);
+            this.olaTmnNum.Name = "olaTmnNum";
+            this.olaTmnNum.Size = new System.Drawing.Size(50, 13);
+            this.olaTmnNum.TabIndex = 1;
+            this.olaTmnNum.Text = "TmnNum";
+            // 
+            // otbTmnNum
+            // 
+            this.otbTmnNum.Location = new System.Drawing.Point(127, 45);
+            this.otbTmnNum.Name = "otbTmnNum";
+            this.otbTmnNum.Size = new System.Drawing.Size(76, 20);
+            this.otbTmnNum.TabIndex = 0;
+            this.otbTmnNum.Text = "55555";
             // 
             // label3
             // 
@@ -558,6 +589,7 @@
             this.otbUsrName.Name = "otbUsrName";
             this.otbUsrName.Size = new System.Drawing.Size(118, 22);
             this.otbUsrName.TabIndex = 20;
+            this.otbUsrName.Text = "admin";
             // 
             // ocmOk
             // 
@@ -609,6 +641,7 @@
             this.otbUsrPwd.PasswordChar = '*';
             this.otbUsrPwd.Size = new System.Drawing.Size(118, 22);
             this.otbUsrPwd.TabIndex = 21;
+            this.otbUsrPwd.Text = "3971";
             // 
             // label1
             // 
@@ -629,9 +662,9 @@
             this.olaDateTame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.olaDateTame.Image = ((System.Drawing.Image)(resources.GetObject("olaDateTame.Image")));
             this.olaDateTame.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.olaDateTame.Location = new System.Drawing.Point(785, 63);
+            this.olaDateTame.Location = new System.Drawing.Point(765, 63);
             this.olaDateTame.Name = "olaDateTame";
-            this.olaDateTame.Size = new System.Drawing.Size(98, 22);
+            this.olaDateTame.Size = new System.Drawing.Size(118, 22);
             this.olaDateTame.TabIndex = 4;
             this.olaDateTame.Text = "Date Time :";
             this.olaDateTame.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -897,7 +930,64 @@
             this.otbOperationDate.Name = "otbOperationDate";
             this.otbOperationDate.Size = new System.Drawing.Size(120, 22);
             this.otbOperationDate.TabIndex = 29;
-            this.otbOperationDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // olaTransNo
+            // 
+            this.olaTransNo.AutoSize = true;
+            this.olaTransNo.Location = new System.Drawing.Point(50, 76);
+            this.olaTransNo.Name = "olaTransNo";
+            this.olaTransNo.Size = new System.Drawing.Size(48, 13);
+            this.olaTransNo.TabIndex = 6;
+            this.olaTransNo.Text = "TransNo";
+            // 
+            // otbTransNo
+            // 
+            this.otbTransNo.Location = new System.Drawing.Point(127, 71);
+            this.otbTransNo.Name = "otbTransNo";
+            this.otbTransNo.Size = new System.Drawing.Size(76, 20);
+            this.otbTransNo.TabIndex = 5;
+            this.otbTransNo.Text = "00149";
+            // 
+            // olaTransDate
+            // 
+            this.olaTransDate.AutoSize = true;
+            this.olaTransDate.Location = new System.Drawing.Point(50, 102);
+            this.olaTransDate.Name = "olaTransDate";
+            this.olaTransDate.Size = new System.Drawing.Size(57, 13);
+            this.olaTransDate.TabIndex = 8;
+            this.olaTransDate.Text = "TransDate";
+            // 
+            // otbTransDate
+            // 
+            this.otbTransDate.Location = new System.Drawing.Point(333, 95);
+            this.otbTransDate.Name = "otbTransDate";
+            this.otbTransDate.Size = new System.Drawing.Size(93, 20);
+            this.otbTransDate.TabIndex = 7;
+            this.otbTransDate.Text = "2018-11-21 00:00:00.000";
+            // 
+            // odtTransDate
+            // 
+            this.odtTransDate.Location = new System.Drawing.Point(127, 96);
+            this.odtTransDate.Name = "odtTransDate";
+            this.odtTransDate.Size = new System.Drawing.Size(200, 20);
+            this.odtTransDate.TabIndex = 9;
+            // 
+            // olaRFCode
+            // 
+            this.olaRFCode.AutoSize = true;
+            this.olaRFCode.Location = new System.Drawing.Point(50, 24);
+            this.olaRFCode.Name = "olaRFCode";
+            this.olaRFCode.Size = new System.Drawing.Size(50, 13);
+            this.olaRFCode.TabIndex = 11;
+            this.olaRFCode.Text = "TmnNum";
+            // 
+            // otbRFCode
+            // 
+            this.otbRFCode.Location = new System.Drawing.Point(127, 19);
+            this.otbRFCode.Name = "otbRFCode";
+            this.otbRFCode.Size = new System.Drawing.Size(91, 20);
+            this.otbRFCode.TabIndex = 10;
+            this.otbRFCode.Text = "RF0000000006";
             // 
             // wMain
             // 
@@ -926,9 +1016,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.opbReload)).EndInit();
             this.otaTabReport.ResumeLayout(false);
             this.otaTabReport.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.otaTebMain.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -960,16 +1051,10 @@
         private System.Windows.Forms.Button ocmLoadPlant;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox ocbDbName;
-        private System.Windows.Forms.PictureBox opbReload;
-        private System.Windows.Forms.Label olaDbNm;
-        private System.Windows.Forms.TextBox otbServer;
-        private System.Windows.Forms.Label olaServer;
-        private System.Windows.Forms.Label olaPassword;
-        private System.Windows.Forms.Button ocmSave;
-        private System.Windows.Forms.TextBox otbUserPwd;
-        private System.Windows.Forms.TextBox otbUserName;
-        private System.Windows.Forms.Label olaUserName;
+        private System.Windows.Forms.TextBox otbPathAdaini;
+        private System.Windows.Forms.Label olaPathAdaini;
+        private System.Windows.Forms.TextBox otbPathReport;
+        private System.Windows.Forms.Label olaPathReport;
         private System.Windows.Forms.TabPage otaTabReport;
         private System.Windows.Forms.TabPage otaTebMain;
         private System.Windows.Forms.TabControl otaTebControl;
@@ -1017,6 +1102,20 @@
         private System.Windows.Forms.Label olaOperationDate;
         internal System.Windows.Forms.TextBox otbOperationDate;
         private System.Windows.Forms.ToolStripButton otoExit;
+        private System.Windows.Forms.Button ocmPathAdaini;
+        private System.Windows.Forms.Button ocmPathReport;
+        private System.Windows.Forms.Button ocmSavePath;
+        private System.Windows.Forms.Button ocmPreview;
+        private System.Windows.Forms.Label olaTmnNum;
+        private System.Windows.Forms.TextBox otbTmnNum;
+        private System.Windows.Forms.CheckBox ocbPrintSticker;
+        private System.Windows.Forms.Label olaTransDate;
+        private System.Windows.Forms.TextBox otbTransDate;
+        private System.Windows.Forms.Label olaTransNo;
+        private System.Windows.Forms.TextBox otbTransNo;
+        private System.Windows.Forms.DateTimePicker odtTransDate;
+        private System.Windows.Forms.Label olaRFCode;
+        private System.Windows.Forms.TextBox otbRFCode;
     }
 }
 

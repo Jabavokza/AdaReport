@@ -1,5 +1,4 @@
-﻿using AdaReport.Class.Models;
-using AdaReport.Class.ST_Class;
+﻿using AdaReport.Class.ST_Class;
 using MetroFramework.Forms;
 using System;
 using System.Data;
@@ -56,33 +55,13 @@ namespace AdaReport.Form
         {
             try
             {
-                //string tSql = "Select * From customer";
-                //string tConstr = "Data Source=ADAAMORN\\SQLEXPRESS;Initial Catalog=TestReport;User ID=sa;Password=P@ssw0rd";
-                //var oResult = cCNSP.SP_GEToDbTbl(tSql, tConstr);
-                //CrystalReport oCrystalReport = new CrystalReport();
-                //oCrystalReport.SetDataSource(oResult);
-                //crystalReportViewer.ReportSource = oCrystalReport;
-                //crystalReportViewer.Refresh();
-                //var oSql = new StringBuilder();
-                //oSql.AppendLine("SELECT [FTEmpFName] FROM [TCNMEmpMtn]");
-                //var oResult = cCNSP.SP_GEToDbTbl(oSql.ToString());
-                //UserLogin oUserLogin = new UserLogin();0
-                //oUserLogin.SetDataSource(oResult);
-                //wReportView oReportView = new wReportView();
-                //oReportView.olaHeader.Text = olbReportList.Text;
-                //oReportView.ocrReportView.ReportSource = oUserLogin;
-                //oReportView.ocrReportView.Refresh();
-                //oReportView.Show();
 
-                wReportView oReportView = new wReportView();
-                oReportView.olaHeader.Text = olbReportList.Text;
-                oReportView.Show();
             }
             catch (Exception oEx)
             {
-                MessageBox.Show(oEx.Message); 
+                MessageBox.Show(oEx.Message);
             }
-           
+
         }
         private void otoLogout_Click(object sender, EventArgs e)
         {
@@ -125,7 +104,7 @@ namespace AdaReport.Form
                     otaTebControl.SelectedTab = otaTabReport;
                     otoLogout.Enabled = true;
                     ostUserDT.Text = oEmpFCode.Rows[0]["FTEmpCode"].ToString();
-                    otoRptPreview.Visible = true;
+                    //  otoRptPreview.Visible = true;
                     otoPlantDB.Visible = false;
                     log.Info(ostUserDT.Text + ": Login Successful");
                 }
@@ -164,12 +143,12 @@ namespace AdaReport.Form
             otbDateTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         }
 
-        private void olbReportList_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            wReportView oReportView = new wReportView();
-            oReportView.olaHeader.Text = olbReportList.Text;
-            oReportView.Show();
-        }
+        //private void olbReportList_MouseDoubleClick(object sender, MouseEventArgs e)
+        //{
+        //    wReportView oReportView = new wReportView();
+        //    oReportView.olaHeader.Text = olbReportList.Text;
+        //    oReportView.Show();
+        //}
 
         private void otoExit_Click(object sender, EventArgs e)
         {
@@ -181,7 +160,7 @@ namespace AdaReport.Form
             try
             {
                 var tSql = "SELECT [FDCdtDate] FROM [TSysChgDateTime]";
-                var tOperationDate= cCNSP.SP_GEToDbTbl(tSql);
+                var tOperationDate = cCNSP.SP_GEToDbTbl(tSql);
                 return tOperationDate.Rows[0]["FDCdtDate"].ToString();
             }
             catch (Exception oEx)
@@ -189,6 +168,78 @@ namespace AdaReport.Form
                 throw oEx;
             }
         }
+
+        private void otoSetting_Click(object sender, EventArgs e)
+        {
+            otaTebControl.SelectedTab = otaTebSetting;
+        }
+
+        private void ocmPreview_Click(object sender, EventArgs e)
+        {
+            string tSql;
+            StringBuilder oSql = new StringBuilder();
+            try
+            {
+                oSql.AppendLine("SELECT TCNMEmpMtn.FTEmpFName");
+                oSql.AppendLine(",TPSTSalVatDT.FTSkuAbbNameSndSrvDoc");
+                oSql.AppendLine(",TPSTSalVatDT.FTSdtBarCode");
+                oSql.AppendLine(",TPSTSalVatDT.FCSdtSalePrice");
+                oSql.AppendLine(",TPSTSalVatDT.FTSdtDisChgTxt");
+                oSql.AppendLine(",TPSTSalVatHD.FTTmnNum");
+                oSql.AppendLine(",TPSTSalVatHD.FTShdTransNo");
+                oSql.AppendLine(",TPSTSalVatHD.FDShdTransDate");
+                oSql.AppendLine(",TPSTSalVatHD.FTXihDocNo");
+                oSql.AppendLine(",TPSTSalVatHD.FDXihDocDate");
+                oSql.AppendLine(",RIGHT(TPSTSalVatHD.FTXihDocRun, 6)AS FTXihDocRun");
+                oSql.AppendLine(" FROM ((TCNMTerminalMtn");
+                oSql.AppendLine(" INNER JOIN TPSTSalVatHD");
+                oSql.AppendLine(" ON(TCNMTerminalMtn.FTEmpCode= TPSTSalVatHD.FTEmpCode)");
+                oSql.AppendLine(" AND(TCNMTerminalMtn.FTTmnNum = TPSTSalVatHD.FTTmnNum))");
+                oSql.AppendLine(" INNER JOIN TPSTSalVatDT");
+                oSql.AppendLine(" ON TCNMTerminalMtn.FTTmnNum = TPSTSalVatDT.FTTmnNum)");
+                oSql.AppendLine(" INNER JOIN TCNMEmpMtn");
+                oSql.AppendLine(" ON TCNMTerminalMtn.FTEmpCode = TCNMEmpMtn.FTEmpCode");
+                //oSql.AppendLine(" WHERE RIGHT(TPSTSalVatHD.FTTmnNum,5) ='" + otbTmnNum.Text + "'");
+                //oSql.AppendLine(" AND (TPSTSalVatHD.FTShdTransNo='" + otbTransNo.Text + "') ");
+                //oSql.AppendLine(" AND (TPSTSalVatHD.FDShdTransDate='" + otbTransDate.Text + "')");
+                //oSql.AppendLine(" AND (TPSTSalVatHD.FTXihDocNo='" + otbRFCode.Text + "')");
+                if (ocbPrintSticker.Checked == true)
+                {
+                    tSql = "SELECT FTScfUsrValue FROM TSysConfig WHERE FTScfCode='SvdRFLOGO'";
+                }
+                else
+                {
+                    tSql = "";
+                }
+                wReportView oReportView = new wReportView(oSql.ToString() + tSql);
+                oReportView.olaHeader.Text = olbReportList.Text;
+                oReportView.Show();
+            }
+            catch (Exception oEx)
+            {
+                throw oEx;
+            }
+        }
+
+        private void olbReportList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (olbReportList.SelectedItem.ToString() == "Report - PermissionDelivery")
+                {
+                  //  olaTmnNum.Visible = true;
+                  ////  olaEx.Visible = true;
+                  //  otbTmnNum.Visible = true;
+                  //  ocmPreview.Visible = true;
+
+                }
+            }
+            catch (Exception oEx)
+            {
+                throw oEx;
+            }
+        }
+
     }
 }
 

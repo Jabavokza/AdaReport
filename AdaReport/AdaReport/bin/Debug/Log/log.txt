@@ -1,1 +1,154 @@
 [16/11/2018 18:31:04,SSS] [INFO   ] wMain:130 (1) - 1: Login Successful
+[16/11/2018 18:35:13,SSS] [INFO   ] wMain:130 (1) - 1: Login Successful
+[20/11/2018 09:10:40,SSS] [INFO   ] wMain:130 (1) - 1: Login Successful
+[20/11/2018 09:11:13,SSS] [INFO   ] wMain:130 (1) - 1: Login Successful
+[20/11/2018 09:37:36,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 09:38:45,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 09:40:20,SSS] [ERROR  ] cReadFileMdb:35 (1) - The Microsoft Jet database engine cannot find the input table or query 'TConfigPlant'.  Make sure it exists and that its name is spelled correctly.
+[20/11/2018 09:40:27,SSS] [ERROR  ] wPlant:44 (1) - The Microsoft Jet database engine cannot find the input table or query 'TConfigPlant'.  Make sure it exists and that its name is spelled correctly.
+[20/11/2018 09:43:31,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 09:45:45,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 09:47:39,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 09:59:29,SSS] [INFO   ] wMain:135 (1) - UserName or Password InValidate
+[20/11/2018 09:59:31,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 10:01:11,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 10:04:26,SSS] [INFO   ] wMain:135 (1) - UserName or Password InValidate
+[20/11/2018 10:04:36,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 10:06:14,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 10:07:31,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 10:08:25,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 10:53:13,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 11:19:43,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 11:20:45,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 11:21:09,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 11:22:21,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 11:23:32,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 11:25:14,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 11:32:47,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 11:34:11,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 11:36:12,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 11:37:55,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 11:48:39,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 11:50:22,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 11:51:52,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 11:59:59,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 12:35:07,SSS] [INFO   ] wMain:131 (1) - Admin: Login Successful
+[20/11/2018 14:24:21,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:24:21,SSS] [ERROR  ] wMain:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:24:28,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:24:28,SSS] [ERROR  ] cCNSP:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:24:30,SSS] [ERROR  ] wMain:144 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]Object reference not set to an instance of an object.
+[20/11/2018 14:24:39,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:24:39,SSS] [ERROR  ] wMain:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:24:40,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:24:40,SSS] [ERROR  ] cCNSP:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:24:41,SSS] [ERROR  ] wMain:144 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]Object reference not set to an instance of an object.
+[20/11/2018 14:25:09,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:25:09,SSS] [ERROR  ] wMain:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:25:14,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:25:14,SSS] [ERROR  ] cCNSP:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:25:15,SSS] [ERROR  ] wMain:144 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]Object reference not set to an instance of an object.
+[20/11/2018 14:25:31,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:25:31,SSS] [ERROR  ] wMain:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:25:36,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:25:36,SSS] [ERROR  ] cCNSP:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:25:38,SSS] [ERROR  ] wMain:144 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]Object reference not set to an instance of an object.
+[20/11/2018 14:28:56,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:28:56,SSS] [ERROR  ] wMain:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:29:15,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:29:15,SSS] [ERROR  ] cCNSP:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:29:17,SSS] [ERROR  ] wMain:144 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]Object reference not set to an instance of an object.
+[20/11/2018 14:29:25,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:29:25,SSS] [ERROR  ] cCNSP:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:29:26,SSS] [ERROR  ] wMain:144 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]Object reference not set to an instance of an object.
+[20/11/2018 14:29:28,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:29:28,SSS] [ERROR  ] cCNSP:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:29:29,SSS] [ERROR  ] wMain:144 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]Object reference not set to an instance of an object.
+[20/11/2018 14:29:31,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:29:31,SSS] [ERROR  ] cCNSP:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:29:32,SSS] [ERROR  ] wMain:144 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]Object reference not set to an instance of an object.
+[20/11/2018 14:29:35,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:29:35,SSS] [ERROR  ] cCNSP:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:29:38,SSS] [ERROR  ] wMain:144 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]Object reference not set to an instance of an object.
+[20/11/2018 14:30:21,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:30:21,SSS] [ERROR  ] wMain:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:30:40,SSS] [ERROR  ] wPlant:133 (1) - The process cannot access the file 'D:\Project\2018\AdaReport\AdaReport\AdaReport\bin\Debug\AdaDbSetting.xml' because it is being used by another process.
+[20/11/2018 14:30:40,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:30:40,SSS] [ERROR  ] wMain:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:31:17,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:31:17,SSS] [ERROR  ] wMain:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:31:23,SSS] [ERROR  ] wPlant:133 (1) - The process cannot access the file 'D:\Project\2018\AdaReport\AdaReport\AdaReport\bin\Debug\AdaDbSetting.xml' because it is being used by another process.
+[20/11/2018 14:31:23,SSS] [ERROR  ] cCNSP:70 (1) - Configuration system failed to initialize
+[20/11/2018 14:31:23,SSS] [ERROR  ] wMain:49 (1) - Object reference not set to an instance of an object.
+[20/11/2018 14:38:08,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 14:56:33,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 14:59:13,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 15:00:38,SSS] [INFO   ] wMain:135 (1) - UserName or Password InValidate
+[20/11/2018 15:00:45,SSS] [INFO   ] wMain:135 (1) - UserName or Password InValidate
+[20/11/2018 15:00:52,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 15:10:36,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 15:24:48,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[20/11/2018 15:26:04,SSS] [INFO   ] wMain:130 (1) - Admin: Login Successful
+[26/11/2018 09:45:30,SSS] [ERROR  ] cCNSP:31 (1) - Incorrect syntax near the keyword 'INNER'.
+[26/11/2018 09:50:25,SSS] [ERROR  ] cCNSP:31 (1) - Incorrect syntax near '='.
+[26/11/2018 09:57:38,SSS] [INFO   ] wMain:114 (1) - Admin: Login Successful
+[26/11/2018 10:04:25,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 10:13:39,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 10:14:49,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 10:18:00,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 10:19:11,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 10:23:25,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 11:16:43,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 11:33:22,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 11:35:27,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 11:36:51,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 11:40:14,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 11:50:49,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 11:54:40,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 12:07:16,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 12:09:52,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 12:15:14,SSS] [INFO   ] wMain:110 (1) - Admin: Login Successful
+[26/11/2018 16:00:19,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 16:11:24,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 16:17:37,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 16:18:15,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 16:32:21,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 16:33:10,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 16:59:18,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 17:00:21,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 17:01:14,SSS] [ERROR  ] cCNSP:31 (1) - Ambiguous column name 'FTTmnNum'.
+Ambiguous column name 'FTShdTransNo'.
+Ambiguous column name 'FDShdTransDate'.
+[26/11/2018 17:02:01,SSS] [INFO   ] wMain:114 (1) - UserName or Password InValidate
+[26/11/2018 17:02:05,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 17:45:52,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 17:48:17,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 17:53:34,SSS] [INFO   ] wMain:114 (1) - UserName or Password InValidate
+[26/11/2018 17:53:37,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 17:53:57,SSS] [ERROR  ] cCNSP:31 (1) - Incorrect syntax near ')'.
+[26/11/2018 17:59:14,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 18:02:34,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 18:16:37,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 18:17:58,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 18:19:32,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[26/11/2018 18:38:10,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 15:54:09,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 15:58:09,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 15:59:10,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 16:01:43,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 16:04:21,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 16:07:32,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 16:12:27,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 16:13:20,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 16:28:56,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 17:43:52,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 17:44:21,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 17:44:45,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 17:45:30,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 17:53:08,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 18:03:05,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 18:03:36,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 18:04:15,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 18:06:58,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 18:09:56,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[27/11/2018 18:15:01,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful

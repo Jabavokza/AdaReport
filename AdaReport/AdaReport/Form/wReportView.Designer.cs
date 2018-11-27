@@ -28,25 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ocrReportView = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.olaHeader = new MetroFramework.Controls.MetroLabel();
-            this.CrystalReport1 = new AdaReport.CrystalReport();
-            this.CrystalReport2 = new AdaReport.CrystalReport();
+            this.ocrCrystalReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
-            // 
-            // ocrReportView
-            // 
-            this.ocrReportView.ActiveViewIndex = -1;
-            this.ocrReportView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ocrReportView.AutoSize = true;
-            this.ocrReportView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ocrReportView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ocrReportView.Location = new System.Drawing.Point(23, 63);
-            this.ocrReportView.Name = "ocrReportView";
-            this.ocrReportView.Size = new System.Drawing.Size(978, 514);
-            this.ocrReportView.TabIndex = 0;
             // 
             // olaHeader
             // 
@@ -58,13 +42,27 @@
             this.olaHeader.Text = "HD";
             this.olaHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ocrCrystalReportViewer
+            // 
+            this.ocrCrystalReportViewer.ActiveViewIndex = -1;
+            this.ocrCrystalReportViewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ocrCrystalReportViewer.AutoSize = true;
+            this.ocrCrystalReportViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ocrCrystalReportViewer.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ocrCrystalReportViewer.Location = new System.Drawing.Point(23, 63);
+            this.ocrCrystalReportViewer.Name = "ocrCrystalReportViewer";
+            this.ocrCrystalReportViewer.Size = new System.Drawing.Size(978, 488);
+            this.ocrCrystalReportViewer.TabIndex = 2;
+            // 
             // wReportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 600);
+            this.Controls.Add(this.ocrCrystalReportViewer);
             this.Controls.Add(this.olaHeader);
-            this.Controls.Add(this.ocrReportView);
             this.Name = "wReportView";
             this.Text = "ReportView";
             this.Load += new System.EventHandler(this.wReportView_Load);
@@ -74,9 +72,7 @@
         }
 
         #endregion
-        public CrystalDecisions.Windows.Forms.CrystalReportViewer ocrReportView;
         public MetroFramework.Controls.MetroLabel olaHeader;
-        private CrystalReport CrystalReport1;
-        private CrystalReport CrystalReport2;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer ocrCrystalReportViewer;
     }
 }

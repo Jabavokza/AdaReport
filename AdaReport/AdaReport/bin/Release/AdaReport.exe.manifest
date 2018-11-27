@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
   <asmv1:assemblyIdentity name="AdaReport.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
-  <description asmv2:iconFile="AppLogo.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <description asmv2:iconFile="Resources\AppLogo.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="AdaReport" version="1.0.0.4" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="AdaReport" version="1.0.0.5" language="neutral" processorArchitecture="x86" />
     <commandLine file="AdaReport.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -48,14 +48,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AdaReport.exe" size="104384">
-      <assemblyIdentity name="AdaReport" version="1.0.0.4" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AdaReport.exe" size="208320">
+      <assemblyIdentity name="AdaReport" version="1.0.0.5" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>pZcjokZUhVcyzhdd2S1t8czfoRY=</dsig:DigestValue>
+        <dsig:DigestValue>jyeDSIXnCWEASVJZ7JFRnVl3yiY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -332,15 +332,6 @@
       <dsig:DigestValue>6Aq7kOJLBTbQlSKn2nFQbvnAChM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="AppLogo.ico" size="4286">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>sHDidRR3Wp5jN6CN0kVmyZJjTtg=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="MetroFramework.txt" size="1266">
     <hash>
       <dsig:Transforms>
@@ -348,6 +339,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>stPTy3HPMmd9qXumY3eSJoiPW0o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\AppLogo.ico" size="4286">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>sHDidRR3Wp5jN6CN0kVmyZJjTtg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\Refresh001.gif" size="1427">
