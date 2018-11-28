@@ -1,5 +1,5 @@
 <Setting>
-  <Server>JABAVOKZA\SQLEXPRESS</Server>
+  <Server>172.16.30.151</Server>
   <UserDb>sa</UserDb>
   <PwdDb>P@ssw0rd</PwdDb>
   <DbName>POSSDB_TesT</DbName>

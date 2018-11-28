@@ -20,7 +20,7 @@ namespace AdaReport.Form
         {
             try
             {
-               // otmOpenPlant.Start();
+                // otmOpenPlant.Start();
                 olaVersion.Text = "v" + Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }
             catch (Exception oEx)
@@ -178,20 +178,21 @@ namespace AdaReport.Form
         {
             string tSql;
             StringBuilder oSql = new StringBuilder();
+            string tStaStickerOnOFF;
             try
             {
                 oSql.AppendLine("SELECT ");
-                oSql.AppendLine(" TCNMEmpMtn.FTEmpFName");
+                oSql.AppendLine("TPSTSalVatHD.FTTmnNum");
+                oSql.AppendLine(",TPSTSalVatHD.FTShdTransNo");
+                oSql.AppendLine(",TPSTSalVatHD.FDShdTransDate");
+                oSql.AppendLine(",TPSTSalVatHD.FTXihDocNo");
+                oSql.AppendLine(",RIGHT(TPSTSalVatHD.FTXihDocRun, 6)AS FTXihDocRun");
                 oSql.AppendLine(",TPSTSalVatDT.FTSkuAbbNameSndSrvDoc");
                 oSql.AppendLine(",TPSTSalVatDT.FTSdtBarCode");
                 oSql.AppendLine(",TPSTSalVatDT.FCSdtSalePrice");
                 oSql.AppendLine(",TPSTSalVatDT.FTSdtDisChgTxt");
-                oSql.AppendLine(",TPSTSalVatHD.FTTmnNum");
-                oSql.AppendLine(",TPSTSalVatHD.FTShdTransNo");
-                oSql.AppendLine(",TPSTSalVatHD.FDShdTransDate");
-                oSql.AppendLine(",TPSTSalVatHD.FTXihDocNo");
-                oSql.AppendLine(",TPSTSalVatHD.FDXihDocDate");
-                oSql.AppendLine(",RIGHT(TPSTSalVatHD.FTXihDocRun, 6)AS FTXihDocRun");
+                oSql.AppendLine(",TPSTSalVatDT.FTSkuCode");
+                oSql.AppendLine(",TCNMEmpMtn.FTEmpFName");
                 oSql.AppendLine(" FROM ((TCNMTerminalMtn");
                 oSql.AppendLine(" INNER JOIN TPSTSalVatHD");
                 oSql.AppendLine(" ON(TCNMTerminalMtn.FTEmpCode= TPSTSalVatHD.FTEmpCode)");
@@ -204,15 +205,28 @@ namespace AdaReport.Form
                 oSql.AppendLine(" AND (TPSTSalVatHD.FTShdTransNo='" + otbTransNo.Text + "') ");
                 oSql.AppendLine(" AND (TPSTSalVatHD.FDShdTransDate='" + otbTransDate.Text + "')");
                 oSql.AppendLine(" AND (TPSTSalVatHD.FTXihDocNo='" + otbRFCode.Text + "')");
+
+
+
+                //oSql.AppendLine("SELECT ");
+
+                //oSql.AppendLine("TPSTSalVatHD.FTShdTransNo");
+                ////oSql.AppendLine(",TPSTSalVatHD.FDShdTransDate");
+                ////oSql.AppendLine(",TPSTSalVatHD.FTXihDocNo");
+                ////oSql.AppendLine(",RIGHT(TPSTSalVatHD.FTXihDocRun, 6)AS FTXihDocRun");
+                //oSql.AppendLine(" FROM TPSTSalVatHD");
+                //oSql.AppendLine(" WHERE (TPSTSalVatHD.FTShdTransNo='" + otbTransNo.Text + "') ");
+
                 if (ocbPrintSticker.Checked == true)
                 {
-                    tSql = "SELECT FTScfUsrValue FROM TSysConfig WHERE FTScfCode='SvdRFLOGO'";
+                   // tSql = "SELECT FTScfUsrValue FROM TSysConfig WHERE FTScfCode='SvdRFLOGO'";
+                    tStaStickerOnOFF = "True";
                 }
                 else
                 {
-                    tSql = "";
+                    tStaStickerOnOFF = "False";
                 }
-                wReportView oReportView = new wReportView(oSql.ToString() + tSql);
+                wReportView oReportView = new wReportView(oSql.ToString(), tStaStickerOnOFF);
                 oReportView.olaHeader.Text = olbReportList.Text;
                 oReportView.Show();
             }
@@ -228,10 +242,10 @@ namespace AdaReport.Form
             {
                 if (olbReportList.SelectedItem.ToString() == "Report - PermissionDelivery")
                 {
-                  //  olaTmnNum.Visible = true;
-                  ////  olaEx.Visible = true;
-                  //  otbTmnNum.Visible = true;
-                  //  ocmPreview.Visible = true;
+                    //  olaTmnNum.Visible = true;
+                    ////  olaEx.Visible = true;
+                    //  otbTmnNum.Visible = true;
+                    //  ocmPreview.Visible = true;
 
                 }
             }

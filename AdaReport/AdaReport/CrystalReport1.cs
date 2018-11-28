@@ -16,14 +16,14 @@ namespace AdaReport {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Frm_Svd_170_PermissionDelivery : ReportClass {
+    public class CrystalReport1 : ReportClass {
         
-        public Frm_Svd_170_PermissionDelivery() {
+        public CrystalReport1() {
         }
         
         public override string ResourceName {
             get {
-                return "Frm_Svd_170_PermissionDelivery.rpt";
+                return "CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace AdaReport {
         
         public override string FullResourceName {
             get {
-                return "AdaReport.Frm_Svd_170_PermissionDelivery.rpt";
+                return "AdaReport.CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -87,12 +87,20 @@ namespace AdaReport {
                 return this.ReportDefinition.Sections[4];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_Sticker {
+            get {
+                return this.DataDefinition.ParameterFields[0];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedFrm_Svd_170_PermissionDelivery : Component, ICachedReport {
+    public class CachedCrystalReport1 : Component, ICachedReport {
         
-        public CachedFrm_Svd_170_PermissionDelivery() {
+        public CachedCrystalReport1() {
         }
         
         [Browsable(false)]
@@ -129,7 +137,7 @@ namespace AdaReport {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Frm_Svd_170_PermissionDelivery rpt = new Frm_Svd_170_PermissionDelivery();
+            CrystalReport1 rpt = new CrystalReport1();
             rpt.Site = this.Site;
             return rpt;
         }

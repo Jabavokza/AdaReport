@@ -58,6 +58,13 @@
             this.otaTabReport = new System.Windows.Forms.TabPage();
             this.olbReportList = new System.Windows.Forms.ListBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.olaRFCode = new System.Windows.Forms.Label();
+            this.otbRFCode = new System.Windows.Forms.TextBox();
+            this.odtTransDate = new System.Windows.Forms.DateTimePicker();
+            this.olaTransDate = new System.Windows.Forms.Label();
+            this.otbTransDate = new System.Windows.Forms.TextBox();
+            this.olaTransNo = new System.Windows.Forms.Label();
+            this.otbTransNo = new System.Windows.Forms.TextBox();
             this.ocbPrintSticker = new System.Windows.Forms.CheckBox();
             this.ocmPreview = new System.Windows.Forms.Button();
             this.olaTmnNum = new System.Windows.Forms.Label();
@@ -105,13 +112,6 @@
             this.otbDateTime = new System.Windows.Forms.TextBox();
             this.olaOperationDate = new System.Windows.Forms.Label();
             this.otbOperationDate = new System.Windows.Forms.TextBox();
-            this.olaTransNo = new System.Windows.Forms.Label();
-            this.otbTransNo = new System.Windows.Forms.TextBox();
-            this.olaTransDate = new System.Windows.Forms.Label();
-            this.otbTransDate = new System.Windows.Forms.TextBox();
-            this.odtTransDate = new System.Windows.Forms.DateTimePicker();
-            this.olaRFCode = new System.Windows.Forms.Label();
-            this.otbRFCode = new System.Windows.Forms.TextBox();
             this.otoMainControl.SuspendLayout();
             this.otaTebSetting.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -483,6 +483,64 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(462, 381);
             this.panel6.TabIndex = 12;
+            // 
+            // olaRFCode
+            // 
+            this.olaRFCode.AutoSize = true;
+            this.olaRFCode.Location = new System.Drawing.Point(50, 24);
+            this.olaRFCode.Name = "olaRFCode";
+            this.olaRFCode.Size = new System.Drawing.Size(46, 13);
+            this.olaRFCode.TabIndex = 11;
+            this.olaRFCode.Text = "RFCode";
+            // 
+            // otbRFCode
+            // 
+            this.otbRFCode.Location = new System.Drawing.Point(127, 19);
+            this.otbRFCode.Name = "otbRFCode";
+            this.otbRFCode.Size = new System.Drawing.Size(91, 20);
+            this.otbRFCode.TabIndex = 10;
+            this.otbRFCode.Text = "RF0000000006";
+            // 
+            // odtTransDate
+            // 
+            this.odtTransDate.Location = new System.Drawing.Point(127, 96);
+            this.odtTransDate.Name = "odtTransDate";
+            this.odtTransDate.Size = new System.Drawing.Size(200, 20);
+            this.odtTransDate.TabIndex = 9;
+            // 
+            // olaTransDate
+            // 
+            this.olaTransDate.AutoSize = true;
+            this.olaTransDate.Location = new System.Drawing.Point(50, 102);
+            this.olaTransDate.Name = "olaTransDate";
+            this.olaTransDate.Size = new System.Drawing.Size(57, 13);
+            this.olaTransDate.TabIndex = 8;
+            this.olaTransDate.Text = "TransDate";
+            // 
+            // otbTransDate
+            // 
+            this.otbTransDate.Location = new System.Drawing.Point(333, 95);
+            this.otbTransDate.Name = "otbTransDate";
+            this.otbTransDate.Size = new System.Drawing.Size(93, 20);
+            this.otbTransDate.TabIndex = 7;
+            this.otbTransDate.Text = "2018-11-21 00:00:00.000";
+            // 
+            // olaTransNo
+            // 
+            this.olaTransNo.AutoSize = true;
+            this.olaTransNo.Location = new System.Drawing.Point(50, 76);
+            this.olaTransNo.Name = "olaTransNo";
+            this.olaTransNo.Size = new System.Drawing.Size(48, 13);
+            this.olaTransNo.TabIndex = 6;
+            this.olaTransNo.Text = "TransNo";
+            // 
+            // otbTransNo
+            // 
+            this.otbTransNo.Location = new System.Drawing.Point(127, 71);
+            this.otbTransNo.Name = "otbTransNo";
+            this.otbTransNo.Size = new System.Drawing.Size(76, 20);
+            this.otbTransNo.TabIndex = 5;
+            this.otbTransNo.Text = "00149";
             // 
             // ocbPrintSticker
             // 
@@ -930,64 +988,6 @@
             this.otbOperationDate.Name = "otbOperationDate";
             this.otbOperationDate.Size = new System.Drawing.Size(120, 22);
             this.otbOperationDate.TabIndex = 29;
-            // 
-            // olaTransNo
-            // 
-            this.olaTransNo.AutoSize = true;
-            this.olaTransNo.Location = new System.Drawing.Point(50, 76);
-            this.olaTransNo.Name = "olaTransNo";
-            this.olaTransNo.Size = new System.Drawing.Size(48, 13);
-            this.olaTransNo.TabIndex = 6;
-            this.olaTransNo.Text = "TransNo";
-            // 
-            // otbTransNo
-            // 
-            this.otbTransNo.Location = new System.Drawing.Point(127, 71);
-            this.otbTransNo.Name = "otbTransNo";
-            this.otbTransNo.Size = new System.Drawing.Size(76, 20);
-            this.otbTransNo.TabIndex = 5;
-            this.otbTransNo.Text = "00149";
-            // 
-            // olaTransDate
-            // 
-            this.olaTransDate.AutoSize = true;
-            this.olaTransDate.Location = new System.Drawing.Point(50, 102);
-            this.olaTransDate.Name = "olaTransDate";
-            this.olaTransDate.Size = new System.Drawing.Size(57, 13);
-            this.olaTransDate.TabIndex = 8;
-            this.olaTransDate.Text = "TransDate";
-            // 
-            // otbTransDate
-            // 
-            this.otbTransDate.Location = new System.Drawing.Point(333, 95);
-            this.otbTransDate.Name = "otbTransDate";
-            this.otbTransDate.Size = new System.Drawing.Size(93, 20);
-            this.otbTransDate.TabIndex = 7;
-            this.otbTransDate.Text = "2018-11-21 00:00:00.000";
-            // 
-            // odtTransDate
-            // 
-            this.odtTransDate.Location = new System.Drawing.Point(127, 96);
-            this.odtTransDate.Name = "odtTransDate";
-            this.odtTransDate.Size = new System.Drawing.Size(200, 20);
-            this.odtTransDate.TabIndex = 9;
-            // 
-            // olaRFCode
-            // 
-            this.olaRFCode.AutoSize = true;
-            this.olaRFCode.Location = new System.Drawing.Point(50, 24);
-            this.olaRFCode.Name = "olaRFCode";
-            this.olaRFCode.Size = new System.Drawing.Size(50, 13);
-            this.olaRFCode.TabIndex = 11;
-            this.olaRFCode.Text = "TmnNum";
-            // 
-            // otbRFCode
-            // 
-            this.otbRFCode.Location = new System.Drawing.Point(127, 19);
-            this.otbRFCode.Name = "otbRFCode";
-            this.otbRFCode.Size = new System.Drawing.Size(91, 20);
-            this.otbRFCode.TabIndex = 10;
-            this.otbRFCode.Text = "RF0000000006";
             // 
             // wMain
             // 

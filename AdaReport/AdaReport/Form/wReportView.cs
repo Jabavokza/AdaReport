@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -17,9 +18,11 @@ namespace AdaReport.Form
     public partial class wReportView : MetroForm
     {
         private string tW_SqlQuery;
-        public wReportView(string ptSqlQuery)
+        private string tW_StaStickerOnOFF;
+        public wReportView(string ptSqlQuery, string ptStaStickerOnOFF)
         {
             tW_SqlQuery = ptSqlQuery;
+            tW_StaStickerOnOFF = ptStaStickerOnOFF;
             InitializeComponent();
         }
         public wReportView()
@@ -42,11 +45,28 @@ namespace AdaReport.Form
         private void W_GEToReport()
         {
             DataTable oDbCon = new DataTable();
+            DataTable oDt = new DataTable();
             ReportDocument oCryRpt = new ReportDocument();
+            string tPathSticker;
             try
             {
-                var oDt = cCNSP.SP_GEToDbTbl(tW_SqlQuery);
-                oDbCon = cCNSP.SP_GEToDbConfigXml(); 
+                if (tW_SqlQuery != "")
+                {
+                    oDt = cCNSP.SP_GEToDbTbl(tW_SqlQuery);
+                }
+                else
+                {
+                    oDt = null;
+                }
+                if (tW_StaStickerOnOFF == "True")
+                {
+                    tPathSticker = "D:\\Phakin\\ProjectThemall\\AdaReport\\Image\\power-mall.png";
+                }
+                else
+                {
+                    tPathSticker = "D:\\Phakin\\ProjectThemall\\AdaReport\\Image\\Power-mall.jpeg";
+                }
+                oDbCon = cCNSP.SP_GEToDbConfigXml();
                 var tServerName = oDbCon.Rows[0]["Server"].ToString();
                 var tDatabaseName = oDbCon.Rows[0]["DbName"].ToString();
                 var tUserID = oDbCon.Rows[0]["UserDb"].ToString();
@@ -56,17 +76,13 @@ namespace AdaReport.Form
                 var tPathApp = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.LastIndexOf('\\'));
                 var tPath = Path.Combine(tPathApp, @"Report\ServiceDoc\", tFileName);
                 // oCryRpt.Load(tPath);
-               // oCryRpt.Load("D:\\Project\\2018\\AdaReport\\AdaReport\\AdaReport\\CrystalReport.rpt");
-                oCryRpt.Load("H:\\GitHub\\AdaReport\\AdaReport\\AdaReport\\CrystalReport.rpt");
-                
-                oCryRpt.DataSourceConnections.Clear();
+                oCryRpt.Load("D:\\Project\\2018\\AdaReport\\AdaReport\\AdaReport\\CrystalReport1.rpt");
+                //  oCryRpt.Load("H:\\GitHub\\AdaReport\\AdaReport\\AdaReport\\170_PermissionDelivery.rpt");
                 oCryRpt.SetDatabaseLogon(tUserID, tPassword, tServerName, tDatabaseName);
                 oCryRpt.SetDataSource(oDt);
-                oCryRpt.VerifyDatabase();
-                ocrCrystalReportViewer.ReportSource = null; 
+                oCryRpt.SetParameterValue("Sticker", tPathSticker);
                 ocrCrystalReportViewer.ReportSource = oCryRpt;
-
-                ocrCrystalReportViewer.RefreshReport();
+                //  ocrCrystalReportViewer.RefreshReport();
             }
             catch (Exception oEx)
             {

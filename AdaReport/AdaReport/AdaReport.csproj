@@ -159,6 +159,20 @@
       <DependentUpon>CrystalReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DATASet.cs">
+      <DependentUpon>DATASet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DATASet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form\wMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,12 +191,6 @@
     <Compile Include="Form\wReportView.Designer.cs">
       <DependentUpon>wReportView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Svd_170_PermissionDelivery.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Frm_Svd_170_PermissionDelivery.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="PermissionDelivery.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -199,6 +207,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\wMain.resx">
       <DependentUpon>wMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,10 +219,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\wReportView.resx">
       <DependentUpon>wReportView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Svd_170_PermissionDelivery.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Frm_Svd_170_PermissionDelivery.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="PermissionDelivery.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -227,6 +235,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="AdaReport_TemporaryKey.pfx" />
+    <None Include="DATASet.xsc">
+      <DependentUpon>DATASet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DATASet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASet.xss">
+      <DependentUpon>DATASet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

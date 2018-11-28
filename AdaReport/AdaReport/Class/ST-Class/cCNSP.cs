@@ -32,17 +32,47 @@ namespace AdaReport.Class.ST_Class
                 throw oEx; 
             }
         }
+        public static DataSet SP_GEToDbSet(string ptSql)
+        {
+            try
+            {
+                var oDbSet = new DataSet();
+                var oDbCont = new SqlConnection(SP_SETtConStr());
+                oDbCont.Open();
+                var oDbAdt = new SqlDataAdapter(ptSql, oDbCont);
+                oDbAdt.Fill(oDbSet);
+                oDbCont.Close();
+                return oDbSet;
+            }
+            catch (SqlException oEx)
+            {
+                log.Error(oEx.Message);
+                throw oEx;
+            }
+        }
+
+      
+
+
+
+
         public static string SP_SETtConStr()
         {
             StringBuilder oSql = new StringBuilder();
             try
             {
-                var oXmlDb = SP_GEToDbConfigXml();
-                oSql.AppendLine("Data Source = '"+ oXmlDb.Rows[0]["Server"].ToString() + "'");
+                  var oXmlDb = SP_GEToDbConfigXml();
+                oSql.AppendLine("Data Source = '" + oXmlDb.Rows[0]["Server"].ToString() + "'");
                 oSql.AppendLine(";Initial Catalog = '" + oXmlDb.Rows[0]["DbName"].ToString() + "'");
                 oSql.AppendLine(";User ID = '" + oXmlDb.Rows[0]["UserDb"].ToString() + "'");
                 oSql.AppendLine(";Password = '" + oXmlDb.Rows[0]["PwdDb"].ToString() + "'");
                 return oSql.ToString();
+
+                //oSql.AppendLine("Data Source = '172.16.30.151'");
+                //oSql.AppendLine(";Initial Catalog = 'POSSDB_Test'");
+                //oSql.AppendLine(";User ID = 'sa'");
+                //oSql.AppendLine(";Password = 'P@ssw0rd'");
+                //return oSql.ToString();
             }
             catch (Exception oEx)
             {
@@ -61,7 +91,7 @@ namespace AdaReport.Class.ST_Class
                 var tPath = "\\AdaDbSetting.xml";
                 oXmlFile = XmlReader.Create(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + tPath, new XmlReaderSettings());
                 oDs.ReadXml(oXmlFile);
-                oDbTbl = oDs.Tables[0];
+                oDbTbl = oDs.Tables["Setting"];
                 oXmlFile.Close();
                 return oDbTbl;
             }

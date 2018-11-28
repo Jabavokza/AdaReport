@@ -182,3 +182,138 @@ Ambiguous column name 'FDShdTransDate'.
 [27/11/2018 23:46:57,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
 [27/11/2018 23:52:13,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
 [27/11/2018 23:56:00,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 09:42:09,SSS] [ERROR  ] cCNSP:31 (1) - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+[28/11/2018 09:42:13,SSS] [ERROR  ] wMain:120 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+[28/11/2018 09:43:54,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 09:44:44,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:01:59,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:03:37,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:04:33,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:05:25,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:06:03,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:06:41,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:07:47,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:09:11,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:12:41,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:15:29,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:15:49,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:16:43,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:16:59,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:17:38,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:18:11,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:19:34,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:20:09,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:25:38,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:26:17,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:26:47,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:27:15,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:31:10,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:32:30,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:33:21,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:35:38,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 10:36:16,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 11:04:51,SSS] [ERROR  ] cCNSP:49 (1) - There is no row at position 0.
+[28/11/2018 11:04:56,SSS] [ERROR  ] wMain:120 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]There is no row at position 0.
+[28/11/2018 11:05:00,SSS] [ERROR  ] cCNSP:49 (1) - There is no row at position 0.
+[28/11/2018 11:05:03,SSS] [ERROR  ] wMain:120 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]There is no row at position 0.
+[28/11/2018 11:05:20,SSS] [ERROR  ] cCNSP:49 (1) - There is no row at position 0.
+[28/11/2018 11:05:21,SSS] [ERROR  ] wMain:120 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]There is no row at position 0.
+[28/11/2018 11:05:30,SSS] [ERROR  ] cCNSP:49 (1) - There is no row at position 0.
+[28/11/2018 11:05:32,SSS] [ERROR  ] wMain:120 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]There is no row at position 0.
+[28/11/2018 11:06:24,SSS] [ERROR  ] cCNSP:49 (1) - There is no row at position 0.
+[28/11/2018 11:16:11,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 11:17:59,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 11:28:06,SSS] [ERROR  ] cCNSP:49 (1) - Object reference not set to an instance of an object.
+[28/11/2018 11:28:07,SSS] [ERROR  ] wMain:120 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]Object reference not set to an instance of an object.
+[28/11/2018 11:28:10,SSS] [ERROR  ] cCNSP:49 (1) - Object reference not set to an instance of an object.
+[28/11/2018 11:28:11,SSS] [ERROR  ] wMain:120 (1) - ไม่พบข้อมูล[กรุณาเลือกPlantให้ถุกต้อง]Object reference not set to an instance of an object.
+[28/11/2018 11:28:37,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 11:30:38,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 11:30:59,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 11:33:46,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 11:35:36,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 11:36:55,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 11:52:43,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:05:21,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:05:22,SSS] [ERROR  ] cCNSP:31 (1) - Invalid column name 'FCS'.
+[28/11/2018 12:06:47,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:06:49,SSS] [ERROR  ] cCNSP:31 (1) - Invalid column name 'FCS'.
+[28/11/2018 12:07:35,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:07:37,SSS] [ERROR  ] cCNSP:31 (1) - Invalid column name 'FCS'.
+[28/11/2018 12:07:58,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:07:59,SSS] [ERROR  ] cCNSP:31 (1) - Invalid column name 'FCS'.
+[28/11/2018 12:10:21,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:10:22,SSS] [ERROR  ] cCNSP:31 (1) - Invalid column name 'FCS'.
+[28/11/2018 12:10:59,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:11:00,SSS] [ERROR  ] cCNSP:31 (1) - Invalid column name 'FCS'.
+[28/11/2018 12:11:17,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:11:18,SSS] [ERROR  ] cCNSP:31 (1) - Invalid column name 'FCS'.
+[28/11/2018 12:12:16,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:13:46,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:34:45,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:38:06,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:40:13,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:42:49,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:44:11,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 12:44:12,SSS] [ERROR  ] cCNSP:31 (1) - Incorrect syntax near ')'.
+[28/11/2018 12:45:52,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 13:39:26,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 13:39:31,SSS] [ERROR  ] cCNSP:31 (1) - Incorrect syntax near ','.
+[28/11/2018 13:39:48,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 13:39:49,SSS] [ERROR  ] cCNSP:31 (1) - Incorrect syntax near 'TCNMTerminalMtn'.
+[28/11/2018 13:41:03,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 13:44:33,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 13:45:32,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 13:52:02,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 13:53:23,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 13:53:56,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 14:04:17,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 14:05:01,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 14:06:59,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 14:09:15,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 15:39:33,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 15:44:39,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 15:46:19,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 15:46:55,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 15:49:31,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 16:49:29,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 16:49:57,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 16:50:21,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 16:55:13,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 16:57:22,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 16:58:09,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 17:07:50,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 17:09:11,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 17:16:25,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 17:18:37,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 17:20:52,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 17:21:18,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 17:30:07,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 17:30:34,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:10:23,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:11:04,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:12:25,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:13:11,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:15:44,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:16:15,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:16:43,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:17:30,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:18:11,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:22:21,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:28:02,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:30:32,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:44:48,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:47:47,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:49:43,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:52:24,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:53:33,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:56:02,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:57:51,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:58:25,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 18:59:49,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 19:00:49,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 19:08:48,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 19:10:01,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 19:12:22,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 19:13:05,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
+[28/11/2018 19:15:38,SSS] [INFO   ] wMain:109 (1) - Admin: Login Successful
