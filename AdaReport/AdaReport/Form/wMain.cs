@@ -206,17 +206,6 @@ namespace AdaReport.Form
                 oSql.AppendLine(" AND (TPSTSalVatHD.FDShdTransDate='" + otbTransDate.Text + "')");
                 oSql.AppendLine(" AND (TPSTSalVatHD.FTXihDocNo='" + otbRFCode.Text + "')");
 
-
-
-                //oSql.AppendLine("SELECT ");
-
-                //oSql.AppendLine("TPSTSalVatHD.FTShdTransNo");
-                ////oSql.AppendLine(",TPSTSalVatHD.FDShdTransDate");
-                ////oSql.AppendLine(",TPSTSalVatHD.FTXihDocNo");
-                ////oSql.AppendLine(",RIGHT(TPSTSalVatHD.FTXihDocRun, 6)AS FTXihDocRun");
-                //oSql.AppendLine(" FROM TPSTSalVatHD");
-                //oSql.AppendLine(" WHERE (TPSTSalVatHD.FTShdTransNo='" + otbTransNo.Text + "') ");
-
                 if (ocbPrintSticker.Checked == true)
                 {
                    // tSql = "SELECT FTScfUsrValue FROM TSysConfig WHERE FTScfCode='SvdRFLOGO'";
@@ -226,7 +215,7 @@ namespace AdaReport.Form
                 {
                     tStaStickerOnOFF = "False";
                 }
-                wReportView oReportView = new wReportView(oSql.ToString(), tStaStickerOnOFF);
+                wReportView oReportView = new wReportView(this,oSql.ToString(), tStaStickerOnOFF);
                 oReportView.olaHeader.Text = olbReportList.Text;
                 oReportView.Show();
             }

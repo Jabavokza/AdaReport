@@ -16,14 +16,14 @@ namespace AdaReport {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport1 : ReportClass {
+    public class Frm_Svd_170_PermissionDelivery : ReportClass {
         
-        public CrystalReport1() {
+        public Frm_Svd_170_PermissionDelivery() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport1.rpt";
+                return "Frm_Svd_170_PermissionDelivery.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace AdaReport {
         
         public override string FullResourceName {
             get {
-                return "AdaReport.CrystalReport1.rpt";
+                return "AdaReport.Frm_Svd_170_PermissionDelivery.rpt";
             }
             set {
                 // Do nothing
@@ -95,12 +95,20 @@ namespace AdaReport {
                 return this.DataDefinition.ParameterFields[0];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_User {
+            get {
+                return this.DataDefinition.ParameterFields[1];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport1 : Component, ICachedReport {
+    public class CachedFrm_Svd_170_PermissionDelivery : Component, ICachedReport {
         
-        public CachedCrystalReport1() {
+        public CachedFrm_Svd_170_PermissionDelivery() {
         }
         
         [Browsable(false)]
@@ -137,7 +145,7 @@ namespace AdaReport {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport1 rpt = new CrystalReport1();
+            Frm_Svd_170_PermissionDelivery rpt = new Frm_Svd_170_PermissionDelivery();
             rpt.Site = this.Site;
             return rpt;
         }

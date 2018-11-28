@@ -159,10 +159,10 @@
       <DependentUpon>CrystalReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrystalReport1.cs">
+    <Compile Include="Frm_Svd_170_PermissionDelivery.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <DependentUpon>Frm_Svd_170_PermissionDelivery.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DATASet.cs">
@@ -207,9 +207,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport1.rpt">
+    <EmbeddedResource Include="Frm_Svd_170_PermissionDelivery.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+      <LastGenOutput>Frm_Svd_170_PermissionDelivery.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\wMain.resx">
       <DependentUpon>wMain.cs</DependentUpon>

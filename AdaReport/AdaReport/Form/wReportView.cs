@@ -1,17 +1,9 @@
 ﻿using AdaReport.Class.ST_Class;
 using CrystalDecisions.CrystalReports.Engine;
-using CrystalDecisions.Shared;
 using MetroFramework.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 
 namespace AdaReport.Form
 {
@@ -19,10 +11,12 @@ namespace AdaReport.Form
     {
         private string tW_SqlQuery;
         private string tW_StaStickerOnOFF;
-        public wReportView(string ptSqlQuery, string ptStaStickerOnOFF)
+        private wMain oW_Main;
+        public wReportView(wMain poMain, string ptSqlQuery, string ptStaStickerOnOFF)
         {
             tW_SqlQuery = ptSqlQuery;
             tW_StaStickerOnOFF = ptStaStickerOnOFF;
+            oW_Main = poMain;
             InitializeComponent();
         }
         public wReportView()
@@ -47,7 +41,7 @@ namespace AdaReport.Form
             DataTable oDbCon = new DataTable();
             DataTable oDt = new DataTable();
             ReportDocument oCryRpt = new ReportDocument();
-            string tPathSticker;
+            string tPathSticker = "";
             try
             {
                 if (tW_SqlQuery != "")
@@ -60,27 +54,26 @@ namespace AdaReport.Form
                 }
                 if (tW_StaStickerOnOFF == "True")
                 {
-                    tPathSticker = "D:\\Phakin\\ProjectThemall\\AdaReport\\Image\\power-mall.png";
+                    tPathSticker = "\\Sticker\\Power-mall.png";
+                    tPathSticker = Environment.CurrentDirectory+ tPathSticker;
                 }
-                else
-                {
-                    tPathSticker = "D:\\Phakin\\ProjectThemall\\AdaReport\\Image\\Power-mall.jpeg";
-                }
-                oDbCon = cCNSP.SP_GEToDbConfigXml();
-                var tServerName = oDbCon.Rows[0]["Server"].ToString();
-                var tDatabaseName = oDbCon.Rows[0]["DbName"].ToString();
-                var tUserID = oDbCon.Rows[0]["UserDb"].ToString();
-                var tPassword = oDbCon.Rows[0]["PwdDb"].ToString();
 
-                var tFileName = "CrystalReport.rpt";
-                var tPathApp = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.LastIndexOf('\\'));
-                var tPath = Path.Combine(tPathApp, @"Report\ServiceDoc\", tFileName);
-                // oCryRpt.Load(tPath);
-                oCryRpt.Load("D:\\Project\\2018\\AdaReport\\AdaReport\\AdaReport\\CrystalReport1.rpt");
-                //  oCryRpt.Load("H:\\GitHub\\AdaReport\\AdaReport\\AdaReport\\170_PermissionDelivery.rpt");
+                oDbCon = cCNSP.SP_GEToDbConfigXml();
+                string tServerName = oDbCon.Rows[0]["Server"].ToString();
+                string tDatabaseName = oDbCon.Rows[0]["DbName"].ToString();
+                string tUserID = oDbCon.Rows[0]["UserDb"].ToString();
+                string tPassword = oDbCon.Rows[0]["PwdDb"].ToString();
+
+                string tFileName = "Frm_Svd_170_PermissionDelivery.rpt";
+                string tPathApp = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.LastIndexOf('\\'));
+                string tPath = Path.Combine(tPathApp, @"Report\ServiceDoc\", tFileName);
+                oCryRpt.Load(tPath);
+                //   oCryRpt.Load("D:\\Project\\2018\\AdaReport\\AdaReport\\AdaReport\\Frm_Svd_170_PermissionDelivery.rpt");
+               // oCryRpt.Load("H:\\GitHub\\AdaReport\\AdaReport\\AdaReport\\Frm_Svd_170_PermissionDelivery.rpt");
                 oCryRpt.SetDatabaseLogon(tUserID, tPassword, tServerName, tDatabaseName);
                 oCryRpt.SetDataSource(oDt);
                 oCryRpt.SetParameterValue("Sticker", tPathSticker);
+                oCryRpt.SetParameterValue("User", oW_Main.ostUserDT.Text);
                 ocrCrystalReportViewer.ReportSource = oCryRpt;
                 //  ocrCrystalReportViewer.RefreshReport();
             }

@@ -775,7 +775,7 @@
             this.ostSaleExportingDT});
             this.ostDetailDbconfig.Location = new System.Drawing.Point(8, 571);
             this.ostDetailDbconfig.Name = "ostDetailDbconfig";
-            this.ostDetailDbconfig.Size = new System.Drawing.Size(857, 22);
+            this.ostDetailDbconfig.Size = new System.Drawing.Size(889, 22);
             this.ostDetailDbconfig.TabIndex = 2;
             // 
             // ostServerHD
@@ -866,7 +866,7 @@
             this.ostTableUpdateHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ostTableUpdateHD.Image = ((System.Drawing.Image)(resources.GetObject("ostTableUpdateHD.Image")));
             this.ostTableUpdateHD.Name = "ostTableUpdateHD";
-            this.ostTableUpdateHD.Size = new System.Drawing.Size(96, 17);
+            this.ostTableUpdateHD.Size = new System.Drawing.Size(97, 17);
             this.ostTableUpdateHD.Text = "Table Update :";
             // 
             // ostTableUpdateDT
@@ -1073,7 +1073,6 @@
         private System.Windows.Forms.ToolStripStatusLabel ostPlantDT;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel ostUserHD;
-        private System.Windows.Forms.ToolStripStatusLabel ostUserDT;
         private System.Windows.Forms.Label label3;
         internal System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
@@ -1116,6 +1115,7 @@
         private System.Windows.Forms.DateTimePicker odtTransDate;
         private System.Windows.Forms.Label olaRFCode;
         private System.Windows.Forms.TextBox otbRFCode;
+        public System.Windows.Forms.ToolStripStatusLabel ostUserDT;
     }
 }
 
