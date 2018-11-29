@@ -29,7 +29,6 @@ namespace AdaReport.Form
             try
             {
                 W_GEToReport();
-
             }
             catch (Exception oEx)
             {
@@ -42,6 +41,7 @@ namespace AdaReport.Form
             DataTable oDt = new DataTable();
             ReportDocument oCryRpt = new ReportDocument();
             string tPathSticker = "";
+            string tFileName = "Frm_Svd_170_PermissionDelivery.rpt";
             try
             {
                 if (tW_SqlQuery != "")
@@ -55,27 +55,25 @@ namespace AdaReport.Form
                 if (tW_StaStickerOnOFF == "True")
                 {
                     tPathSticker = "\\Sticker\\Power-mall.png";
-                    tPathSticker = Environment.CurrentDirectory+ tPathSticker;
+                    tPathSticker = Environment.CurrentDirectory + tPathSticker;
                 }
-
                 oDbCon = cCNSP.SP_GEToDbConfigXml();
                 string tServerName = oDbCon.Rows[0]["Server"].ToString();
                 string tDatabaseName = oDbCon.Rows[0]["DbName"].ToString();
                 string tUserID = oDbCon.Rows[0]["UserDb"].ToString();
                 string tPassword = oDbCon.Rows[0]["PwdDb"].ToString();
 
-                string tFileName = "Frm_Svd_170_PermissionDelivery.rpt";
                 string tPathApp = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.LastIndexOf('\\'));
                 string tPath = Path.Combine(tPathApp, @"Report\ServiceDoc\", tFileName);
                 oCryRpt.Load(tPath);
-                //   oCryRpt.Load("D:\\Project\\2018\\AdaReport\\AdaReport\\AdaReport\\Frm_Svd_170_PermissionDelivery.rpt");
-               // oCryRpt.Load("H:\\GitHub\\AdaReport\\AdaReport\\AdaReport\\Frm_Svd_170_PermissionDelivery.rpt");
+                //oCryRpt.Load("D:\\Project\\2018\\AdaReport\\AdaReport\\AdaReport\\Frm_Svd_170_PermissionDelivery.rpt");
+                //oCryRpt.Load("H:\\GitHub\\AdaReport\\AdaReport\\AdaReport\\Frm_Svd_170_PermissionDelivery.rpt");
                 oCryRpt.SetDatabaseLogon(tUserID, tPassword, tServerName, tDatabaseName);
                 oCryRpt.SetDataSource(oDt);
                 oCryRpt.SetParameterValue("Sticker", tPathSticker);
                 oCryRpt.SetParameterValue("User", oW_Main.ostUserDT.Text);
                 ocrCrystalReportViewer.ReportSource = oCryRpt;
-                //  ocrCrystalReportViewer.RefreshReport();
+                // ocrCrystalReportViewer.RefreshReport();
             }
             catch (Exception oEx)
             {

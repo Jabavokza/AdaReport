@@ -142,23 +142,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="170_PermissionDelivery.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>170_PermissionDelivery.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Class\Models\mlDbConfig.cs" />
     <Compile Include="Class\Models\mlPlant.cs" />
     <Compile Include="Class\ST-Class\cCNSP.cs" />
     <Compile Include="Class\X-Class\cReadFileINI.cs" />
     <Compile Include="Class\X-Class\cReadFileMdb.cs" />
-    <Compile Include="CrystalReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Frm_Svd_170_PermissionDelivery.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -191,22 +179,8 @@
     <Compile Include="Form\wReportView.Designer.cs">
       <DependentUpon>wReportView.cs</DependentUpon>
     </Compile>
-    <Compile Include="PermissionDelivery.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PermissionDelivery.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="170_PermissionDelivery.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>170_PermissionDelivery.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Svd_170_PermissionDelivery.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Frm_Svd_170_PermissionDelivery.cs</LastGenOutput>
@@ -219,10 +193,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\wReportView.resx">
       <DependentUpon>wReportView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PermissionDelivery.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>PermissionDelivery.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

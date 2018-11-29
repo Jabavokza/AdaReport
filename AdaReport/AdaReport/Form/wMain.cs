@@ -2,6 +2,7 @@
 using MetroFramework.Forms;
 using System;
 using System.Data;
+using System.Globalization;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
@@ -20,7 +21,7 @@ namespace AdaReport.Form
         {
             try
             {
-                // otmOpenPlant.Start();
+                otmOpenPlant.Start();
                 olaVersion.Text = "v" + Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }
             catch (Exception oEx)
@@ -176,46 +177,46 @@ namespace AdaReport.Form
 
         private void ocmPreview_Click(object sender, EventArgs e)
         {
-            string tSql;
             StringBuilder oSql = new StringBuilder();
             string tStaStickerOnOFF;
             try
             {
+                DateTime DateNow = Convert.ToDateTime(odtTransDate.Value.ToString());
                 oSql.AppendLine("SELECT ");
                 oSql.AppendLine("TPSTSalVatHD.FTTmnNum");
                 oSql.AppendLine(",TPSTSalVatHD.FTShdTransNo");
-                oSql.AppendLine(",TPSTSalVatHD.FDShdTransDate");
-                oSql.AppendLine(",TPSTSalVatHD.FTXihDocNo");
+                oSql.AppendLine(",GETDATE() AS FDDateNow");
+                oSql.AppendLine(",TPSTSalVatHD.FTSpnCode");
                 oSql.AppendLine(",RIGHT(TPSTSalVatHD.FTXihDocRun, 6)AS FTXihDocRun");
+                oSql.AppendLine(",CONVERT(varchar(10),TPSTSalVatDT.FNSdtSeqNo)AS FNSdtSeqNo");
                 oSql.AppendLine(",TPSTSalVatDT.FTSkuAbbNameSndSrvDoc");
                 oSql.AppendLine(",TPSTSalVatDT.FTSdtBarCode");
                 oSql.AppendLine(",TPSTSalVatDT.FCSdtSalePrice");
                 oSql.AppendLine(",TPSTSalVatDT.FTSdtDisChgTxt");
                 oSql.AppendLine(",TPSTSalVatDT.FTSkuCode");
-                oSql.AppendLine(",TCNMEmpMtn.FTEmpFName");
+                //oSql.AppendLine(",TCNMEmpMtn.FTEmpFName");
                 oSql.AppendLine(" FROM ((TCNMTerminalMtn");
                 oSql.AppendLine(" INNER JOIN TPSTSalVatHD");
                 oSql.AppendLine(" ON(TCNMTerminalMtn.FTEmpCode= TPSTSalVatHD.FTEmpCode)");
                 oSql.AppendLine(" AND(TCNMTerminalMtn.FTTmnNum = TPSTSalVatHD.FTTmnNum))");
                 oSql.AppendLine(" INNER JOIN TPSTSalVatDT");
                 oSql.AppendLine(" ON TCNMTerminalMtn.FTTmnNum = TPSTSalVatDT.FTTmnNum)");
-                oSql.AppendLine(" INNER JOIN TCNMEmpMtn");
-                oSql.AppendLine(" ON TCNMTerminalMtn.FTEmpCode = TCNMEmpMtn.FTEmpCode");
+                //oSql.AppendLine(" INNER JOIN TCNMEmpMtn");
+                //oSql.AppendLine(" ON TCNMTerminalMtn.FTEmpCode = TCNMEmpMtn.FTEmpCode");
                 oSql.AppendLine(" WHERE RIGHT(TPSTSalVatHD.FTTmnNum,5) ='" + otbTmnNum.Text + "'");
                 oSql.AppendLine(" AND (TPSTSalVatHD.FTShdTransNo='" + otbTransNo.Text + "') ");
-                oSql.AppendLine(" AND (TPSTSalVatHD.FDShdTransDate='" + otbTransDate.Text + "')");
+                oSql.AppendLine(" AND (TPSTSalVatHD.FDShdTransDate='" + DateNow.ToString("yyyy-MM-dd", new CultureInfo("en-US")) + "')");
                 oSql.AppendLine(" AND (TPSTSalVatHD.FTXihDocNo='" + otbRFCode.Text + "')");
 
                 if (ocbPrintSticker.Checked == true)
                 {
-                   // tSql = "SELECT FTScfUsrValue FROM TSysConfig WHERE FTScfCode='SvdRFLOGO'";
                     tStaStickerOnOFF = "True";
                 }
                 else
                 {
                     tStaStickerOnOFF = "False";
                 }
-                wReportView oReportView = new wReportView(this,oSql.ToString(), tStaStickerOnOFF);
+                wReportView oReportView = new wReportView(this, oSql.ToString(), tStaStickerOnOFF);
                 oReportView.olaHeader.Text = olbReportList.Text;
                 oReportView.Show();
             }
@@ -224,7 +225,6 @@ namespace AdaReport.Form
                 throw oEx;
             }
         }
-
         private void olbReportList_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -235,7 +235,6 @@ namespace AdaReport.Form
                     ////  olaEx.Visible = true;
                     //  otbTmnNum.Visible = true;
                     //  ocmPreview.Visible = true;
-
                 }
             }
             catch (Exception oEx)

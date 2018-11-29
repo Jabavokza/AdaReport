@@ -283,7 +283,7 @@ namespace AdaReport {
             
             private global::System.Data.DataColumn columnFTShdTransNo;
             
-            private global::System.Data.DataColumn columnFDShdTransDate;
+            private global::System.Data.DataColumn columnFDDateNow;
             
             private global::System.Data.DataColumn columnFTXihDocNo;
             
@@ -297,11 +297,13 @@ namespace AdaReport {
             
             private global::System.Data.DataColumn columnFTSdtDisChgTxt;
             
-            private global::System.Data.DataColumn columnFTEmpFName;
-            
             private global::System.Data.DataColumn columnFTSkuCode;
             
             private global::System.Data.DataColumn columnFTScfUsrValue;
+            
+            private global::System.Data.DataColumn columnFNSdtSeqNo;
+            
+            private global::System.Data.DataColumn columnFTSpnCode;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -354,9 +356,9 @@ namespace AdaReport {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn FDShdTransDateColumn {
+            public global::System.Data.DataColumn FDDateNowColumn {
                 get {
-                    return this.columnFDShdTransDate;
+                    return this.columnFDDateNow;
                 }
             }
             
@@ -410,14 +412,6 @@ namespace AdaReport {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn FTEmpFNameColumn {
-                get {
-                    return this.columnFTEmpFName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn FTSkuCodeColumn {
                 get {
                     return this.columnFTSkuCode;
@@ -429,6 +423,22 @@ namespace AdaReport {
             public global::System.Data.DataColumn FTScfUsrValueColumn {
                 get {
                     return this.columnFTScfUsrValue;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FNSdtSeqNoColumn {
+                get {
+                    return this.columnFNSdtSeqNo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FTSpnCodeColumn {
+                get {
+                    return this.columnFTSpnCode;
                 }
             }
             
@@ -469,21 +479,22 @@ namespace AdaReport {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTableRow AddDataTableRow(string FTTmnNum, string FTShdTransNo, string FDShdTransDate, string FTXihDocNo, string FTXihDocRun, string FTSkuAbbNameSndSrvDoc, string FTSdtBarCode, string FCSdtSalePrice, string FTSdtDisChgTxt, string FTEmpFName, string FTSkuCode, string FTScfUsrValue) {
+            public DataTableRow AddDataTableRow(string FTTmnNum, string FTShdTransNo, string FDDateNow, string FTXihDocNo, string FTXihDocRun, string FTSkuAbbNameSndSrvDoc, string FTSdtBarCode, string FCSdtSalePrice, string FTSdtDisChgTxt, string FTSkuCode, string FTScfUsrValue, int FNSdtSeqNo, string FTSpnCode) {
                 DataTableRow rowDataTableRow = ((DataTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FTTmnNum,
                         FTShdTransNo,
-                        FDShdTransDate,
+                        FDDateNow,
                         FTXihDocNo,
                         FTXihDocRun,
                         FTSkuAbbNameSndSrvDoc,
                         FTSdtBarCode,
                         FCSdtSalePrice,
                         FTSdtDisChgTxt,
-                        FTEmpFName,
                         FTSkuCode,
-                        FTScfUsrValue};
+                        FTScfUsrValue,
+                        FNSdtSeqNo,
+                        FTSpnCode};
                 rowDataTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTableRow);
                 return rowDataTableRow;
@@ -508,16 +519,17 @@ namespace AdaReport {
             internal void InitVars() {
                 this.columnFTTmnNum = base.Columns["FTTmnNum"];
                 this.columnFTShdTransNo = base.Columns["FTShdTransNo"];
-                this.columnFDShdTransDate = base.Columns["FDShdTransDate"];
+                this.columnFDDateNow = base.Columns["FDDateNow"];
                 this.columnFTXihDocNo = base.Columns["FTXihDocNo"];
                 this.columnFTXihDocRun = base.Columns["FTXihDocRun"];
                 this.columnFTSkuAbbNameSndSrvDoc = base.Columns["FTSkuAbbNameSndSrvDoc"];
                 this.columnFTSdtBarCode = base.Columns["FTSdtBarCode"];
                 this.columnFCSdtSalePrice = base.Columns["FCSdtSalePrice"];
                 this.columnFTSdtDisChgTxt = base.Columns["FTSdtDisChgTxt"];
-                this.columnFTEmpFName = base.Columns["FTEmpFName"];
                 this.columnFTSkuCode = base.Columns["FTSkuCode"];
                 this.columnFTScfUsrValue = base.Columns["FTScfUsrValue"];
+                this.columnFNSdtSeqNo = base.Columns["FNSdtSeqNo"];
+                this.columnFTSpnCode = base.Columns["FTSpnCode"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -527,8 +539,8 @@ namespace AdaReport {
                 base.Columns.Add(this.columnFTTmnNum);
                 this.columnFTShdTransNo = new global::System.Data.DataColumn("FTShdTransNo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFTShdTransNo);
-                this.columnFDShdTransDate = new global::System.Data.DataColumn("FDShdTransDate", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFDShdTransDate);
+                this.columnFDDateNow = new global::System.Data.DataColumn("FDDateNow", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFDDateNow);
                 this.columnFTXihDocNo = new global::System.Data.DataColumn("FTXihDocNo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFTXihDocNo);
                 this.columnFTXihDocRun = new global::System.Data.DataColumn("FTXihDocRun", typeof(string), null, global::System.Data.MappingType.Element);
@@ -541,12 +553,14 @@ namespace AdaReport {
                 base.Columns.Add(this.columnFCSdtSalePrice);
                 this.columnFTSdtDisChgTxt = new global::System.Data.DataColumn("FTSdtDisChgTxt", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFTSdtDisChgTxt);
-                this.columnFTEmpFName = new global::System.Data.DataColumn("FTEmpFName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFTEmpFName);
                 this.columnFTSkuCode = new global::System.Data.DataColumn("FTSkuCode", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFTSkuCode);
                 this.columnFTScfUsrValue = new global::System.Data.DataColumn("FTScfUsrValue", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFTScfUsrValue);
+                this.columnFNSdtSeqNo = new global::System.Data.DataColumn("FNSdtSeqNo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFNSdtSeqNo);
+                this.columnFTSpnCode = new global::System.Data.DataColumn("FTSpnCode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFTSpnCode);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -721,17 +735,17 @@ namespace AdaReport {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string FDShdTransDate {
+            public string FDDateNow {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable.FDShdTransDateColumn]));
+                        return ((string)(this[this.tableDataTable.FDDateNowColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FDShdTransDate\' in table \'DataTable\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'FDDateNow\' in table \'DataTable\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable.FDShdTransDateColumn] = value;
+                    this[this.tableDataTable.FDDateNowColumn] = value;
                 }
             }
             
@@ -833,22 +847,6 @@ namespace AdaReport {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string FTEmpFName {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable.FTEmpFNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FTEmpFName\' in table \'DataTable\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable.FTEmpFNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string FTSkuCode {
                 get {
                     try {
@@ -881,6 +879,38 @@ namespace AdaReport {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int FNSdtSeqNo {
+                get {
+                    try {
+                        return ((int)(this[this.tableDataTable.FNSdtSeqNoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FNSdtSeqNo\' in table \'DataTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable.FNSdtSeqNoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string FTSpnCode {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable.FTSpnCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FTSpnCode\' in table \'DataTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable.FTSpnCodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsFTTmnNumNull() {
                 return this.IsNull(this.tableDataTable.FTTmnNumColumn);
             }
@@ -905,14 +935,14 @@ namespace AdaReport {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsFDShdTransDateNull() {
-                return this.IsNull(this.tableDataTable.FDShdTransDateColumn);
+            public bool IsFDDateNowNull() {
+                return this.IsNull(this.tableDataTable.FDDateNowColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetFDShdTransDateNull() {
-                this[this.tableDataTable.FDShdTransDateColumn] = global::System.Convert.DBNull;
+            public void SetFDDateNowNull() {
+                this[this.tableDataTable.FDDateNowColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -989,18 +1019,6 @@ namespace AdaReport {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsFTEmpFNameNull() {
-                return this.IsNull(this.tableDataTable.FTEmpFNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetFTEmpFNameNull() {
-                this[this.tableDataTable.FTEmpFNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsFTSkuCodeNull() {
                 return this.IsNull(this.tableDataTable.FTSkuCodeColumn);
             }
@@ -1021,6 +1039,30 @@ namespace AdaReport {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetFTScfUsrValueNull() {
                 this[this.tableDataTable.FTScfUsrValueColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFNSdtSeqNoNull() {
+                return this.IsNull(this.tableDataTable.FNSdtSeqNoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFNSdtSeqNoNull() {
+                this[this.tableDataTable.FNSdtSeqNoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFTSpnCodeNull() {
+                return this.IsNull(this.tableDataTable.FTSpnCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFTSpnCodeNull() {
+                this[this.tableDataTable.FTSpnCodeColumn] = global::System.Convert.DBNull;
             }
         }
         

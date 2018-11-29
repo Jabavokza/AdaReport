@@ -62,7 +62,6 @@
             this.otbRFCode = new System.Windows.Forms.TextBox();
             this.odtTransDate = new System.Windows.Forms.DateTimePicker();
             this.olaTransDate = new System.Windows.Forms.Label();
-            this.otbTransDate = new System.Windows.Forms.TextBox();
             this.olaTransNo = new System.Windows.Forms.Label();
             this.otbTransNo = new System.Windows.Forms.TextBox();
             this.ocbPrintSticker = new System.Windows.Forms.CheckBox();
@@ -472,7 +471,6 @@
             this.panel6.Controls.Add(this.otbRFCode);
             this.panel6.Controls.Add(this.odtTransDate);
             this.panel6.Controls.Add(this.olaTransDate);
-            this.panel6.Controls.Add(this.otbTransDate);
             this.panel6.Controls.Add(this.olaTransNo);
             this.panel6.Controls.Add(this.otbTransNo);
             this.panel6.Controls.Add(this.ocbPrintSticker);
@@ -517,14 +515,6 @@
             this.olaTransDate.TabIndex = 8;
             this.olaTransDate.Text = "TransDate";
             // 
-            // otbTransDate
-            // 
-            this.otbTransDate.Location = new System.Drawing.Point(333, 95);
-            this.otbTransDate.Name = "otbTransDate";
-            this.otbTransDate.Size = new System.Drawing.Size(93, 20);
-            this.otbTransDate.TabIndex = 7;
-            this.otbTransDate.Text = "2018-11-21 00:00:00.000";
-            // 
             // olaTransNo
             // 
             this.olaTransNo.AutoSize = true;
@@ -554,11 +544,13 @@
             // 
             // ocmPreview
             // 
-            this.ocmPreview.Location = new System.Drawing.Point(127, 164);
+            this.ocmPreview.Image = ((System.Drawing.Image)(resources.GetObject("ocmPreview.Image")));
+            this.ocmPreview.Location = new System.Drawing.Point(362, 9);
             this.ocmPreview.Name = "ocmPreview";
-            this.ocmPreview.Size = new System.Drawing.Size(87, 42);
+            this.ocmPreview.Size = new System.Drawing.Size(91, 43);
             this.ocmPreview.TabIndex = 2;
             this.ocmPreview.Text = "Preview";
+            this.ocmPreview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ocmPreview.UseVisualStyleBackColor = true;
             this.ocmPreview.Click += new System.EventHandler(this.ocmPreview_Click);
             // 
@@ -775,7 +767,7 @@
             this.ostSaleExportingDT});
             this.ostDetailDbconfig.Location = new System.Drawing.Point(8, 571);
             this.ostDetailDbconfig.Name = "ostDetailDbconfig";
-            this.ostDetailDbconfig.Size = new System.Drawing.Size(889, 22);
+            this.ostDetailDbconfig.Size = new System.Drawing.Size(857, 22);
             this.ostDetailDbconfig.TabIndex = 2;
             // 
             // ostServerHD
@@ -866,7 +858,7 @@
             this.ostTableUpdateHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ostTableUpdateHD.Image = ((System.Drawing.Image)(resources.GetObject("ostTableUpdateHD.Image")));
             this.ostTableUpdateHD.Name = "ostTableUpdateHD";
-            this.ostTableUpdateHD.Size = new System.Drawing.Size(97, 17);
+            this.ostTableUpdateHD.Size = new System.Drawing.Size(96, 17);
             this.ostTableUpdateHD.Text = "Table Update :";
             // 
             // ostTableUpdateDT
@@ -1109,7 +1101,6 @@
         private System.Windows.Forms.TextBox otbTmnNum;
         private System.Windows.Forms.CheckBox ocbPrintSticker;
         private System.Windows.Forms.Label olaTransDate;
-        private System.Windows.Forms.TextBox otbTransDate;
         private System.Windows.Forms.Label olaTransNo;
         private System.Windows.Forms.TextBox otbTransNo;
         private System.Windows.Forms.DateTimePicker odtTransDate;
