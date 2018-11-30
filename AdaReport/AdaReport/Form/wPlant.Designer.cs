@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(wPlant));
             this.ogdPlant = new System.Windows.Forms.DataGridView();
             this.ocmExit = new System.Windows.Forms.Button();
+            this.oBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.ogdPlant)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +61,12 @@
             this.ocmExit.UseVisualStyleBackColor = false;
             this.ocmExit.Click += new System.EventHandler(this.ocmExit_Click);
             // 
+            // oBackgroundWorker
+            // 
+            this.oBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.oBackgroundWorker_DoWork);
+            this.oBackgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.oBackgroundWorker_ProgressChanged);
+            this.oBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.oBackgroundWorker_RunWorkerCompleted);
+            // 
             // wPlant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -83,5 +90,6 @@
         #endregion
         private System.Windows.Forms.DataGridView ogdPlant;
         private System.Windows.Forms.Button ocmExit;
+        private System.ComponentModel.BackgroundWorker oBackgroundWorker;
     }
 }

@@ -31,13 +31,62 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(wMain));
             this.otoMainControl = new System.Windows.Forms.ToolStrip();
-            this.otoLogin = new System.Windows.Forms.ToolStripButton();
-            this.otoPlantDB = new System.Windows.Forms.ToolStripButton();
-            this.otoRptPreview = new System.Windows.Forms.ToolStripButton();
-            this.otoLang = new System.Windows.Forms.ToolStripButton();
-            this.otoSetting = new System.Windows.Forms.ToolStripButton();
-            this.otoLogout = new System.Windows.Forms.ToolStripButton();
-            this.otoExit = new System.Windows.Forms.ToolStripButton();
+            this.otaTebControl = new System.Windows.Forms.TabControl();
+            this.ostDetailDbconfig = new System.Windows.Forms.StatusStrip();
+            this.ostServerDT = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel19 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ostDbNameDT = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ostPlantDT = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ostUserDT = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel9 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel12 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.otmOpenPlant = new System.Windows.Forms.Timer(this.components);
+            this.olaVersion = new System.Windows.Forms.Label();
+            this.otmDateTime = new System.Windows.Forms.Timer(this.components);
+            this.otbDateTime = new System.Windows.Forms.TextBox();
+            this.otbOperationDate = new System.Windows.Forms.TextBox();
+            this.ocmOk = new System.Windows.Forms.Button();
+            this.olaOperationDate = new System.Windows.Forms.Label();
+            this.olaDateTame = new System.Windows.Forms.Label();
+            this.ostServerHD = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ostDbNameHD = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ostPlantHD = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ostUserHD = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ostTableUpdateHD = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ostTableUpdateDT = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ostOpenStoreHD = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ostOpenStoreDT = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ostCloseStoreHD = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ostCloseStoreDT = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ostSaleExportingHD = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ostSaleExportingDT = new System.Windows.Forms.ToolStripStatusLabel();
+            this.otaTebMain = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.opbLogin = new System.Windows.Forms.PictureBox();
+            this.otbUsrName = new System.Windows.Forms.TextBox();
+            this.olaPwd = new System.Windows.Forms.Label();
+            this.ocmCancel = new System.Windows.Forms.Button();
+            this.otbUsrPwd = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.otaTabReport = new System.Windows.Forms.TabPage();
+            this.olbReportList = new System.Windows.Forms.ListBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.olaRFCode = new System.Windows.Forms.Label();
+            this.otbRFCode = new System.Windows.Forms.TextBox();
+            this.odtTransDate = new System.Windows.Forms.DateTimePicker();
+            this.olaTransDate = new System.Windows.Forms.Label();
+            this.olaTransNo = new System.Windows.Forms.Label();
+            this.otbTransNo = new System.Windows.Forms.TextBox();
+            this.ocbPrintSticker = new System.Windows.Forms.CheckBox();
+            this.ocmPreview = new System.Windows.Forms.Button();
+            this.olaTmnNum = new System.Windows.Forms.Label();
+            this.otbTmnNum = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.otaTebSetting = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.olaDbName = new System.Windows.Forms.Label();
@@ -55,75 +104,27 @@
             this.olaPathAdaini = new System.Windows.Forms.Label();
             this.otbPathReport = new System.Windows.Forms.TextBox();
             this.olaPathReport = new System.Windows.Forms.Label();
-            this.otaTabReport = new System.Windows.Forms.TabPage();
-            this.olbReportList = new System.Windows.Forms.ListBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.olaRFCode = new System.Windows.Forms.Label();
-            this.otbRFCode = new System.Windows.Forms.TextBox();
-            this.odtTransDate = new System.Windows.Forms.DateTimePicker();
-            this.olaTransDate = new System.Windows.Forms.Label();
-            this.olaTransNo = new System.Windows.Forms.Label();
-            this.otbTransNo = new System.Windows.Forms.TextBox();
-            this.ocbPrintSticker = new System.Windows.Forms.CheckBox();
-            this.ocmPreview = new System.Windows.Forms.Button();
-            this.olaTmnNum = new System.Windows.Forms.Label();
-            this.otbTmnNum = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.otaTebMain = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.opbLogin = new System.Windows.Forms.PictureBox();
-            this.otbUsrName = new System.Windows.Forms.TextBox();
-            this.ocmOk = new System.Windows.Forms.Button();
-            this.olaPwd = new System.Windows.Forms.Label();
-            this.ocmCancel = new System.Windows.Forms.Button();
-            this.otbUsrPwd = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.olaDateTame = new System.Windows.Forms.Label();
-            this.otaTebControl = new System.Windows.Forms.TabControl();
-            this.ostDetailDbconfig = new System.Windows.Forms.StatusStrip();
-            this.ostServerHD = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostServerDT = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel19 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostDbNameHD = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostDbNameDT = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostPlantHD = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostPlantDT = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostUserHD = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostUserDT = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostTableUpdateHD = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostTableUpdateDT = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostOpenStoreHD = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostOpenStoreDT = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel9 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostCloseStoreHD = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostCloseStoreDT = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel12 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostSaleExportingHD = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ostSaleExportingDT = new System.Windows.Forms.ToolStripStatusLabel();
-            this.otmOpenPlant = new System.Windows.Forms.Timer(this.components);
-            this.olaVersion = new System.Windows.Forms.Label();
-            this.otmDateTime = new System.Windows.Forms.Timer(this.components);
-            this.otbDateTime = new System.Windows.Forms.TextBox();
-            this.olaOperationDate = new System.Windows.Forms.Label();
-            this.otbOperationDate = new System.Windows.Forms.TextBox();
+            this.otoLogin = new System.Windows.Forms.ToolStripButton();
+            this.otoPlantDB = new System.Windows.Forms.ToolStripButton();
+            this.otoRptPreview = new System.Windows.Forms.ToolStripButton();
+            this.otoLang = new System.Windows.Forms.ToolStripButton();
+            this.otoSetting = new System.Windows.Forms.ToolStripButton();
+            this.otoLogout = new System.Windows.Forms.ToolStripButton();
+            this.otoExit = new System.Windows.Forms.ToolStripButton();
+            this.oBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.otoMainControl.SuspendLayout();
+            this.otaTebControl.SuspendLayout();
+            this.ostDetailDbconfig.SuspendLayout();
+            this.otaTebMain.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.opbLogin)).BeginInit();
+            this.otaTabReport.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.otaTebSetting.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.otaTabReport.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.otaTebMain.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.opbLogin)).BeginInit();
-            this.otaTebControl.SuspendLayout();
-            this.ostDetailDbconfig.SuspendLayout();
             this.SuspendLayout();
             // 
             // otoMainControl
@@ -142,102 +143,569 @@
             this.otoExit});
             this.otoMainControl.Location = new System.Drawing.Point(12, 60);
             this.otoMainControl.Name = "otoMainControl";
-            this.otoMainControl.Size = new System.Drawing.Size(998, 68);
+            this.otoMainControl.Size = new System.Drawing.Size(1002, 68);
             this.otoMainControl.TabIndex = 0;
             // 
-            // otoLogin
+            // otaTebControl
             // 
-            this.otoLogin.AutoSize = false;
-            this.otoLogin.AutoToolTip = false;
-            this.otoLogin.Enabled = false;
-            this.otoLogin.Image = ((System.Drawing.Image)(resources.GetObject("otoLogin.Image")));
-            this.otoLogin.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.otoLogin.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.otoLogin.Name = "otoLogin";
-            this.otoLogin.Size = new System.Drawing.Size(55, 65);
-            this.otoLogin.Text = "Login";
-            this.otoLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.otoLogin.Visible = false;
+            this.otaTebControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.otaTebControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.otaTebControl.Controls.Add(this.otaTebMain);
+            this.otaTebControl.Controls.Add(this.otaTabReport);
+            this.otaTebControl.Controls.Add(this.otaTebSetting);
+            this.otaTebControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.otaTebControl.ItemSize = new System.Drawing.Size(20, 2);
+            this.otaTebControl.Location = new System.Drawing.Point(8, 128);
+            this.otaTebControl.Name = "otaTebControl";
+            this.otaTebControl.SelectedIndex = 0;
+            this.otaTebControl.Size = new System.Drawing.Size(1006, 435);
+            this.otaTebControl.TabIndex = 1;
             // 
-            // otoPlantDB
+            // ostDetailDbconfig
             // 
-            this.otoPlantDB.AutoSize = false;
-            this.otoPlantDB.AutoToolTip = false;
-            this.otoPlantDB.Image = ((System.Drawing.Image)(resources.GetObject("otoPlantDB.Image")));
-            this.otoPlantDB.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.otoPlantDB.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.otoPlantDB.Name = "otoPlantDB";
-            this.otoPlantDB.Size = new System.Drawing.Size(55, 65);
-            this.otoPlantDB.Text = "Plant";
-            this.otoPlantDB.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.otoPlantDB.Click += new System.EventHandler(this.otoPlantDB_Click);
+            this.ostDetailDbconfig.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ostDetailDbconfig.BackColor = System.Drawing.Color.Aquamarine;
+            this.ostDetailDbconfig.Dock = System.Windows.Forms.DockStyle.None;
+            this.ostDetailDbconfig.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ostServerHD,
+            this.ostServerDT,
+            this.toolStripStatusLabel19,
+            this.ostDbNameHD,
+            this.ostDbNameDT,
+            this.toolStripStatusLabel3,
+            this.ostPlantHD,
+            this.ostPlantDT,
+            this.toolStripStatusLabel1,
+            this.ostUserHD,
+            this.ostUserDT,
+            this.toolStripStatusLabel2,
+            this.ostTableUpdateHD,
+            this.ostTableUpdateDT,
+            this.toolStripStatusLabel6,
+            this.ostOpenStoreHD,
+            this.ostOpenStoreDT,
+            this.toolStripStatusLabel9,
+            this.ostCloseStoreHD,
+            this.ostCloseStoreDT,
+            this.toolStripStatusLabel12,
+            this.ostSaleExportingHD,
+            this.ostSaleExportingDT});
+            this.ostDetailDbconfig.Location = new System.Drawing.Point(8, 571);
+            this.ostDetailDbconfig.Name = "ostDetailDbconfig";
+            this.ostDetailDbconfig.Size = new System.Drawing.Size(857, 22);
+            this.ostDetailDbconfig.TabIndex = 2;
             // 
-            // otoRptPreview
+            // ostServerDT
             // 
-            this.otoRptPreview.AutoSize = false;
-            this.otoRptPreview.AutoToolTip = false;
-            this.otoRptPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.otoRptPreview.Image = ((System.Drawing.Image)(resources.GetObject("otoRptPreview.Image")));
-            this.otoRptPreview.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.otoRptPreview.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.otoRptPreview.Name = "otoRptPreview";
-            this.otoRptPreview.Size = new System.Drawing.Size(55, 65);
-            this.otoRptPreview.Text = "Preview";
-            this.otoRptPreview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.otoRptPreview.Visible = false;
-            this.otoRptPreview.Click += new System.EventHandler(this.otoRptAll_Click);
+            this.ostServerDT.Name = "ostServerDT";
+            this.ostServerDT.Size = new System.Drawing.Size(22, 17);
+            this.ostServerDT.Text = "xxx";
             // 
-            // otoLang
+            // toolStripStatusLabel19
             // 
-            this.otoLang.AutoSize = false;
-            this.otoLang.AutoToolTip = false;
-            this.otoLang.Image = ((System.Drawing.Image)(resources.GetObject("otoLang.Image")));
-            this.otoLang.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.otoLang.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.otoLang.Name = "otoLang";
-            this.otoLang.Size = new System.Drawing.Size(55, 65);
-            this.otoLang.Text = "Language";
-            this.otoLang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripStatusLabel19.Name = "toolStripStatusLabel19";
+            this.toolStripStatusLabel19.Size = new System.Drawing.Size(10, 17);
+            this.toolStripStatusLabel19.Text = "|";
             // 
-            // otoSetting
+            // ostDbNameDT
             // 
-            this.otoSetting.AutoSize = false;
-            this.otoSetting.Enabled = false;
-            this.otoSetting.Image = ((System.Drawing.Image)(resources.GetObject("otoSetting.Image")));
-            this.otoSetting.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.otoSetting.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.otoSetting.Name = "otoSetting";
-            this.otoSetting.Size = new System.Drawing.Size(55, 65);
-            this.otoSetting.Text = "Setting";
-            this.otoSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.otoSetting.Visible = false;
-            this.otoSetting.Click += new System.EventHandler(this.otoSetting_Click);
+            this.ostDbNameDT.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ostDbNameDT.Name = "ostDbNameDT";
+            this.ostDbNameDT.Size = new System.Drawing.Size(22, 17);
+            this.ostDbNameDT.Text = "xxx";
             // 
-            // otoLogout
+            // toolStripStatusLabel3
             // 
-            this.otoLogout.AutoSize = false;
-            this.otoLogout.AutoToolTip = false;
-            this.otoLogout.Enabled = false;
-            this.otoLogout.Image = ((System.Drawing.Image)(resources.GetObject("otoLogout.Image")));
-            this.otoLogout.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.otoLogout.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.otoLogout.Name = "otoLogout";
-            this.otoLogout.Size = new System.Drawing.Size(55, 65);
-            this.otoLogout.Text = "Logout";
-            this.otoLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.otoLogout.Click += new System.EventHandler(this.otoLogout_Click);
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(10, 17);
+            this.toolStripStatusLabel3.Text = "|";
             // 
-            // otoExit
+            // ostPlantDT
             // 
-            this.otoExit.AutoSize = false;
-            this.otoExit.Image = ((System.Drawing.Image)(resources.GetObject("otoExit.Image")));
-            this.otoExit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.otoExit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.otoExit.Name = "otoExit";
-            this.otoExit.Size = new System.Drawing.Size(55, 65);
-            this.otoExit.Text = "Exit";
-            this.otoExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.otoExit.Click += new System.EventHandler(this.otoExit_Click);
+            this.ostPlantDT.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ostPlantDT.Name = "ostPlantDT";
+            this.ostPlantDT.Size = new System.Drawing.Size(22, 17);
+            this.ostPlantDT.Text = "xxx";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(10, 17);
+            this.toolStripStatusLabel1.Text = "|";
+            // 
+            // ostUserDT
+            // 
+            this.ostUserDT.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ostUserDT.Name = "ostUserDT";
+            this.ostUserDT.Size = new System.Drawing.Size(22, 17);
+            this.ostUserDT.Text = "xxx";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(10, 17);
+            this.toolStripStatusLabel2.Text = "|";
+            // 
+            // toolStripStatusLabel6
+            // 
+            this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
+            this.toolStripStatusLabel6.Size = new System.Drawing.Size(10, 17);
+            this.toolStripStatusLabel6.Text = "|";
+            // 
+            // toolStripStatusLabel9
+            // 
+            this.toolStripStatusLabel9.Name = "toolStripStatusLabel9";
+            this.toolStripStatusLabel9.Size = new System.Drawing.Size(10, 17);
+            this.toolStripStatusLabel9.Text = "|";
+            // 
+            // toolStripStatusLabel12
+            // 
+            this.toolStripStatusLabel12.Name = "toolStripStatusLabel12";
+            this.toolStripStatusLabel12.Size = new System.Drawing.Size(10, 17);
+            this.toolStripStatusLabel12.Text = "|";
+            // 
+            // otmOpenPlant
+            // 
+            this.otmOpenPlant.Interval = 700;
+            this.otmOpenPlant.Tick += new System.EventHandler(this.otmOpenPlant_Tick);
+            // 
+            // olaVersion
+            // 
+            this.olaVersion.AutoSize = true;
+            this.olaVersion.Location = new System.Drawing.Point(136, 35);
+            this.olaVersion.Name = "olaVersion";
+            this.olaVersion.Size = new System.Drawing.Size(46, 13);
+            this.olaVersion.TabIndex = 3;
+            this.olaVersion.Text = "v1.0.0.0";
+            // 
+            // otmDateTime
+            // 
+            this.otmDateTime.Enabled = true;
+            this.otmDateTime.Interval = 1000;
+            this.otmDateTime.Tick += new System.EventHandler(this.otmDateTime_Tick);
+            // 
+            // otbDateTime
+            // 
+            this.otbDateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.otbDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.otbDateTime.Location = new System.Drawing.Point(892, 63);
+            this.otbDateTime.MaxLength = 20;
+            this.otbDateTime.Name = "otbDateTime";
+            this.otbDateTime.Size = new System.Drawing.Size(120, 22);
+            this.otbDateTime.TabIndex = 27;
+            // 
+            // otbOperationDate
+            // 
+            this.otbOperationDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.otbOperationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.otbOperationDate.Location = new System.Drawing.Point(892, 88);
+            this.otbOperationDate.MaxLength = 20;
+            this.otbOperationDate.Name = "otbOperationDate";
+            this.otbOperationDate.Size = new System.Drawing.Size(120, 22);
+            this.otbOperationDate.TabIndex = 29;
+            // 
+            // ocmOk
+            // 
+            this.ocmOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.ocmOk.Image = ((System.Drawing.Image)(resources.GetObject("ocmOk.Image")));
+            this.ocmOk.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ocmOk.Location = new System.Drawing.Point(79, 120);
+            this.ocmOk.Name = "ocmOk";
+            this.ocmOk.Size = new System.Drawing.Size(114, 34);
+            this.ocmOk.TabIndex = 22;
+            this.ocmOk.Tag = "2;ตกลง;Ok";
+            this.ocmOk.Text = "Ok";
+            this.ocmOk.UseVisualStyleBackColor = true;
+            this.ocmOk.Click += new System.EventHandler(this.ocmOk_Click);
+            // 
+            // olaOperationDate
+            // 
+            this.olaOperationDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.olaOperationDate.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.olaOperationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.olaOperationDate.Image = ((System.Drawing.Image)(resources.GetObject("olaOperationDate.Image")));
+            this.olaOperationDate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.olaOperationDate.Location = new System.Drawing.Point(771, 88);
+            this.olaOperationDate.Name = "olaOperationDate";
+            this.olaOperationDate.Size = new System.Drawing.Size(118, 22);
+            this.olaOperationDate.TabIndex = 28;
+            this.olaOperationDate.Text = "Operation Date :";
+            this.olaOperationDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // olaDateTame
+            // 
+            this.olaDateTame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.olaDateTame.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.olaDateTame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.olaDateTame.Image = ((System.Drawing.Image)(resources.GetObject("olaDateTame.Image")));
+            this.olaDateTame.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.olaDateTame.Location = new System.Drawing.Point(771, 63);
+            this.olaDateTame.Name = "olaDateTame";
+            this.olaDateTame.Size = new System.Drawing.Size(118, 22);
+            this.olaDateTame.TabIndex = 4;
+            this.olaDateTame.Text = "Date Time :";
+            this.olaDateTame.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // ostServerHD
+            // 
+            this.ostServerHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ostServerHD.Image = ((System.Drawing.Image)(resources.GetObject("ostServerHD.Image")));
+            this.ostServerHD.Name = "ostServerHD";
+            this.ostServerHD.Size = new System.Drawing.Size(60, 17);
+            this.ostServerHD.Text = "Server :";
+            // 
+            // ostDbNameHD
+            // 
+            this.ostDbNameHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ostDbNameHD.Image = ((System.Drawing.Image)(resources.GetObject("ostDbNameHD.Image")));
+            this.ostDbNameHD.Name = "ostDbNameHD";
+            this.ostDbNameHD.Size = new System.Drawing.Size(77, 17);
+            this.ostDbNameHD.Text = "DataBase :";
+            // 
+            // ostPlantHD
+            // 
+            this.ostPlantHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ostPlantHD.Image = ((System.Drawing.Image)(resources.GetObject("ostPlantHD.Image")));
+            this.ostPlantHD.Name = "ostPlantHD";
+            this.ostPlantHD.Size = new System.Drawing.Size(55, 17);
+            this.ostPlantHD.Text = "Plant :";
+            // 
+            // ostUserHD
+            // 
+            this.ostUserHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ostUserHD.Image = ((System.Drawing.Image)(resources.GetObject("ostUserHD.Image")));
+            this.ostUserHD.Name = "ostUserHD";
+            this.ostUserHD.Size = new System.Drawing.Size(52, 17);
+            this.ostUserHD.Text = "User :";
+            // 
+            // ostTableUpdateHD
+            // 
+            this.ostTableUpdateHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ostTableUpdateHD.Image = ((System.Drawing.Image)(resources.GetObject("ostTableUpdateHD.Image")));
+            this.ostTableUpdateHD.Name = "ostTableUpdateHD";
+            this.ostTableUpdateHD.Size = new System.Drawing.Size(96, 17);
+            this.ostTableUpdateHD.Text = "Table Update :";
+            // 
+            // ostTableUpdateDT
+            // 
+            this.ostTableUpdateDT.Image = ((System.Drawing.Image)(resources.GetObject("ostTableUpdateDT.Image")));
+            this.ostTableUpdateDT.Name = "ostTableUpdateDT";
+            this.ostTableUpdateDT.Size = new System.Drawing.Size(16, 17);
+            // 
+            // ostOpenStoreHD
+            // 
+            this.ostOpenStoreHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ostOpenStoreHD.Image = ((System.Drawing.Image)(resources.GetObject("ostOpenStoreHD.Image")));
+            this.ostOpenStoreHD.Name = "ostOpenStoreHD";
+            this.ostOpenStoreHD.Size = new System.Drawing.Size(88, 17);
+            this.ostOpenStoreHD.Text = "Open Store :";
+            // 
+            // ostOpenStoreDT
+            // 
+            this.ostOpenStoreDT.Image = ((System.Drawing.Image)(resources.GetObject("ostOpenStoreDT.Image")));
+            this.ostOpenStoreDT.Name = "ostOpenStoreDT";
+            this.ostOpenStoreDT.Size = new System.Drawing.Size(16, 17);
+            // 
+            // ostCloseStoreHD
+            // 
+            this.ostCloseStoreHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ostCloseStoreHD.Image = ((System.Drawing.Image)(resources.GetObject("ostCloseStoreHD.Image")));
+            this.ostCloseStoreHD.Name = "ostCloseStoreHD";
+            this.ostCloseStoreHD.Size = new System.Drawing.Size(87, 17);
+            this.ostCloseStoreHD.Text = "Close Store :";
+            // 
+            // ostCloseStoreDT
+            // 
+            this.ostCloseStoreDT.Image = ((System.Drawing.Image)(resources.GetObject("ostCloseStoreDT.Image")));
+            this.ostCloseStoreDT.Name = "ostCloseStoreDT";
+            this.ostCloseStoreDT.Size = new System.Drawing.Size(16, 17);
+            // 
+            // ostSaleExportingHD
+            // 
+            this.ostSaleExportingHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ostSaleExportingHD.Image = ((System.Drawing.Image)(resources.GetObject("ostSaleExportingHD.Image")));
+            this.ostSaleExportingHD.Name = "ostSaleExportingHD";
+            this.ostSaleExportingHD.Size = new System.Drawing.Size(103, 17);
+            this.ostSaleExportingHD.Text = "Sale Exporting :";
+            // 
+            // ostSaleExportingDT
+            // 
+            this.ostSaleExportingDT.Image = ((System.Drawing.Image)(resources.GetObject("ostSaleExportingDT.Image")));
+            this.ostSaleExportingDT.Name = "ostSaleExportingDT";
+            this.ostSaleExportingDT.Size = new System.Drawing.Size(16, 17);
+            // 
+            // otaTebMain
+            // 
+            this.otaTebMain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("otaTebMain.BackgroundImage")));
+            this.otaTebMain.Controls.Add(this.panel1);
+            this.otaTebMain.Location = new System.Drawing.Point(4, 6);
+            this.otaTebMain.Name = "otaTebMain";
+            this.otaTebMain.Padding = new System.Windows.Forms.Padding(3);
+            this.otaTebMain.Size = new System.Drawing.Size(998, 425);
+            this.otaTebMain.TabIndex = 0;
+            this.otaTebMain.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.opbLogin);
+            this.panel1.Controls.Add(this.otbUsrName);
+            this.panel1.Controls.Add(this.ocmOk);
+            this.panel1.Controls.Add(this.olaPwd);
+            this.panel1.Controls.Add(this.ocmCancel);
+            this.panel1.Controls.Add(this.otbUsrPwd);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(334, 84);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(337, 215);
+            this.panel1.TabIndex = 29;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label4.Location = new System.Drawing.Point(149, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 16);
+            this.label4.TabIndex = 26;
+            this.label4.Tag = "2;รหัสผู้ใช้;User Code";
+            this.label4.Text = "LOGIN";
+            // 
+            // opbLogin
+            // 
+            this.opbLogin.Image = ((System.Drawing.Image)(resources.GetObject("opbLogin.Image")));
+            this.opbLogin.Location = new System.Drawing.Point(24, 50);
+            this.opbLogin.Name = "opbLogin";
+            this.opbLogin.Size = new System.Drawing.Size(65, 64);
+            this.opbLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.opbLogin.TabIndex = 19;
+            this.opbLogin.TabStop = false;
+            // 
+            // otbUsrName
+            // 
+            this.otbUsrName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.otbUsrName.Location = new System.Drawing.Point(195, 50);
+            this.otbUsrName.MaxLength = 20;
+            this.otbUsrName.Name = "otbUsrName";
+            this.otbUsrName.Size = new System.Drawing.Size(118, 22);
+            this.otbUsrName.TabIndex = 20;
+            this.otbUsrName.Text = "admin";
+            // 
+            // olaPwd
+            // 
+            this.olaPwd.AutoSize = true;
+            this.olaPwd.BackColor = System.Drawing.Color.Transparent;
+            this.olaPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.olaPwd.Location = new System.Drawing.Point(105, 83);
+            this.olaPwd.Name = "olaPwd";
+            this.olaPwd.Size = new System.Drawing.Size(68, 16);
+            this.olaPwd.TabIndex = 25;
+            this.olaPwd.Tag = "2;รหัสผ่าน;Password";
+            this.olaPwd.Text = "Password";
+            // 
+            // ocmCancel
+            // 
+            this.ocmCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.ocmCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.ocmCancel.Image = ((System.Drawing.Image)(resources.GetObject("ocmCancel.Image")));
+            this.ocmCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ocmCancel.Location = new System.Drawing.Point(199, 120);
+            this.ocmCancel.Name = "ocmCancel";
+            this.ocmCancel.Size = new System.Drawing.Size(114, 34);
+            this.ocmCancel.TabIndex = 24;
+            this.ocmCancel.Tag = "2;ปิด;Close";
+            this.ocmCancel.Text = "Cancel";
+            this.ocmCancel.UseVisualStyleBackColor = true;
+            this.ocmCancel.Click += new System.EventHandler(this.ocmCancel_Click);
+            // 
+            // otbUsrPwd
+            // 
+            this.otbUsrPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.otbUsrPwd.Location = new System.Drawing.Point(195, 80);
+            this.otbUsrPwd.MaxLength = 20;
+            this.otbUsrPwd.Name = "otbUsrPwd";
+            this.otbUsrPwd.PasswordChar = '*';
+            this.otbUsrPwd.Size = new System.Drawing.Size(118, 22);
+            this.otbUsrPwd.TabIndex = 21;
+            this.otbUsrPwd.Text = "3971";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label1.Location = new System.Drawing.Point(105, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 16);
+            this.label1.TabIndex = 23;
+            this.label1.Tag = "2;รหัสผู้ใช้;User Code";
+            this.label1.Text = "UserName";
+            // 
+            // otaTabReport
+            // 
+            this.otaTabReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("otaTabReport.BackgroundImage")));
+            this.otaTabReport.Controls.Add(this.olbReportList);
+            this.otaTabReport.Controls.Add(this.panel6);
+            this.otaTabReport.Controls.Add(this.label3);
+            this.otaTabReport.Location = new System.Drawing.Point(4, 6);
+            this.otaTabReport.Name = "otaTabReport";
+            this.otaTabReport.Padding = new System.Windows.Forms.Padding(3);
+            this.otaTabReport.Size = new System.Drawing.Size(998, 425);
+            this.otaTabReport.TabIndex = 1;
+            this.otaTabReport.UseVisualStyleBackColor = true;
+            // 
+            // olbReportList
+            // 
+            this.olbReportList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.olbReportList.FormattingEnabled = true;
+            this.olbReportList.ItemHeight = 20;
+            this.olbReportList.Items.AddRange(new object[] {
+            "Report - PermissionDelivery",
+            "Report - Divition Sale",
+            "Report - Department/Class Sale",
+            "Report - Merchandise Sale",
+            "Report - Flash Sale",
+            "Report - Sales by Time",
+            "Report - Sales VAT",
+            "Report - Cashier Total",
+            "Report - Void",
+            "Report - Suspend/Recall",
+            "Report - Missing Transaction",
+            "Report - VIP Service",
+            "Report - Other Receive",
+            "Report - Voucher",
+            "Report - Location Status Report",
+            "Report - Employee Audit Log",
+            "Report - Transaction Information",
+            "Report - Discount Infomation",
+            "Report - Tender Information"});
+            this.olbReportList.Location = new System.Drawing.Point(11, 36);
+            this.olbReportList.Name = "olbReportList";
+            this.olbReportList.ScrollAlwaysVisible = true;
+            this.olbReportList.Size = new System.Drawing.Size(366, 364);
+            this.olbReportList.TabIndex = 13;
+            this.olbReportList.SelectedIndexChanged += new System.EventHandler(this.olbReportList_SelectedIndexChanged);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.olaRFCode);
+            this.panel6.Controls.Add(this.otbRFCode);
+            this.panel6.Controls.Add(this.odtTransDate);
+            this.panel6.Controls.Add(this.olaTransDate);
+            this.panel6.Controls.Add(this.olaTransNo);
+            this.panel6.Controls.Add(this.otbTransNo);
+            this.panel6.Controls.Add(this.ocbPrintSticker);
+            this.panel6.Controls.Add(this.ocmPreview);
+            this.panel6.Controls.Add(this.olaTmnNum);
+            this.panel6.Controls.Add(this.otbTmnNum);
+            this.panel6.Location = new System.Drawing.Point(471, 36);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(462, 381);
+            this.panel6.TabIndex = 12;
+            // 
+            // olaRFCode
+            // 
+            this.olaRFCode.AutoSize = true;
+            this.olaRFCode.Location = new System.Drawing.Point(50, 24);
+            this.olaRFCode.Name = "olaRFCode";
+            this.olaRFCode.Size = new System.Drawing.Size(46, 13);
+            this.olaRFCode.TabIndex = 11;
+            this.olaRFCode.Text = "RFCode";
+            // 
+            // otbRFCode
+            // 
+            this.otbRFCode.Location = new System.Drawing.Point(127, 19);
+            this.otbRFCode.Name = "otbRFCode";
+            this.otbRFCode.Size = new System.Drawing.Size(91, 20);
+            this.otbRFCode.TabIndex = 10;
+            this.otbRFCode.Text = "RF0000000006";
+            // 
+            // odtTransDate
+            // 
+            this.odtTransDate.Location = new System.Drawing.Point(127, 96);
+            this.odtTransDate.Name = "odtTransDate";
+            this.odtTransDate.Size = new System.Drawing.Size(200, 20);
+            this.odtTransDate.TabIndex = 9;
+            // 
+            // olaTransDate
+            // 
+            this.olaTransDate.AutoSize = true;
+            this.olaTransDate.Location = new System.Drawing.Point(50, 102);
+            this.olaTransDate.Name = "olaTransDate";
+            this.olaTransDate.Size = new System.Drawing.Size(57, 13);
+            this.olaTransDate.TabIndex = 8;
+            this.olaTransDate.Text = "TransDate";
+            // 
+            // olaTransNo
+            // 
+            this.olaTransNo.AutoSize = true;
+            this.olaTransNo.Location = new System.Drawing.Point(50, 76);
+            this.olaTransNo.Name = "olaTransNo";
+            this.olaTransNo.Size = new System.Drawing.Size(48, 13);
+            this.olaTransNo.TabIndex = 6;
+            this.olaTransNo.Text = "TransNo";
+            // 
+            // otbTransNo
+            // 
+            this.otbTransNo.Location = new System.Drawing.Point(127, 71);
+            this.otbTransNo.Name = "otbTransNo";
+            this.otbTransNo.Size = new System.Drawing.Size(76, 20);
+            this.otbTransNo.TabIndex = 5;
+            this.otbTransNo.Text = "00149";
+            // 
+            // ocbPrintSticker
+            // 
+            this.ocbPrintSticker.AutoSize = true;
+            this.ocbPrintSticker.Location = new System.Drawing.Point(127, 131);
+            this.ocbPrintSticker.Name = "ocbPrintSticker";
+            this.ocbPrintSticker.Size = new System.Drawing.Size(91, 17);
+            this.ocbPrintSticker.TabIndex = 4;
+            this.ocbPrintSticker.Text = "ปริ้นสติกเกอร์";
+            this.ocbPrintSticker.UseVisualStyleBackColor = true;
+            // 
+            // ocmPreview
+            // 
+            this.ocmPreview.Image = ((System.Drawing.Image)(resources.GetObject("ocmPreview.Image")));
+            this.ocmPreview.Location = new System.Drawing.Point(362, 9);
+            this.ocmPreview.Name = "ocmPreview";
+            this.ocmPreview.Size = new System.Drawing.Size(91, 43);
+            this.ocmPreview.TabIndex = 2;
+            this.ocmPreview.Text = "Preview";
+            this.ocmPreview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ocmPreview.UseVisualStyleBackColor = true;
+            this.ocmPreview.Click += new System.EventHandler(this.ocmPreview_Click);
+            // 
+            // olaTmnNum
+            // 
+            this.olaTmnNum.AutoSize = true;
+            this.olaTmnNum.Location = new System.Drawing.Point(50, 50);
+            this.olaTmnNum.Name = "olaTmnNum";
+            this.olaTmnNum.Size = new System.Drawing.Size(50, 13);
+            this.olaTmnNum.TabIndex = 1;
+            this.olaTmnNum.Text = "TmnNum";
+            // 
+            // otbTmnNum
+            // 
+            this.otbTmnNum.Location = new System.Drawing.Point(127, 45);
+            this.otbTmnNum.Name = "otbTmnNum";
+            this.otbTmnNum.Size = new System.Drawing.Size(76, 20);
+            this.otbTmnNum.TabIndex = 0;
+            this.otbTmnNum.Text = "55555";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label3.Location = new System.Drawing.Point(11, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(189, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "STORE REPORT LIST";
             // 
             // otaTebSetting
             // 
@@ -420,566 +888,105 @@
             this.olaPathReport.Text = "Path Report";
             this.olaPathReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // otaTabReport
-            // 
-            this.otaTabReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("otaTabReport.BackgroundImage")));
-            this.otaTabReport.Controls.Add(this.olbReportList);
-            this.otaTabReport.Controls.Add(this.panel6);
-            this.otaTabReport.Controls.Add(this.label3);
-            this.otaTabReport.Location = new System.Drawing.Point(4, 6);
-            this.otaTabReport.Name = "otaTabReport";
-            this.otaTabReport.Padding = new System.Windows.Forms.Padding(3);
-            this.otaTabReport.Size = new System.Drawing.Size(998, 425);
-            this.otaTabReport.TabIndex = 1;
-            this.otaTabReport.UseVisualStyleBackColor = true;
-            // 
-            // olbReportList
-            // 
-            this.olbReportList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.olbReportList.FormattingEnabled = true;
-            this.olbReportList.ItemHeight = 20;
-            this.olbReportList.Items.AddRange(new object[] {
-            "Report - PermissionDelivery",
-            "Report - Divition Sale",
-            "Report - Department/Class Sale",
-            "Report - Merchandise Sale",
-            "Report - Flash Sale",
-            "Report - Sales by Time",
-            "Report - Sales VAT",
-            "Report - Cashier Total",
-            "Report - Void",
-            "Report - Suspend/Recall",
-            "Report - Missing Transaction",
-            "Report - VIP Service",
-            "Report - Other Receive",
-            "Report - Voucher",
-            "Report - Location Status Report",
-            "Report - Employee Audit Log",
-            "Report - Transaction Information",
-            "Report - Discount Infomation",
-            "Report - Tender Information"});
-            this.olbReportList.Location = new System.Drawing.Point(11, 36);
-            this.olbReportList.Name = "olbReportList";
-            this.olbReportList.ScrollAlwaysVisible = true;
-            this.olbReportList.Size = new System.Drawing.Size(366, 364);
-            this.olbReportList.TabIndex = 13;
-            this.olbReportList.SelectedIndexChanged += new System.EventHandler(this.olbReportList_SelectedIndexChanged);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.olaRFCode);
-            this.panel6.Controls.Add(this.otbRFCode);
-            this.panel6.Controls.Add(this.odtTransDate);
-            this.panel6.Controls.Add(this.olaTransDate);
-            this.panel6.Controls.Add(this.olaTransNo);
-            this.panel6.Controls.Add(this.otbTransNo);
-            this.panel6.Controls.Add(this.ocbPrintSticker);
-            this.panel6.Controls.Add(this.ocmPreview);
-            this.panel6.Controls.Add(this.olaTmnNum);
-            this.panel6.Controls.Add(this.otbTmnNum);
-            this.panel6.Location = new System.Drawing.Point(471, 36);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(462, 381);
-            this.panel6.TabIndex = 12;
-            // 
-            // olaRFCode
-            // 
-            this.olaRFCode.AutoSize = true;
-            this.olaRFCode.Location = new System.Drawing.Point(50, 24);
-            this.olaRFCode.Name = "olaRFCode";
-            this.olaRFCode.Size = new System.Drawing.Size(46, 13);
-            this.olaRFCode.TabIndex = 11;
-            this.olaRFCode.Text = "RFCode";
-            // 
-            // otbRFCode
-            // 
-            this.otbRFCode.Location = new System.Drawing.Point(127, 19);
-            this.otbRFCode.Name = "otbRFCode";
-            this.otbRFCode.Size = new System.Drawing.Size(91, 20);
-            this.otbRFCode.TabIndex = 10;
-            this.otbRFCode.Text = "RF0000000006";
-            // 
-            // odtTransDate
-            // 
-            this.odtTransDate.Location = new System.Drawing.Point(127, 96);
-            this.odtTransDate.Name = "odtTransDate";
-            this.odtTransDate.Size = new System.Drawing.Size(200, 20);
-            this.odtTransDate.TabIndex = 9;
-            // 
-            // olaTransDate
-            // 
-            this.olaTransDate.AutoSize = true;
-            this.olaTransDate.Location = new System.Drawing.Point(50, 102);
-            this.olaTransDate.Name = "olaTransDate";
-            this.olaTransDate.Size = new System.Drawing.Size(57, 13);
-            this.olaTransDate.TabIndex = 8;
-            this.olaTransDate.Text = "TransDate";
-            // 
-            // olaTransNo
-            // 
-            this.olaTransNo.AutoSize = true;
-            this.olaTransNo.Location = new System.Drawing.Point(50, 76);
-            this.olaTransNo.Name = "olaTransNo";
-            this.olaTransNo.Size = new System.Drawing.Size(48, 13);
-            this.olaTransNo.TabIndex = 6;
-            this.olaTransNo.Text = "TransNo";
-            // 
-            // otbTransNo
-            // 
-            this.otbTransNo.Location = new System.Drawing.Point(127, 71);
-            this.otbTransNo.Name = "otbTransNo";
-            this.otbTransNo.Size = new System.Drawing.Size(76, 20);
-            this.otbTransNo.TabIndex = 5;
-            this.otbTransNo.Text = "00149";
-            // 
-            // ocbPrintSticker
-            // 
-            this.ocbPrintSticker.AutoSize = true;
-            this.ocbPrintSticker.Location = new System.Drawing.Point(127, 131);
-            this.ocbPrintSticker.Name = "ocbPrintSticker";
-            this.ocbPrintSticker.Size = new System.Drawing.Size(91, 17);
-            this.ocbPrintSticker.TabIndex = 4;
-            this.ocbPrintSticker.Text = "ปริ้นสติกเกอร์";
-            this.ocbPrintSticker.UseVisualStyleBackColor = true;
-            // 
-            // ocmPreview
-            // 
-            this.ocmPreview.Image = ((System.Drawing.Image)(resources.GetObject("ocmPreview.Image")));
-            this.ocmPreview.Location = new System.Drawing.Point(362, 9);
-            this.ocmPreview.Name = "ocmPreview";
-            this.ocmPreview.Size = new System.Drawing.Size(91, 43);
-            this.ocmPreview.TabIndex = 2;
-            this.ocmPreview.Text = "Preview";
-            this.ocmPreview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ocmPreview.UseVisualStyleBackColor = true;
-            this.ocmPreview.Click += new System.EventHandler(this.ocmPreview_Click);
-            // 
-            // olaTmnNum
-            // 
-            this.olaTmnNum.AutoSize = true;
-            this.olaTmnNum.Location = new System.Drawing.Point(50, 50);
-            this.olaTmnNum.Name = "olaTmnNum";
-            this.olaTmnNum.Size = new System.Drawing.Size(50, 13);
-            this.olaTmnNum.TabIndex = 1;
-            this.olaTmnNum.Text = "TmnNum";
-            // 
-            // otbTmnNum
-            // 
-            this.otbTmnNum.Location = new System.Drawing.Point(127, 45);
-            this.otbTmnNum.Name = "otbTmnNum";
-            this.otbTmnNum.Size = new System.Drawing.Size(76, 20);
-            this.otbTmnNum.TabIndex = 0;
-            this.otbTmnNum.Text = "55555";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label3.Location = new System.Drawing.Point(11, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 20);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "STORE REPORT LIST";
-            // 
-            // otaTebMain
-            // 
-            this.otaTebMain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("otaTebMain.BackgroundImage")));
-            this.otaTebMain.Controls.Add(this.panel1);
-            this.otaTebMain.Location = new System.Drawing.Point(4, 6);
-            this.otaTebMain.Name = "otaTebMain";
-            this.otaTebMain.Padding = new System.Windows.Forms.Padding(3);
-            this.otaTebMain.Size = new System.Drawing.Size(998, 425);
-            this.otaTebMain.TabIndex = 0;
-            this.otaTebMain.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.opbLogin);
-            this.panel1.Controls.Add(this.otbUsrName);
-            this.panel1.Controls.Add(this.ocmOk);
-            this.panel1.Controls.Add(this.olaPwd);
-            this.panel1.Controls.Add(this.ocmCancel);
-            this.panel1.Controls.Add(this.otbUsrPwd);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(334, 84);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(337, 215);
-            this.panel1.TabIndex = 29;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label4.Location = new System.Drawing.Point(149, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 16);
-            this.label4.TabIndex = 26;
-            this.label4.Tag = "2;รหัสผู้ใช้;User Code";
-            this.label4.Text = "LOGIN";
-            // 
-            // opbLogin
-            // 
-            this.opbLogin.Image = ((System.Drawing.Image)(resources.GetObject("opbLogin.Image")));
-            this.opbLogin.Location = new System.Drawing.Point(24, 50);
-            this.opbLogin.Name = "opbLogin";
-            this.opbLogin.Size = new System.Drawing.Size(65, 64);
-            this.opbLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.opbLogin.TabIndex = 19;
-            this.opbLogin.TabStop = false;
-            // 
-            // otbUsrName
-            // 
-            this.otbUsrName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.otbUsrName.Location = new System.Drawing.Point(195, 50);
-            this.otbUsrName.MaxLength = 20;
-            this.otbUsrName.Name = "otbUsrName";
-            this.otbUsrName.Size = new System.Drawing.Size(118, 22);
-            this.otbUsrName.TabIndex = 20;
-            this.otbUsrName.Text = "admin";
-            // 
-            // ocmOk
-            // 
-            this.ocmOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.ocmOk.Image = ((System.Drawing.Image)(resources.GetObject("ocmOk.Image")));
-            this.ocmOk.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ocmOk.Location = new System.Drawing.Point(79, 120);
-            this.ocmOk.Name = "ocmOk";
-            this.ocmOk.Size = new System.Drawing.Size(114, 34);
-            this.ocmOk.TabIndex = 22;
-            this.ocmOk.Tag = "2;ตกลง;Ok";
-            this.ocmOk.Text = "Ok";
-            this.ocmOk.UseVisualStyleBackColor = true;
-            this.ocmOk.Click += new System.EventHandler(this.ocmOk_Click);
-            // 
-            // olaPwd
-            // 
-            this.olaPwd.AutoSize = true;
-            this.olaPwd.BackColor = System.Drawing.Color.Transparent;
-            this.olaPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.olaPwd.Location = new System.Drawing.Point(105, 83);
-            this.olaPwd.Name = "olaPwd";
-            this.olaPwd.Size = new System.Drawing.Size(68, 16);
-            this.olaPwd.TabIndex = 25;
-            this.olaPwd.Tag = "2;รหัสผ่าน;Password";
-            this.olaPwd.Text = "Password";
-            // 
-            // ocmCancel
-            // 
-            this.ocmCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.ocmCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.ocmCancel.Image = ((System.Drawing.Image)(resources.GetObject("ocmCancel.Image")));
-            this.ocmCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ocmCancel.Location = new System.Drawing.Point(199, 120);
-            this.ocmCancel.Name = "ocmCancel";
-            this.ocmCancel.Size = new System.Drawing.Size(114, 34);
-            this.ocmCancel.TabIndex = 24;
-            this.ocmCancel.Tag = "2;ปิด;Close";
-            this.ocmCancel.Text = "Cancel";
-            this.ocmCancel.UseVisualStyleBackColor = true;
-            this.ocmCancel.Click += new System.EventHandler(this.ocmCancel_Click);
-            // 
-            // otbUsrPwd
-            // 
-            this.otbUsrPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.otbUsrPwd.Location = new System.Drawing.Point(195, 80);
-            this.otbUsrPwd.MaxLength = 20;
-            this.otbUsrPwd.Name = "otbUsrPwd";
-            this.otbUsrPwd.PasswordChar = '*';
-            this.otbUsrPwd.Size = new System.Drawing.Size(118, 22);
-            this.otbUsrPwd.TabIndex = 21;
-            this.otbUsrPwd.Text = "3971";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label1.Location = new System.Drawing.Point(105, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 16);
-            this.label1.TabIndex = 23;
-            this.label1.Tag = "2;รหัสผู้ใช้;User Code";
-            this.label1.Text = "UserName";
-            // 
-            // olaDateTame
-            // 
-            this.olaDateTame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.olaDateTame.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.olaDateTame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.olaDateTame.Image = ((System.Drawing.Image)(resources.GetObject("olaDateTame.Image")));
-            this.olaDateTame.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.olaDateTame.Location = new System.Drawing.Point(765, 63);
-            this.olaDateTame.Name = "olaDateTame";
-            this.olaDateTame.Size = new System.Drawing.Size(118, 22);
-            this.olaDateTame.TabIndex = 4;
-            this.olaDateTame.Text = "Date Time :";
-            this.olaDateTame.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // otaTebControl
-            // 
-            this.otaTebControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.otaTebControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.otaTebControl.Controls.Add(this.otaTebMain);
-            this.otaTebControl.Controls.Add(this.otaTabReport);
-            this.otaTebControl.Controls.Add(this.otaTebSetting);
-            this.otaTebControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.otaTebControl.ItemSize = new System.Drawing.Size(20, 2);
-            this.otaTebControl.Location = new System.Drawing.Point(8, 128);
-            this.otaTebControl.Name = "otaTebControl";
-            this.otaTebControl.SelectedIndex = 0;
-            this.otaTebControl.Size = new System.Drawing.Size(1006, 435);
-            this.otaTebControl.TabIndex = 1;
-            // 
-            // ostDetailDbconfig
-            // 
-            this.ostDetailDbconfig.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ostDetailDbconfig.BackColor = System.Drawing.Color.Aquamarine;
-            this.ostDetailDbconfig.Dock = System.Windows.Forms.DockStyle.None;
-            this.ostDetailDbconfig.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ostServerHD,
-            this.ostServerDT,
-            this.toolStripStatusLabel19,
-            this.ostDbNameHD,
-            this.ostDbNameDT,
-            this.toolStripStatusLabel3,
-            this.ostPlantHD,
-            this.ostPlantDT,
-            this.toolStripStatusLabel1,
-            this.ostUserHD,
-            this.ostUserDT,
-            this.toolStripStatusLabel2,
-            this.ostTableUpdateHD,
-            this.ostTableUpdateDT,
-            this.toolStripStatusLabel6,
-            this.ostOpenStoreHD,
-            this.ostOpenStoreDT,
-            this.toolStripStatusLabel9,
-            this.ostCloseStoreHD,
-            this.ostCloseStoreDT,
-            this.toolStripStatusLabel12,
-            this.ostSaleExportingHD,
-            this.ostSaleExportingDT});
-            this.ostDetailDbconfig.Location = new System.Drawing.Point(8, 571);
-            this.ostDetailDbconfig.Name = "ostDetailDbconfig";
-            this.ostDetailDbconfig.Size = new System.Drawing.Size(857, 22);
-            this.ostDetailDbconfig.TabIndex = 2;
-            // 
-            // ostServerHD
-            // 
-            this.ostServerHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ostServerHD.Image = ((System.Drawing.Image)(resources.GetObject("ostServerHD.Image")));
-            this.ostServerHD.Name = "ostServerHD";
-            this.ostServerHD.Size = new System.Drawing.Size(60, 17);
-            this.ostServerHD.Text = "Server :";
-            // 
-            // ostServerDT
-            // 
-            this.ostServerDT.Name = "ostServerDT";
-            this.ostServerDT.Size = new System.Drawing.Size(22, 17);
-            this.ostServerDT.Text = "xxx";
-            // 
-            // toolStripStatusLabel19
-            // 
-            this.toolStripStatusLabel19.Name = "toolStripStatusLabel19";
-            this.toolStripStatusLabel19.Size = new System.Drawing.Size(10, 17);
-            this.toolStripStatusLabel19.Text = "|";
-            // 
-            // ostDbNameHD
-            // 
-            this.ostDbNameHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ostDbNameHD.Image = ((System.Drawing.Image)(resources.GetObject("ostDbNameHD.Image")));
-            this.ostDbNameHD.Name = "ostDbNameHD";
-            this.ostDbNameHD.Size = new System.Drawing.Size(77, 17);
-            this.ostDbNameHD.Text = "DataBase :";
-            // 
-            // ostDbNameDT
-            // 
-            this.ostDbNameDT.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ostDbNameDT.Name = "ostDbNameDT";
-            this.ostDbNameDT.Size = new System.Drawing.Size(22, 17);
-            this.ostDbNameDT.Text = "xxx";
-            // 
-            // toolStripStatusLabel3
-            // 
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(10, 17);
-            this.toolStripStatusLabel3.Text = "|";
-            // 
-            // ostPlantHD
-            // 
-            this.ostPlantHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ostPlantHD.Image = ((System.Drawing.Image)(resources.GetObject("ostPlantHD.Image")));
-            this.ostPlantHD.Name = "ostPlantHD";
-            this.ostPlantHD.Size = new System.Drawing.Size(55, 17);
-            this.ostPlantHD.Text = "Plant :";
-            // 
-            // ostPlantDT
-            // 
-            this.ostPlantDT.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ostPlantDT.Name = "ostPlantDT";
-            this.ostPlantDT.Size = new System.Drawing.Size(22, 17);
-            this.ostPlantDT.Text = "xxx";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(10, 17);
-            this.toolStripStatusLabel1.Text = "|";
-            // 
-            // ostUserHD
-            // 
-            this.ostUserHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ostUserHD.Image = ((System.Drawing.Image)(resources.GetObject("ostUserHD.Image")));
-            this.ostUserHD.Name = "ostUserHD";
-            this.ostUserHD.Size = new System.Drawing.Size(52, 17);
-            this.ostUserHD.Text = "User :";
-            // 
-            // ostUserDT
-            // 
-            this.ostUserDT.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ostUserDT.Name = "ostUserDT";
-            this.ostUserDT.Size = new System.Drawing.Size(22, 17);
-            this.ostUserDT.Text = "xxx";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(10, 17);
-            this.toolStripStatusLabel2.Text = "|";
-            // 
-            // ostTableUpdateHD
-            // 
-            this.ostTableUpdateHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ostTableUpdateHD.Image = ((System.Drawing.Image)(resources.GetObject("ostTableUpdateHD.Image")));
-            this.ostTableUpdateHD.Name = "ostTableUpdateHD";
-            this.ostTableUpdateHD.Size = new System.Drawing.Size(96, 17);
-            this.ostTableUpdateHD.Text = "Table Update :";
-            // 
-            // ostTableUpdateDT
-            // 
-            this.ostTableUpdateDT.Image = ((System.Drawing.Image)(resources.GetObject("ostTableUpdateDT.Image")));
-            this.ostTableUpdateDT.Name = "ostTableUpdateDT";
-            this.ostTableUpdateDT.Size = new System.Drawing.Size(16, 17);
-            // 
-            // toolStripStatusLabel6
-            // 
-            this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
-            this.toolStripStatusLabel6.Size = new System.Drawing.Size(10, 17);
-            this.toolStripStatusLabel6.Text = "|";
-            // 
-            // ostOpenStoreHD
-            // 
-            this.ostOpenStoreHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ostOpenStoreHD.Image = ((System.Drawing.Image)(resources.GetObject("ostOpenStoreHD.Image")));
-            this.ostOpenStoreHD.Name = "ostOpenStoreHD";
-            this.ostOpenStoreHD.Size = new System.Drawing.Size(88, 17);
-            this.ostOpenStoreHD.Text = "Open Store :";
-            // 
-            // ostOpenStoreDT
-            // 
-            this.ostOpenStoreDT.Image = ((System.Drawing.Image)(resources.GetObject("ostOpenStoreDT.Image")));
-            this.ostOpenStoreDT.Name = "ostOpenStoreDT";
-            this.ostOpenStoreDT.Size = new System.Drawing.Size(16, 17);
-            // 
-            // toolStripStatusLabel9
-            // 
-            this.toolStripStatusLabel9.Name = "toolStripStatusLabel9";
-            this.toolStripStatusLabel9.Size = new System.Drawing.Size(10, 17);
-            this.toolStripStatusLabel9.Text = "|";
-            // 
-            // ostCloseStoreHD
-            // 
-            this.ostCloseStoreHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ostCloseStoreHD.Image = ((System.Drawing.Image)(resources.GetObject("ostCloseStoreHD.Image")));
-            this.ostCloseStoreHD.Name = "ostCloseStoreHD";
-            this.ostCloseStoreHD.Size = new System.Drawing.Size(87, 17);
-            this.ostCloseStoreHD.Text = "Close Store :";
-            // 
-            // ostCloseStoreDT
-            // 
-            this.ostCloseStoreDT.Image = ((System.Drawing.Image)(resources.GetObject("ostCloseStoreDT.Image")));
-            this.ostCloseStoreDT.Name = "ostCloseStoreDT";
-            this.ostCloseStoreDT.Size = new System.Drawing.Size(16, 17);
-            // 
-            // toolStripStatusLabel12
-            // 
-            this.toolStripStatusLabel12.Name = "toolStripStatusLabel12";
-            this.toolStripStatusLabel12.Size = new System.Drawing.Size(10, 17);
-            this.toolStripStatusLabel12.Text = "|";
-            // 
-            // ostSaleExportingHD
-            // 
-            this.ostSaleExportingHD.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ostSaleExportingHD.Image = ((System.Drawing.Image)(resources.GetObject("ostSaleExportingHD.Image")));
-            this.ostSaleExportingHD.Name = "ostSaleExportingHD";
-            this.ostSaleExportingHD.Size = new System.Drawing.Size(103, 17);
-            this.ostSaleExportingHD.Text = "Sale Exporting :";
-            // 
-            // ostSaleExportingDT
-            // 
-            this.ostSaleExportingDT.Image = ((System.Drawing.Image)(resources.GetObject("ostSaleExportingDT.Image")));
-            this.ostSaleExportingDT.Name = "ostSaleExportingDT";
-            this.ostSaleExportingDT.Size = new System.Drawing.Size(16, 17);
-            // 
-            // otmOpenPlant
-            // 
-            this.otmOpenPlant.Interval = 700;
-            this.otmOpenPlant.Tick += new System.EventHandler(this.otmOpenPlant_Tick);
-            // 
-            // olaVersion
-            // 
-            this.olaVersion.AutoSize = true;
-            this.olaVersion.Location = new System.Drawing.Point(136, 35);
-            this.olaVersion.Name = "olaVersion";
-            this.olaVersion.Size = new System.Drawing.Size(46, 13);
-            this.olaVersion.TabIndex = 3;
-            this.olaVersion.Text = "v1.0.0.0";
-            // 
-            // otmDateTime
-            // 
-            this.otmDateTime.Enabled = true;
-            this.otmDateTime.Interval = 1000;
-            this.otmDateTime.Tick += new System.EventHandler(this.otmDateTime_Tick);
-            // 
-            // otbDateTime
-            // 
-            this.otbDateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.otbDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.otbDateTime.Location = new System.Drawing.Point(889, 63);
-            this.otbDateTime.MaxLength = 20;
-            this.otbDateTime.Name = "otbDateTime";
-            this.otbDateTime.Size = new System.Drawing.Size(120, 22);
-            this.otbDateTime.TabIndex = 27;
-            // 
-            // olaOperationDate
-            // 
-            this.olaOperationDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.olaOperationDate.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.olaOperationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.olaOperationDate.Image = ((System.Drawing.Image)(resources.GetObject("olaOperationDate.Image")));
-            this.olaOperationDate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.olaOperationDate.Location = new System.Drawing.Point(765, 88);
-            this.olaOperationDate.Name = "olaOperationDate";
-            this.olaOperationDate.Size = new System.Drawing.Size(118, 22);
-            this.olaOperationDate.TabIndex = 28;
-            this.olaOperationDate.Text = "Operation Date :";
-            this.olaOperationDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // otbOperationDate
-            // 
-            this.otbOperationDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.otbOperationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.otbOperationDate.Location = new System.Drawing.Point(889, 88);
-            this.otbOperationDate.MaxLength = 20;
-            this.otbOperationDate.Name = "otbOperationDate";
-            this.otbOperationDate.Size = new System.Drawing.Size(120, 22);
-            this.otbOperationDate.TabIndex = 29;
+            // otoLogin
+            // 
+            this.otoLogin.AutoSize = false;
+            this.otoLogin.AutoToolTip = false;
+            this.otoLogin.Enabled = false;
+            this.otoLogin.Image = ((System.Drawing.Image)(resources.GetObject("otoLogin.Image")));
+            this.otoLogin.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.otoLogin.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.otoLogin.Name = "otoLogin";
+            this.otoLogin.Size = new System.Drawing.Size(55, 65);
+            this.otoLogin.Text = "Login";
+            this.otoLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.otoLogin.Visible = false;
+            // 
+            // otoPlantDB
+            // 
+            this.otoPlantDB.AutoSize = false;
+            this.otoPlantDB.AutoToolTip = false;
+            this.otoPlantDB.Image = ((System.Drawing.Image)(resources.GetObject("otoPlantDB.Image")));
+            this.otoPlantDB.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.otoPlantDB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.otoPlantDB.Name = "otoPlantDB";
+            this.otoPlantDB.Size = new System.Drawing.Size(55, 65);
+            this.otoPlantDB.Text = "Plant";
+            this.otoPlantDB.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.otoPlantDB.Click += new System.EventHandler(this.otoPlantDB_Click);
+            // 
+            // otoRptPreview
+            // 
+            this.otoRptPreview.AutoSize = false;
+            this.otoRptPreview.AutoToolTip = false;
+            this.otoRptPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.otoRptPreview.Image = ((System.Drawing.Image)(resources.GetObject("otoRptPreview.Image")));
+            this.otoRptPreview.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.otoRptPreview.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.otoRptPreview.Name = "otoRptPreview";
+            this.otoRptPreview.Size = new System.Drawing.Size(55, 65);
+            this.otoRptPreview.Text = "Preview";
+            this.otoRptPreview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.otoRptPreview.Visible = false;
+            this.otoRptPreview.Click += new System.EventHandler(this.otoRptAll_Click);
+            // 
+            // otoLang
+            // 
+            this.otoLang.AutoSize = false;
+            this.otoLang.AutoToolTip = false;
+            this.otoLang.Image = ((System.Drawing.Image)(resources.GetObject("otoLang.Image")));
+            this.otoLang.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.otoLang.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.otoLang.Name = "otoLang";
+            this.otoLang.Size = new System.Drawing.Size(55, 65);
+            this.otoLang.Text = "Language";
+            this.otoLang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // otoSetting
+            // 
+            this.otoSetting.AutoSize = false;
+            this.otoSetting.Enabled = false;
+            this.otoSetting.Image = ((System.Drawing.Image)(resources.GetObject("otoSetting.Image")));
+            this.otoSetting.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.otoSetting.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.otoSetting.Name = "otoSetting";
+            this.otoSetting.Size = new System.Drawing.Size(55, 65);
+            this.otoSetting.Text = "Setting";
+            this.otoSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.otoSetting.Visible = false;
+            this.otoSetting.Click += new System.EventHandler(this.otoSetting_Click);
+            // 
+            // otoLogout
+            // 
+            this.otoLogout.AutoSize = false;
+            this.otoLogout.AutoToolTip = false;
+            this.otoLogout.Enabled = false;
+            this.otoLogout.Image = ((System.Drawing.Image)(resources.GetObject("otoLogout.Image")));
+            this.otoLogout.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.otoLogout.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.otoLogout.Name = "otoLogout";
+            this.otoLogout.Size = new System.Drawing.Size(55, 65);
+            this.otoLogout.Text = "Logout";
+            this.otoLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.otoLogout.Click += new System.EventHandler(this.otoLogout_Click);
+            // 
+            // otoExit
+            // 
+            this.otoExit.AutoSize = false;
+            this.otoExit.Image = ((System.Drawing.Image)(resources.GetObject("otoExit.Image")));
+            this.otoExit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.otoExit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.otoExit.Name = "otoExit";
+            this.otoExit.Size = new System.Drawing.Size(55, 65);
+            this.otoExit.Text = "Exit";
+            this.otoExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.otoExit.Click += new System.EventHandler(this.otoExit_Click);
+            // 
+            // oBackgroundWorker
+            // 
+            this.oBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.oBackgroundWorker_DoWork);
+            this.oBackgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.oBackgroundWorker_ProgressChanged);
+            this.oBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.oBackgroundWorker_RunWorkerCompleted);
             // 
             // wMain
             // 
@@ -1001,6 +1008,17 @@
             this.Load += new System.EventHandler(this.wMain_Load);
             this.otoMainControl.ResumeLayout(false);
             this.otoMainControl.PerformLayout();
+            this.otaTebControl.ResumeLayout(false);
+            this.ostDetailDbconfig.ResumeLayout(false);
+            this.ostDetailDbconfig.PerformLayout();
+            this.otaTebMain.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.opbLogin)).EndInit();
+            this.otaTabReport.ResumeLayout(false);
+            this.otaTabReport.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.otaTebSetting.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -1008,17 +1026,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.otaTabReport.ResumeLayout(false);
-            this.otaTabReport.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.otaTebMain.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.opbLogin)).EndInit();
-            this.otaTebControl.ResumeLayout(false);
-            this.ostDetailDbconfig.ResumeLayout(false);
-            this.ostDetailDbconfig.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1107,6 +1114,7 @@
         private System.Windows.Forms.Label olaRFCode;
         private System.Windows.Forms.TextBox otbRFCode;
         public System.Windows.Forms.ToolStripStatusLabel ostUserDT;
+        private System.ComponentModel.BackgroundWorker oBackgroundWorker;
     }
 }
 

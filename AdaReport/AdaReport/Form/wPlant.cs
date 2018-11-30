@@ -18,6 +18,7 @@ namespace AdaReport.Form
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(wPlant));
         private wMain oW_Main = new wMain();
+        private wProgressDlg oW_ProgressDlg;
         public wPlant(wMain poMain)
         {
             oW_Main = poMain;
@@ -26,17 +27,24 @@ namespace AdaReport.Form
 
         private void wPlant_Load(object sender, EventArgs e)
         {
-            DataTable oResult = new DataTable();
             try
             {
-
-                    oW_Main.otmOpenPlant.Stop();
-                    cReadFileMdb oReadFileMdb = new cReadFileMdb();
-                    var tSql = "SELECT FTPlantCode,FTPlantName,FTCfgDescTha,FTCfgOn,FTCfgOff,FTCfgValue FROM TConfigPlant WHERE FTCfgCode = 'SD_SQLDB1'";
-                    oResult = oReadFileMdb.C_GEToReadFileMdb(tSql);
-                    ogdPlant.DataSource = oResult;
-                    W_SETxPlantDataGrid();
-
+                oW_Main.otmOpenPlant.Stop();
+                cReadFileMdb oReadFileMdb = new cReadFileMdb();
+                var oSql = new StringBuilder();
+                oSql.AppendLine("SELECT");
+                oSql.AppendLine("FTPlantCode");
+                oSql.AppendLine(",FTPlantName");
+                oSql.AppendLine(",FTCfgDescTha");
+                oSql.AppendLine(",FTCfgOn");
+                oSql.AppendLine(",FTCfgOff");
+                oSql.AppendLine(",FTCfgValue");
+                oSql.AppendLine("FROM TConfigPlant");
+                oSql.AppendLine("WHERE");
+                oSql.AppendLine("FTCfgCode = 'SD_SQLDB1'");
+                var oResult = oReadFileMdb.C_GEToReadFileMdb(oSql.ToString());
+                ogdPlant.DataSource = oResult;
+                W_SETxPlantDataGrid();
             }
             catch (Exception oEx)
             {
@@ -64,8 +72,8 @@ namespace AdaReport.Form
                 ogdPlant.Columns[4].Visible = false;
                 ogdPlant.Columns[5].Visible = false;
                 //ogdPlant.Columns[6].Visible = false;
-              //  ogdPlant.Columns[7].Visible = false;
-              //  ogdPlant.Columns[8].Visible = false;
+                //  ogdPlant.Columns[7].Visible = false;
+                //  ogdPlant.Columns[8].Visible = false;
             }
             catch (Exception oEx)
             {
@@ -136,6 +144,21 @@ namespace AdaReport.Form
         private void ocmExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void oBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void oBackgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+
+        }
+
+        private void oBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            oW_ProgressDlg.Close();
         }
     }
 }

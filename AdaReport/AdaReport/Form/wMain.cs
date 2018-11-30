@@ -5,6 +5,7 @@ using System.Data;
 using System.Globalization;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace AdaReport.Form
@@ -12,6 +13,8 @@ namespace AdaReport.Form
     public partial class wMain : MetroForm
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(wMain));
+
+        private wProgressDlg oW_ProgressDlg;
         public wMain()
         {
             InitializeComponent();
@@ -85,6 +88,12 @@ namespace AdaReport.Form
         {
             try
             {
+                if (oBackgroundWorker.IsBusy != true)
+                {
+                    oBackgroundWorker.RunWorkerAsync();
+                    oW_ProgressDlg = new wProgressDlg();
+                    oW_ProgressDlg.ShowDialog();
+                }
                 if (otbUsrName.Text.Equals(""))
                 {
                     otbUsrName.Focus();
@@ -96,10 +105,7 @@ namespace AdaReport.Form
                     return;
                 }
 
-                var oSql = new StringBuilder();
-                oSql.AppendLine("SELECT [FTEmpCode] FROM [TCNMEmpMtn]");
-                oSql.AppendLine("WHERE [FTEmpCode]='" + otbUsrName.Text + "' AND [FTEmpPW]='" + otbUsrPwd.Text + "'");
-                var oEmpFCode = cCNSP.SP_GEToDbTbl(oSql.ToString());
+                var oEmpFCode = W_CHKoLogin();
                 if (oEmpFCode.Rows.Count > 0)
                 {
                     otaTebControl.SelectedTab = otaTabReport;
@@ -114,6 +120,7 @@ namespace AdaReport.Form
                     MessageBox.Show("UserName or Password InValidate", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     log.Info("UserName or Password InValidate");
                 }
+
             }
             catch (Exception oEx)
             {
@@ -243,6 +250,45 @@ namespace AdaReport.Form
             }
         }
 
+        private void oBackgroundWorker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            try
+            {
+                W_CHKoLogin();
+                Thread.Sleep(1000);
+            }
+            catch (Exception oEx)
+            {
+                MessageBox.Show("wMain : oBackgroundWorker_DoWork //" + oEx.Message);    
+            }
+        }
+
+        private void oBackgroundWorker_ProgressChanged(object sender, System.ComponentModel.ProgressChangedEventArgs e)
+        {
+
+        }
+
+        private void oBackgroundWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+           oW_ProgressDlg.Close();
+        }
+
+        private DataTable W_CHKoLogin()
+        {
+            try
+            {
+                var oSql = new StringBuilder();
+                oSql.AppendLine("SELECT [FTEmpCode] FROM [TCNMEmpMtn]");
+                oSql.AppendLine("WHERE [FTEmpCode]='" + otbUsrName.Text + "' AND [FTEmpPW]='" + otbUsrPwd.Text + "'");
+                return cCNSP.SP_GEToDbTbl(oSql.ToString());
+            }
+            catch (Exception oEx)
+            {
+                MessageBox.Show("wMain : W_CHKxLogin //" + oEx.Message);
+                log.Error(oEx.Message);
+                throw oEx;
+            }
+        }
     }
 }
 

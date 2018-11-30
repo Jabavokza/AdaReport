@@ -17,7 +17,7 @@ namespace AdaReport
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new wPlant());
+           //  Application.Run(new wProgressDlg());
             Application.Run(new wMain());
         }
     }

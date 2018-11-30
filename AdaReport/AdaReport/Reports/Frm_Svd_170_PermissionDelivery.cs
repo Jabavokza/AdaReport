@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AdaReport {
+namespace AdaReport.Reports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace AdaReport {
         
         public override string FullResourceName {
             get {
-                return "AdaReport.Frm_Svd_170_PermissionDelivery.rpt";
+                return "AdaReport.Reports.Frm_Svd_170_PermissionDelivery.rpt";
             }
             set {
                 // Do nothing

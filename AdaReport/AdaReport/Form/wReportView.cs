@@ -65,8 +65,8 @@ namespace AdaReport.Form
 
                 string tPathApp = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.LastIndexOf('\\'));
                 string tPath = Path.Combine(tPathApp, @"Report\ServiceDoc\", tFileName);
-                oCryRpt.Load(tPath);
-                //oCryRpt.Load("D:\\Project\\2018\\AdaReport\\AdaReport\\AdaReport\\Frm_Svd_170_PermissionDelivery.rpt");
+              // oCryRpt.Load(tPath);
+               oCryRpt.Load("D:\\Project\\2018\\AdaReport\\AdaReport\\AdaReport\\Reports\\Frm_Svd_170_PermissionDelivery.rpt");
                 //oCryRpt.Load("H:\\GitHub\\AdaReport\\AdaReport\\AdaReport\\Frm_Svd_170_PermissionDelivery.rpt");
                 oCryRpt.SetDatabaseLogon(tUserID, tPassword, tServerName, tDatabaseName);
                 oCryRpt.SetDataSource(oDt);
