@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AdaReport.Class.Models
 {
-    public class mlDbConfig
+    public class mlDbSetting
     {
         public string tML_Server { get; set; }
         public string tML_UserName { get; set; }

@@ -30,6 +30,7 @@
         {
             this.olaHeader = new MetroFramework.Controls.MetroLabel();
             this.ocrCrystalReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.oBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // olaHeader
@@ -56,6 +57,11 @@
             this.ocrCrystalReportViewer.Size = new System.Drawing.Size(978, 488);
             this.ocrCrystalReportViewer.TabIndex = 2;
             // 
+            // oBackgroundWorker
+            // 
+            this.oBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.oBackgroundWorker_DoWork);
+            this.oBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.oBackgroundWorker_RunWorkerCompleted);
+            // 
             // wReportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -74,5 +80,6 @@
         #endregion
         public MetroFramework.Controls.MetroLabel olaHeader;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer ocrCrystalReportViewer;
+        private System.ComponentModel.BackgroundWorker oBackgroundWorker;
     }
 }

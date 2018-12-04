@@ -51,17 +51,12 @@ namespace AdaReport.Class.ST_Class
             }
         }
 
-      
-
-
-
-
         public static string SP_SETtConStr()
         {
             StringBuilder oSql = new StringBuilder();
             try
             {
-                  var oXmlDb = SP_GEToDbConfigXml();
+                  var oXmlDb = SP_GEToDbSettingXml();
                 oSql.AppendLine("Data Source = '" + oXmlDb.Rows[0]["Server"].ToString() + "'");
                 oSql.AppendLine(";Initial Catalog = '" + oXmlDb.Rows[0]["DbName"].ToString() + "'");
                 oSql.AppendLine(";User ID = '" + oXmlDb.Rows[0]["UserDb"].ToString() + "'");
@@ -81,7 +76,7 @@ namespace AdaReport.Class.ST_Class
             }
         }
 
-        public static DataTable SP_GEToDbConfigXml()
+        public static DataTable SP_GEToDbSettingXml()
         {
             XmlReader oXmlFile;
             DataSet oDs = new DataSet();
@@ -107,5 +102,6 @@ namespace AdaReport.Class.ST_Class
                 oDbTbl = null;
             }
         }
+ 
     }
 }

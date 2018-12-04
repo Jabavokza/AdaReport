@@ -38,7 +38,7 @@
             this.opgProgressSpinner.Maximum = 100;
             this.opgProgressSpinner.Name = "opgProgressSpinner";
             this.opgProgressSpinner.Size = new System.Drawing.Size(69, 71);
-            this.opgProgressSpinner.Speed = 8F;
+            this.opgProgressSpinner.Speed = 10F;
             this.opgProgressSpinner.TabIndex = 0;
             // 
             // metroLabel1

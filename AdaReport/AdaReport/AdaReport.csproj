@@ -72,7 +72,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>AdaReport.Program</StartupObject>
+    <StartupObject>AdaReport.Class.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -142,8 +142,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Models\mlDbConfig.cs" />
+    <Compile Include="Class\Models\mlDbSetting.cs" />
     <Compile Include="Class\Models\mlPlant.cs" />
+    <Compile Include="Class\Program.cs" />
     <Compile Include="Class\ST-Class\cCNSP.cs" />
     <Compile Include="Class\X-Class\cReadFileINI.cs" />
     <Compile Include="Class\X-Class\cReadFileMdb.cs" />
@@ -179,13 +180,12 @@
     <Compile Include="Form\wReportView.Designer.cs">
       <DependentUpon>wReportView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\Frm_Svd_170_PermissionDelivery.cs">
-      <DependentUpon>Frm_Svd_170_PermissionDelivery.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
+      <DependentUpon>Frm_Svd_170_PermissionDelivery.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="Form\wProgressDlg.resx">
       <DependentUpon>wProgressDlg.cs</DependentUpon>

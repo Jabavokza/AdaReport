@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AdaReport.Class.Models
 {
-   public class mlPlant : mlDbConfig
+   public class mlPlant : mlDbSetting
     {
         public string tML_PlantCode { get; set; }
     }

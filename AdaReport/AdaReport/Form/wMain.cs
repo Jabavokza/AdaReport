@@ -13,7 +13,6 @@ namespace AdaReport.Form
     public partial class wMain : MetroForm
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(wMain));
-
         private wProgressDlg oW_ProgressDlg;
         public wMain()
         {
@@ -25,7 +24,7 @@ namespace AdaReport.Form
             try
             {
                 otmOpenPlant.Start();
-                olaVersion.Text = "v" + Assembly.GetExecutingAssembly().GetName().Version.ToString();
+                this.Text = "AdaReport v" + Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }
             catch (Exception oEx)
             {
@@ -38,7 +37,7 @@ namespace AdaReport.Form
             DataTable oSetting = new DataTable();
             try
             {
-                oSetting = cCNSP.SP_GEToDbConfigXml();
+                oSetting = cCNSP.SP_GEToDbSettingXml();
                 ostServerDT.Text = oSetting.Rows[0]["Server"].ToString();
                 ostDbNameDT.Text = oSetting.Rows[0]["DbName"].ToString();
                 ostPlantDT.Text = oSetting.Rows[0]["PlantCode"].ToString();
@@ -192,7 +191,7 @@ namespace AdaReport.Form
                 oSql.AppendLine("SELECT ");
                 oSql.AppendLine("TPSTSalVatHD.FTTmnNum");
                 oSql.AppendLine(",TPSTSalVatHD.FTShdTransNo");
-                oSql.AppendLine(",GETDATE() AS FDDateNow");
+                oSql.AppendLine(",CONVERT(date,GETDATE()) AS FDDateNow");
                 oSql.AppendLine(",TPSTSalVatHD.FTSpnCode");
                 oSql.AppendLine(",RIGHT(TPSTSalVatHD.FTXihDocRun, 6)AS FTXihDocRun");
                 oSql.AppendLine(",CONVERT(varchar(10),TPSTSalVatDT.FNSdtSeqNo)AS FNSdtSeqNo");
@@ -262,12 +261,6 @@ namespace AdaReport.Form
                 MessageBox.Show("wMain : oBackgroundWorker_DoWork //" + oEx.Message);    
             }
         }
-
-        private void oBackgroundWorker_ProgressChanged(object sender, System.ComponentModel.ProgressChangedEventArgs e)
-        {
-
-        }
-
         private void oBackgroundWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
            oW_ProgressDlg.Close();
