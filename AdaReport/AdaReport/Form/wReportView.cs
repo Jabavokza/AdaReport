@@ -95,7 +95,7 @@ namespace AdaReport.Form
             try
             {
                 W_GEToReport();
-                Thread.Sleep(800);
+                Thread.Sleep(500);
             }
             catch (Exception oEx)
             {

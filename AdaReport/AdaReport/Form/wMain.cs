@@ -191,7 +191,7 @@ namespace AdaReport.Form
                 oSql.AppendLine("SELECT ");
                 oSql.AppendLine("TPSTSalVatHD.FTTmnNum");
                 oSql.AppendLine(",TPSTSalVatHD.FTShdTransNo");
-                oSql.AppendLine(",CONVERT(date,GETDATE()) AS FDDateNow");
+                oSql.AppendLine(",CONVERT(DATE,GETDATE()) AS FDDateNow");
                 oSql.AppendLine(",TPSTSalVatHD.FTSpnCode");
                 oSql.AppendLine(",RIGHT(TPSTSalVatHD.FTXihDocRun, 6)AS FTXihDocRun");
                 oSql.AppendLine(",CONVERT(varchar(10),TPSTSalVatDT.FNSdtSeqNo)AS FNSdtSeqNo");
