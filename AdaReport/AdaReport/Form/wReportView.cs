@@ -67,22 +67,21 @@ namespace AdaReport.Form
                     tPathSticker = "\\Sticker\\Power-mall.png";
                     tPathSticker = Environment.CurrentDirectory + tPathSticker;
                 }
-                oDbCon = cCNSP.SP_GEToDbSettingXml();
-                string tServerName = oDbCon.Rows[0]["Server"].ToString();
-                string tDatabaseName = oDbCon.Rows[0]["DbName"].ToString();
-                string tUserID = oDbCon.Rows[0]["UserDb"].ToString();
-                string tPassword = oDbCon.Rows[0]["PwdDb"].ToString();
+                //oDbCon = cCNSP.SP_GEToDbSettingXml();
+                //string tServerName = oDbCon.Rows[0]["Server"].ToString();
+                //string tDatabaseName = oDbCon.Rows[0]["DbName"].ToString();
+                //string tUserID = oDbCon.Rows[0]["UserDb"].ToString();
+                //string tPassword = oDbCon.Rows[0]["PwdDb"].ToString();
 
-                string tPathApp = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.LastIndexOf('\\'));
+                //กำหนดพาท
+                string tPathApp = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.LastIndexOf('\\')); 
                 string tPath = Path.Combine(tPathApp, @"Report\ServiceDoc\", tFileName);
               // oCryRpt.Load(tPath);
                oCryRpt.Load("D:\\Project\\2018\\AdaReport\\AdaReport\\AdaReport\\Reports\\Frm_Svd_170_PermissionDelivery.rpt");
-                //oCryRpt.Load("H:\\GitHub\\AdaReport\\AdaReport\\AdaReport\\Frm_Svd_170_PermissionDelivery.rpt");
-                oCryRpt.SetDatabaseLogon(tUserID, tPassword, tServerName, tPassword);//ใช้ในกรณีที่Cystall ต่อกับฐานข้อมูลโดยตรง ถ้าในกรณีที่ใช้Dataset ไม่ต้องไช้คำสั่งนี้
+                //oCryRpt.SetDatabaseLogon(tUserID, tPassword, tServerName, tPassword);//ใช้ในกรณีที่Cystall ต่อกับฐานข้อมูลโดยตรง ถ้าในกรณีที่ใช้Dataset ไม่ต้องใช้คำสั่งนี้
                 oCryRpt.SetDataSource(oDt);
                 oCryRpt.SetParameterValue("Sticker", tPathSticker);
                 oCryRpt.SetParameterValue("User", oW_Main.ostUserDT.Text);
-                // ocrCrystalReportViewer.RefreshReport();
             }
             catch (Exception oEx)
             {
@@ -102,7 +101,6 @@ namespace AdaReport.Form
                 MessageBox.Show("wReportView : oBackgroundWorker_DoWork //" + oEx.Message);
             }
         }
-
         private void oBackgroundWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             oW_ProgressDlg.Close();

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace AdaReport {
+namespace AdaReport.Data {
     
     
     /// <summary>

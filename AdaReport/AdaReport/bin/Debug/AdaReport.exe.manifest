@@ -43,19 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="log4net" version="1.2.10.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="x86" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AdaReport.exe" size="366016">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AdaReport.exe" size="365504">
       <assemblyIdentity name="AdaReport" version="1.0.0.7" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vUVa/Im5uBBHvZZVv5J+PWA4weg=</dsig:DigestValue>
+        <dsig:DigestValue>Q6dSX1iQdvpouBeGCC673Y/fYq8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

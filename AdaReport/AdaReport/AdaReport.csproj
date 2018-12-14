@@ -148,11 +148,11 @@
     <Compile Include="Class\ST-Class\cCNSP.cs" />
     <Compile Include="Class\X-Class\cReadFileINI.cs" />
     <Compile Include="Class\X-Class\cReadFileMdb.cs" />
-    <Compile Include="Data\DATASet.cs">
-      <DependentUpon>DATASet.xsd</DependentUpon>
+    <Compile Include="Data\DataSetPermissionDelivery.cs">
+      <DependentUpon>DataSetPermissionDelivery.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Data\DATASet.Designer.cs">
-      <DependentUpon>DATASet.xsd</DependentUpon>
+    <Compile Include="Data\DataSetPermissionDelivery.Designer.cs">
+      <DependentUpon>DataSetPermissionDelivery.xsd</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -214,16 +214,16 @@
       <LastGenOutput>Frm_Svd_170_PermissionDelivery.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="AdaReport_TemporaryKey.pfx" />
-    <None Include="Data\DATASet.xsc">
-      <DependentUpon>DATASet.xsd</DependentUpon>
+    <None Include="Data\DataSetPermissionDelivery.xsc">
+      <DependentUpon>DataSetPermissionDelivery.xsd</DependentUpon>
     </None>
-    <None Include="Data\DATASet.xsd">
+    <None Include="Data\DataSetPermissionDelivery.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DATASet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetPermissionDelivery.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Data\DATASet.xss">
-      <DependentUpon>DATASet.xsd</DependentUpon>
+    <None Include="Data\DataSetPermissionDelivery.xss">
+      <DependentUpon>DataSetPermissionDelivery.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

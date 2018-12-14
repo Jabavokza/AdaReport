@@ -550,3 +550,9 @@ Ambiguous column name 'FDShdTransDate'.
 [04/12/2018 17:50:09,SSS] [INFO   ] wMain:115 (1) - Admin: Login Successful
 [04/12/2018 17:51:18,SSS] [INFO   ] wMain:115 (1) - Admin: Login Successful
 [04/12/2018 18:33:16,SSS] [INFO   ] wMain:115 (1) - Admin: Login Successful
+[12/12/2018 14:54:13,SSS] [INFO   ] wMain:98 (1) - Admin: Login Successful
+[12/12/2018 14:59:14,SSS] [INFO   ] wMain:98 (1) - Admin: Login Successful
+[12/12/2018 15:06:01,SSS] [INFO   ] wMain:98 (1) - Admin: Login Successful
+[12/12/2018 15:08:50,SSS] [INFO   ] wMain:98 (1) - Admin: Login Successful
+[12/12/2018 15:10:40,SSS] [INFO   ] wMain:98 (1) - Admin: Login Successful
+[12/12/2018 15:41:04,SSS] [INFO   ] wMain:98 (1) - Admin: Login Successful

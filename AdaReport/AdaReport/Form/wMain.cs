@@ -32,23 +32,6 @@ namespace AdaReport.Form
             }
         }
 
-        public void W_GETxStatusBar()
-        {
-            DataTable oSetting = new DataTable();
-            try
-            {
-                oSetting = cCNSP.SP_GEToDbSettingXml();
-                ostServerDT.Text = oSetting.Rows[0]["Server"].ToString();
-                ostDbNameDT.Text = oSetting.Rows[0]["DbName"].ToString();
-                ostPlantDT.Text = oSetting.Rows[0]["PlantCode"].ToString();
-                otbOperationDate.Text = W_GETxOperationDate();
-            }
-            catch (Exception oEx)
-            {
-                log.Error(oEx.Message);
-            }
-        }
-
         private void otoPlantDB_Click(object sender, EventArgs e)
         {
             wPlant oPlant = new wPlant(this);
@@ -162,20 +145,6 @@ namespace AdaReport.Form
             Application.Exit();
         }
 
-        private string W_GETxOperationDate()
-        {
-            try
-            {
-                var tSql = "SELECT [FDCdtDate] FROM [TSysChgDateTime]";
-                var tOperationDate = cCNSP.SP_GEToDbTbl(tSql);
-                return tOperationDate.Rows[0]["FDCdtDate"].ToString();
-            }
-            catch (Exception oEx)
-            {
-                throw oEx;
-            }
-        }
-
         private void otoSetting_Click(object sender, EventArgs e)
         {
             otaTebControl.SelectedTab = otaTebSetting;
@@ -266,6 +235,22 @@ namespace AdaReport.Form
            oW_ProgressDlg.Close();
         }
 
+        public void W_GETxStatusBar()
+        {
+            DataTable oSetting = new DataTable();
+            try
+            {
+                oSetting = cCNSP.SP_GEToDbSettingXml();
+                ostServerDT.Text = oSetting.Rows[0]["Server"].ToString();
+                ostDbNameDT.Text = oSetting.Rows[0]["DbName"].ToString();
+                ostPlantDT.Text = oSetting.Rows[0]["PlantCode"].ToString();
+                otbOperationDate.Text = W_GETxOperationDate();
+            }
+            catch (Exception oEx)
+            {
+                log.Error(oEx.Message);
+            }
+        }
         private DataTable W_CHKoLogin()
         {
             try
@@ -279,6 +264,19 @@ namespace AdaReport.Form
             {
                 MessageBox.Show("wMain : W_CHKxLogin //" + oEx.Message);
                 log.Error(oEx.Message);
+                throw oEx;
+            }
+        }
+        private string W_GETxOperationDate()
+        {
+            try
+            {
+                var tSql = "SELECT [FDCdtDate] FROM [TSysChgDateTime]";
+                var tOperationDate = cCNSP.SP_GEToDbTbl(tSql);
+                return tOperationDate.Rows[0]["FDCdtDate"].ToString();
+            }
+            catch (Exception oEx)
+            {
                 throw oEx;
             }
         }
